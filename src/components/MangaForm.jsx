@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 
 function MangaForm({ manga, onSave, onCancel }) {
   const [name, setName] = useState("");
+  const [genres, setGenres] = useState([]); // Thể loại
   const [country, setCountry] = useState("");
-  const [status, setStatus] = useState("Chưa hoàn thành");
+  const [status, setStatus] = useState("Đã đọc");
   const [link, setLink] = useState("");
   const [rate, setRate] = useState("");
   const [chapters, setChapters] = useState("");
@@ -11,15 +12,17 @@ function MangaForm({ manga, onSave, onCancel }) {
   useEffect(() => {
     if (manga) {
       setName(manga.name || "");
+      setGenres(Array.isArray(manga.genres) ? manga.genres : []);
       setCountry(manga.country || "");
-      setStatus(manga.status || "Chưa hoàn thành");
+      setStatus(manga.status || "Đã đọc");
       setLink(manga.link || "");
       setRate(manga.rate ? manga.rate.toString() : "");
       setChapters(manga.chapters ? manga.chapters.toString() : "");
     } else {
       setName("");
+      setGenres([]);
       setCountry("");
-      setStatus("Chưa hoàn thành");
+      setStatus("Đã đọc");
       setLink("");
       setRate("");
       setChapters("");
@@ -31,22 +34,56 @@ function MangaForm({ manga, onSave, onCancel }) {
     const newManga = {
       id: manga ? manga.id : null,
       name,
+      genres,
       country,
       status,
       link,
-      rate: parseFloat(rate),
+      rate: parseInt(rate),
       chapters: parseInt(chapters),
     };
     onSave(newManga);
   };
 
+  // Xử lý chọn nhiều thể loại
+  const genreOptions = [
+    "Linh dị",
+    "Thanh xuân vườn trường",
+    "Xuyên thư",
+    "Trinh thám",
+    "Hài hước",
+    "Hành động",
+    "Lãng mạn",
+    "Phiêu lưu"
+  ];
+  const handleGenreChange = (e) => {
+    const { options } = e.target;
+    const selected = [];
+    for (let i = 0; i < options.length; i++) {
+      if (options[i].selected) selected.push(options[i].value);
+    }
+    setGenres(selected);
+  };
+
+  const countryOptions = [
+    "Việt Nam",
+    "Trung Quốc",
+    "Hàn Quốc",
+    "Thái Lan",
+    "Nhật Bản"
+  ];
+  const statusOptions = ["Đã đọc", "Chờ đợi", "Đang dịch"];
+  const rateOptions = [1, 2, 3];
+
   return (
-    <div className="fixed top-0 !mt-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-8 rounded-md shadow-md w-96">
-        <h2 className="text-2xl font-bold mb-6 text-center text-blue-700">
-          {manga ? "Sửa truyện" : "Thêm truyện"}
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="fixed top-0 !mt-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+      <div className="bg-white p-0 sm:p-0 rounded-md shadow-md w-full max-w-md h-[90vh] flex flex-col">
+        {/* Sticky Header */}
+        <div className="sticky top-0 z-10 bg-white p-4 border-b">
+          <h2 className="text-2xl font-bold text-center text-blue-700">
+            {manga ? "Sửa truyện" : "Thêm truyện"}
+          </h2>
+        </div>
+        <form id="manga-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-4 py-2 space-y-4">
           <div>
             <label
               htmlFor="name"
@@ -65,18 +102,42 @@ function MangaForm({ manga, onSave, onCancel }) {
           </div>
           <div>
             <label
+              htmlFor="genres"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
+              Thể loại:
+            </label>
+            <select
+              id="genres"
+              multiple
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              value={genres}
+              onChange={handleGenreChange}
+            >
+              {genreOptions.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
+            <div className="text-xs text-gray-500 mt-1">(Giữ Ctrl hoặc Cmd để chọn nhiều)</div>
+          </div>
+          <div>
+            <label
               htmlFor="country"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
               Quốc gia:
             </label>
-            <input
-              type="text"
+            <select
               id="country"
-              className="shadow appearance-none border rounded w-full appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               value={country}
               onChange={(e) => setCountry(e.target.value)}
-            />
+            >
+              <option value="">Chọn quốc gia</option>
+              {countryOptions.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
           </div>
           <div>
             <label
@@ -91,9 +152,9 @@ function MangaForm({ manga, onSave, onCancel }) {
               value={status}
               onChange={(e) => setStatus(e.target.value)}
             >
-              <option value="Hoàn thành">Hoàn thành</option>
-              <option value="Chưa hoàn thành">Chưa hoàn thành</option>
-              <option value="Đã xem">Đã xem</option>
+              {statusOptions.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
             </select>
           </div>
           <div>
@@ -118,16 +179,17 @@ function MangaForm({ manga, onSave, onCancel }) {
             >
               Rate:
             </label>
-            <input
-              type="number"
+            <select
               id="rate"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              min="0"
-              max="5"
-              step="0.5"
               value={rate}
               onChange={(e) => setRate(e.target.value)}
-            />
+            >
+              <option value="">Chọn rate</option>
+              {rateOptions.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
           </div>
           <div>
             <label
@@ -145,22 +207,24 @@ function MangaForm({ manga, onSave, onCancel }) {
               onChange={(e) => setChapters(e.target.value)}
             />
           </div>
-          <div className="flex justify-end space-x-2">
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
-              {manga ? "Lưu" : "Thêm"}
-            </button>
-            <button
-              type="button"
-              onClick={onCancel}
-              className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            >
-              Huỷ
-            </button>
-          </div>
         </form>
+        {/* Sticky Footer */}
+        <div className="sticky bottom-0 z-10 bg-white p-4 border-t flex justify-end space-x-2">
+          <button
+            type="submit"
+            form="manga-form"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            {manga ? "Lưu" : "Thêm"}
+          </button>
+          <button
+            type="button"
+            onClick={onCancel}
+            className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          >
+            Huỷ
+          </button>
+        </div>
       </div>
     </div>
   );

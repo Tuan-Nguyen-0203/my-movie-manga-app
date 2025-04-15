@@ -25,12 +25,15 @@ const MovieForm = ({ onSubmit, onCancel, movie = null }) => {
   };
 
   return (
-    <div className="fixed !mt-0 top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex justify-center items-center">
-      <div className="bg-white p-8 rounded-md shadow-md w-96">
-        <h2 className="text-2xl font-bold mb-6 text-center text-blue-700">
-          {movie ? "Sửa phim" : "Thêm phim"}
-        </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="fixed !mt-0 top-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+      <div className="bg-white p-0 sm:p-0 rounded-md shadow-md w-full max-w-md h-[90vh] flex flex-col">
+        {/* Sticky Header */}
+        <div className="sticky top-0 z-10 bg-white p-4 border-b">
+          <h2 className="text-2xl font-bold text-center text-blue-700">
+            {movie ? "Sửa phim" : "Thêm phim"}
+          </h2>
+        </div>
+        <form id="movie-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-4 py-2 space-y-4">
           {/* Tiêu đề đã có sẵn ở trên */}
           <div>
             <label
@@ -72,15 +75,24 @@ const MovieForm = ({ onSubmit, onCancel, movie = null }) => {
             >
               Quốc gia:
             </label>
-            <input
-              type="text"
+            <select
               id="country"
               name="country"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               value={formData.country}
               onChange={handleChange}
               required
-            />
+            >
+              <option value="">Chọn quốc gia</option>
+              <option value="Việt Nam">Việt Nam</option>
+              <option value="Trung Quốc">Trung Quốc</option>
+              <option value="Hàn Quốc">Hàn Quốc</option>
+              <option value="Thái Lan">Thái Lan</option>
+              <option value="Nhật Bản">Nhật Bản</option>
+              <option value="Đài Loan">Đài Loan</option>
+              <option value="Philip">Philip</option>
+              <option value="Khác">Khác</option>
+            </select>
           </div>
           <div>
             <label
@@ -96,9 +108,9 @@ const MovieForm = ({ onSubmit, onCancel, movie = null }) => {
               value={formData.status}
               onChange={handleChange}
             >
-              <option value="Chưa hoàn thành">Chưa hoàn thành</option>
-              <option value="Hoàn thành">Hoàn thành</option>
               <option value="Đã xem">Đã xem</option>
+              <option value="Chờ đợi">Chờ đợi</option>
+              <option value="Đang dịch">Đang dịch</option>
             </select>
           </div>
           <div>
@@ -124,34 +136,37 @@ const MovieForm = ({ onSubmit, onCancel, movie = null }) => {
             >
               Đánh giá:
             </label>
-            <input
-              type="number"
+            <select
               id="rate"
               name="rate"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              min="0"
-              max="5"
-              step="0.1"
               value={formData.rate}
               onChange={handleChange}
-            />
-          </div>
-          <div className="flex justify-end gap-2 mt-6">
-            <button
-              type="button"
-              className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 text-gray-700"
-              onClick={onCancel}
             >
-              Huỷ
-            </button>
-            <button
-              type="submit"
-              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-            >
-              {movie ? "Lưu" : "Thêm"}
-            </button>
+              <option value="">Chọn rate</option>
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+            </select>
           </div>
         </form>
+        {/* Sticky Footer */}
+        <div className="sticky bottom-0 z-10 bg-white p-4 border-t flex justify-end gap-2">
+          <button
+            type="button"
+            className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 text-gray-700"
+            onClick={onCancel}
+          >
+            Huỷ
+          </button>
+          <button
+            type="submit"
+            form="movie-form"
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          >
+            {movie ? "Lưu" : "Thêm"}
+          </button>
+        </div>
       </div>
     </div>
   );

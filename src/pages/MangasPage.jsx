@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useData } from "../hooks/useData";
 import MangaForm from "../components/MangaForm";
 import MangaList from "../components/MangaList";
@@ -37,6 +37,10 @@ function MangasPage() {
     setShowForm(true);
   };
 
+  useEffect(() => {
+    handleFilter();
+  }, [countryFilter, statusFilter, rateFilter, items]);
+
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
@@ -50,16 +54,16 @@ function MangasPage() {
       </div>
 
       <div className="grid grid-cols-3 gap-4">
-        <SearchBar value={searchTerm} onChange={handleSearch} />
+        <SearchBar onSearch={handleSearch} />
         <FilterDropdown
           label="Quốc gia"
-          options={Array.from(new Set(items.map((m) => m.country)))}
+          options={["", ...Array.from(new Set((items || []).map((m) => m.country))).filter(Boolean)]}
           value={countryFilter}
           onChange={setCountryFilter}
         />
         <FilterDropdown
           label="Tình trạng"
-          options={["Chưa hoàn thành", "Hoàn thành", "Đã xem"]}
+          options={["", ...Array.from(new Set((items || []).map((m) => m.status))).filter(Boolean)]}
           value={statusFilter}
           onChange={setStatusFilter}
         />

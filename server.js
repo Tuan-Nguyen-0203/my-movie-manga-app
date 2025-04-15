@@ -17,19 +17,16 @@ app.use(express.json());
 // Multer config for file upload
 const upload = multer({ dest: 'uploads/' });
 
-// Path to JSON file
-const dataPath = path.join(__dirname, "src", "assets", "data.json");
+// Paths to separate JSON files
+const moviesPath = path.join(__dirname, "src", "assets", "movies.json");
+const mangasPath = path.join(__dirname, "src", "assets", "mangas.json");
 
-// Middleware to read JSON file
-app.use(async (req, res, next) => {
-  try {
-    const data = JSON.parse(await fs.promises.readFile(dataPath, "utf8"));
-    req.data = data;
-    next();
-  } catch (error) {
-    res.status(500).json({ error: "Không thể đọc file dữ liệu" });
-  }
-});
+// Helper to get file path by type
+function getFilePath(type) {
+  if (type === "movies") return moviesPath;
+  if (type === "mangas") return mangasPath;
+  throw new Error("Invalid type");
+}
 
 // API endpoints
 
@@ -40,11 +37,7 @@ app.post("/api/mangas/update-order", async (req, res) => {
     return res.status(400).json({ error: "Dữ liệu gửi lên phải là mảng manga." });
   }
   try {
-    const updatedData = {
-      ...req.data,
-      mangas: newOrder,
-    };
-    await fs.promises.writeFile(dataPath, JSON.stringify(updatedData, null, 2));
+    await fs.promises.writeFile(mangasPath, JSON.stringify(newOrder, null, 2));
     res.json({ message: "Cập nhật thứ tự manga thành công!" });
   } catch (error) {
     res.status(500).json({ error: "Không thể cập nhật file dữ liệu." });
@@ -58,53 +51,68 @@ app.post("/api/movies/update-order", async (req, res) => {
     return res.status(400).json({ error: "Dữ liệu gửi lên phải là mảng movie." });
   }
   try {
-    const updatedData = {
-      ...req.data,
-      movies: newOrder,
-    };
-    await fs.promises.writeFile(dataPath, JSON.stringify(updatedData, null, 2));
+    await fs.promises.writeFile(moviesPath, JSON.stringify(newOrder, null, 2));
     res.json({ message: "Cập nhật thứ tự movie thành công!" });
   } catch (error) {
     res.status(500).json({ error: "Không thể cập nhật file dữ liệu." });
   }
 });
 
-app.get("/api/data", (req, res) => {
-  res.json(req.data);
+// Get all data (optional, for backward compatibility)
+app.get("/api/data", async (req, res) => {
+  try {
+    const movies = JSON.parse(await fs.promises.readFile(moviesPath, "utf8"));
+    const mangas = JSON.parse(await fs.promises.readFile(mangasPath, "utf8"));
+    res.json({ movies, mangas });
+  } catch (error) {
+    res.status(500).json({ error: "Không thể đọc file dữ liệu" });
+  }
 });
 
+// Get data by type (movies or mangas)
+app.get("/api/data/:type", async (req, res) => {
+  const { type } = req.params;
+  try {
+    const filePath = getFilePath(type);
+    const raw = await fs.promises.readFile(filePath, "utf8");
+    const data = JSON.parse(raw);
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error: "Không thể đọc file dữ liệu" });
+  }
+});
+
+// Update data by type
 app.post("/api/data/:type", async (req, res) => {
   const { type } = req.params;
   const newData = req.body;
-
   try {
-    const updatedData = {
-      ...req.data,
-      [type]: newData,
-    };
-
-    await fs.promises.writeFile(dataPath, JSON.stringify(updatedData, null, 2));
-    res.json(updatedData);
+    const filePath = getFilePath(type);
+    await fs.promises.writeFile(filePath, JSON.stringify(newData, null, 2));
+    res.json(newData);
   } catch (error) {
     res.status(500).json({ error: "Không thể cập nhật file dữ liệu" });
   }
 });
 
-// --- IMPORT EXCEL (movies/books) ---
+// --- IMPORT EXCEL (movies/mangas) ---
 app.post("/api/:type/import-excel", upload.single('file'), async (req, res) => {
-  const { type } = req.params; // 'movies' hoặc 'books'
+  const { type } = req.params; // 'movies' hoặc 'mangas'
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded" });
   }
   try {
+    const filePath = getFilePath(type);
     const workbook = xlsx.readFile(req.file.path);
     const sheetName = workbook.SheetNames[0];
     const dataFromExcel = xlsx.utils.sheet_to_json(workbook.Sheets[sheetName]);
-    // Merge vào data.json
-    const currentData = req.data[type] || [];
+    // Merge vào file riêng
+    let currentData = [];
+    try {
+      currentData = JSON.parse(await fs.promises.readFile(filePath, "utf8"));
+    } catch {}
     const merged = [...currentData, ...dataFromExcel];
-    const updatedData = { ...req.data, [type]: merged };
-    await fs.promises.writeFile(dataPath, JSON.stringify(updatedData, null, 2));
+    await fs.promises.writeFile(filePath, JSON.stringify(merged, null, 2));
     // Xoá file tạm
     fs.unlink(req.file.path, () => {});
     res.json({ message: `Imported ${dataFromExcel.length} ${type}` });
@@ -113,11 +121,15 @@ app.post("/api/:type/import-excel", upload.single('file'), async (req, res) => {
   }
 });
 
-// --- EXPORT EXCEL (movies/books) ---
+// --- EXPORT EXCEL (movies/mangas) ---
 app.get("/api/:type/export-excel", async (req, res) => {
-  const { type } = req.params; // 'movies' hoặc 'books'
+  const { type } = req.params; // 'movies' hoặc 'mangas'
   try {
-    const items = req.data[type] || [];
+    const filePath = getFilePath(type);
+    let items = [];
+    try {
+      items = JSON.parse(await fs.promises.readFile(filePath, "utf8"));
+    } catch {}
     const ws = xlsx.utils.json_to_sheet(items);
     const wb = xlsx.utils.book_new();
     xlsx.utils.book_append_sheet(wb, ws, type);

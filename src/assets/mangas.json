@@ -1,0 +1,20 @@
+[
+  {
+    "id": "manga-1",
+    "name": "One Piece",
+    "country": "Japan",
+    "status": "Chưa hoàn thành",
+    "link": "https://example.com/one-piece",
+    "rate": 5,
+    "chapters": 1000
+  },
+  {
+    "id": "manga-2",
+    "name": "Attack on Titan",
+    "country": "Japan",
+    "status": "Hoàn thành",
+    "link": "https://example.com/attack-on-titan",
+    "rate": 4.8,
+    "chapters": 139
+  }
+]

@@ -1,87 +1,13 @@
 {
-  "movies": [
-    {
-      "id": "movie-1744650329857",
-      "englishName": "qwe",
-      "vietnameseName": "123",
-      "country": "qwe",
-      "status": "Đã xem",
-      "link": "wqeqw",
-      "rate": 0
-    },
-    {
-      "id": "movie-1",
-      "englishName": "Avengers: Endgame",
-      "vietnameseName": "Biệt Đội Báo Thù: Hồi Kết",
-      "country": "USA1",
-      "status": "Đã xem",
-      "link": "https://example.com/avengers-endgame",
-      "rate": 5
-    },
-    {
-      "id": "movie-2",
-      "englishName": "Parasite",
-      "vietnameseName": "Ký Sinh Trùng",
-      "country": "South Korea",
-      "status": "Hoàn thành",
-      "link": "https://example.com/parasite",
-      "rate": 4.5
-    },
-    {
-      "id": "movie-1744649439880",
-      "englishName": "eqw",
-      "vietnameseName": "asdsa",
-      "country": "wqe",
-      "status": "Chưa hoàn thành",
-      "link": "qwe",
-      "rate": 0
-    },
-    {
-      "id": "movie-1744647007610",
-      "englishName": "qweq",
-      "vietnameseName": "asdsaq",
-      "country": "qweqw",
-      "status": "Đã xem",
-      "link": "qweqw",
-      "rate": 0
-    },
-    {
-      "id": "movie-1744649401819",
-      "englishName": "qw",
-      "vietnameseName": "qwe",
-      "country": "qwe",
-      "status": "Đã xem",
-      "link": "qwe",
-      "rate": 0
-    },
-    {
-      "id": "movie-1744649422897",
-      "englishName": "qweqw",
-      "vietnameseName": "qweq",
-      "country": "qweqw",
-      "status": "Hoàn thành",
-      "link": "qwe",
-      "rate": "1"
-    }
-  ],
+  "movies": [],
   "mangas": [
     {
-      "id": "manga-2",
-      "name": "Attack on Titan",
-      "country": "Japan",
-      "status": "Hoàn thành",
-      "link": "https://example.com/attack-on-titan",
-      "rate": 4.8,
-      "chapters": 139
-    },
-    {
-      "id": "manga-1",
-      "name": "One Piece",
-      "country": "Japan",
-      "status": "Chưa hoàn thành",
-      "link": "https://example.com/one-piece",
-      "rate": 5,
-      "chapters": 1000
+      "name": "Đoản mệnh",
+      "country": "Trung",
+      "status": "Chưa đọc",
+      "rate": 1,
+      "chapters": 100,
+      "link": "abc"
     }
   ]
 }

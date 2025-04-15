@@ -129,8 +129,17 @@ const Table = ({
             </select>
           </div>
 
-          <div className="text-sm text-gray-700">
-            Page {currentPage} of {totalPages}
+          <div className="text-sm text-gray-700 flex flex-col sm:flex-row sm:items-center sm:space-x-4">
+            <span>
+              {(() => {
+                const start = (currentPage - 1) * pageSize + 1;
+                const end = Math.min(currentPage * pageSize, data.length);
+                return `Showing ${start}-${end} of ${data.length} items`;
+              })()}
+            </span>
+            <span>
+              Page {currentPage} of {totalPages}
+            </span>
           </div>
         </div>
       </div>

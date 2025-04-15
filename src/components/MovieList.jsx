@@ -9,10 +9,18 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" });
   const [saveMsg, setSaveMsg] = useState("");
 
+
   // Khi movies prop thay đổi (thêm/xoá/sửa), cập nhật lại sortedMovies
   React.useEffect(() => {
     setSortedMovies(movies);
   }, [movies]);
+
+  // Only filter by view (all/unviewed/viewed) on sortedMovies
+  const filteredMovies = sortedMovies.filter((movie) => {
+    if (view === "all") return true;
+    if (view === "unviewed") return movie.status !== "Đã xem";
+    return movie.status === "Đã xem";
+  });
 
   // Hàm sort: sort toàn bộ danh sách gốc
   const handleSort = (key) => {
@@ -50,12 +58,7 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
     }
   };
 
-  // Filter chỉ để hiển thị, không ảnh hưởng đến thứ tự lưu
-  const filteredMovies = sortedMovies.filter((movie) => {
-    if (view === "all") return true;
-    if (view === "unviewed") return movie.status !== "Đã xem";
-    return movie.status === "Đã xem";
-  });
+
 
   const columns = [
     { key: "englishName", label: "Tên tiếng Anh" },
@@ -88,7 +91,7 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
     const formData = new FormData();
     formData.append("file", file);
     try {
-      const res = await fetch("/api/movies/import-excel", {
+      const res = await fetch("http://localhost:3001/api/movies/import-excel", {
         method: "POST",
         body: formData,
       });
@@ -107,9 +110,17 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
   const handleExport = async () => {
     setImportMsg("");
     try {
-      const res = await fetch("/api/movies/export-excel");
-      if (!res.ok) throw new Error("Export lỗi");
-      const blob = await res.blob();
+      // Dynamically import xlsx only when needed
+      const XLSX = await import("xlsx");
+      // Prepare data: only export filtered & sorted movies
+      const exportData = filteredMovies.map(({ englishName, vietnameseName, country, status, rate, link }) => ({
+        englishName, vietnameseName, country, status, rate, link
+      }));
+      const worksheet = XLSX.utils.json_to_sheet(exportData);
+      const workbook = XLSX.utils.book_new();
+      XLSX.utils.book_append_sheet(workbook, worksheet, "Movies");
+      const wbout = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
+      const blob = new Blob([wbout], { type: "application/octet-stream" });
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
@@ -118,6 +129,7 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
       a.click();
       a.remove();
       window.URL.revokeObjectURL(url);
+      setImportMsg("✅ Export thành công!");
     } catch (err) {
       setImportMsg("❌ Export lỗi");
     }

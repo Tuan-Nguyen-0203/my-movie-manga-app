@@ -14,11 +14,10 @@ export const useData = (type) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/data");
+      const response = await fetch(`http://localhost:3001/api/data/${type}`);
       const data = await response.json();
-      const initialData = type === "movies" ? data.movies : data.mangas;
-      setItems(initialData);
-      setFilteredItems(initialData);
+      setItems(data);
+      setFilteredItems(data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -46,11 +45,25 @@ export const useData = (type) => {
 
   const handleSearch = (term) => {
     setSearchTerm(term);
-    const filtered = items.filter((item) =>
-      item.name.toLowerCase().includes(term.toLowerCase())
-    );
+    const trimmedSearch = term.trim().toLowerCase();
+    const filtered = items.filter((item) => {
+      if (!trimmedSearch) return true;
+      const inName = item.name?.toLowerCase().includes(trimmedSearch);
+      const inCountry = item.country?.toLowerCase().includes(trimmedSearch);
+      const inStatus = item.status?.toLowerCase().includes(trimmedSearch);
+      const inRate = (item.rate + '').toLowerCase().includes(trimmedSearch);
+      const inChapters = (item.chapters + '').toLowerCase().includes(trimmedSearch);
+      const inGenres = Array.isArray(item.genres)
+        ? item.genres.some((g) => g.toLowerCase().includes(trimmedSearch))
+        : false;
+      const inLink = item.link?.toLowerCase().includes(trimmedSearch);
+      return (
+        inName || inCountry || inStatus || inRate || inChapters || inGenres || inLink
+      );
+    });
     setFilteredItems(filtered);
   };
+
 
   const handleFilter = () => {
     let filtered = items;
