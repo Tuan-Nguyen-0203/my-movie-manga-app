@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // Multer config for file upload
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({ dest: "uploads/" });
 
 // Paths to separate JSON files
 const moviesPath = path.join(__dirname, "src", "assets", "movies.json");
@@ -34,7 +34,9 @@ function getFilePath(type) {
 app.post("/api/mangas/update-order", async (req, res) => {
   const newOrder = req.body;
   if (!Array.isArray(newOrder)) {
-    return res.status(400).json({ error: "Dữ liệu gửi lên phải là mảng manga." });
+    return res
+      .status(400)
+      .json({ error: "Dữ liệu gửi lên phải là mảng manga." });
   }
   try {
     await fs.promises.writeFile(mangasPath, JSON.stringify(newOrder, null, 2));
@@ -48,7 +50,9 @@ app.post("/api/mangas/update-order", async (req, res) => {
 app.post("/api/movies/update-order", async (req, res) => {
   const newOrder = req.body;
   if (!Array.isArray(newOrder)) {
-    return res.status(400).json({ error: "Dữ liệu gửi lên phải là mảng movie." });
+    return res
+      .status(400)
+      .json({ error: "Dữ liệu gửi lên phải là mảng movie." });
   }
   try {
     await fs.promises.writeFile(moviesPath, JSON.stringify(newOrder, null, 2));
@@ -96,7 +100,7 @@ app.post("/api/data/:type", async (req, res) => {
 });
 
 // --- IMPORT EXCEL (movies/mangas) ---
-app.post("/api/:type/import-excel", upload.single('file'), async (req, res) => {
+app.post("/api/:type/import-excel", upload.single("file"), async (req, res) => {
   const { type } = req.params; // 'movies' hoặc 'mangas'
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded" });
@@ -111,7 +115,23 @@ app.post("/api/:type/import-excel", upload.single('file'), async (req, res) => {
     try {
       currentData = JSON.parse(await fs.promises.readFile(filePath, "utf8"));
     } catch {}
-    const merged = [...currentData, ...dataFromExcel];
+    // If importing mangas, ensure genres is array
+    let processedData = dataFromExcel;
+    if (type === "mangas") {
+      processedData = dataFromExcel.map((row) => {
+        if (typeof row.genres === "string") {
+          return {
+            ...row,
+            genres: row.genres
+              .split(",")
+              .map((g) => g.trim())
+              .filter(Boolean),
+          };
+        }
+        return row;
+      });
+    }
+    const merged = [...currentData, ...processedData];
     await fs.promises.writeFile(filePath, JSON.stringify(merged, null, 2));
     // Xoá file tạm
     fs.unlink(req.file.path, () => {});
@@ -135,7 +155,7 @@ app.get("/api/:type/export-excel", async (req, res) => {
     xlsx.utils.book_append_sheet(wb, ws, type);
     const exportPath = path.join(__dirname, `${type}-export.xlsx`);
     xlsx.writeFile(wb, exportPath);
-    res.download(exportPath, `${type}.xlsx`, err => {
+    res.download(exportPath, `${type}.xlsx`, (err) => {
       fs.unlink(exportPath, () => {});
     });
   } catch (error) {

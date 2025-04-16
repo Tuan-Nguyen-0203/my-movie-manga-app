@@ -13,7 +13,7 @@ const Table = ({
 }) => {
   // Pagination logic giữ nguyên nếu muốn
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(10);
+  const [pageSize, setPageSize] = useState(50);
   const totalPages = Math.ceil(data.length / pageSize);
 
   const paginatedData = data.slice(
@@ -77,13 +77,13 @@ const Table = ({
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium sticky right-0 bg-white">
                         <button
                           onClick={() => onEdit && onEdit(item)}
-                          className="text-blue-600 hover:text-blue-800 mr-4 transition-colors"
+                          className="mr-4 px-3 py-1 rounded bg-blue-100 text-blue-700 hover:bg-blue-300 hover:text-blue-900 transition-colors shadow-sm"
                         >
                           Edit
                         </button>
                         <button
                           onClick={() => onDelete && onDelete(item.id)}
-                          className="text-red-600 hover:text-red-800 transition-colors"
+                          className="px-3 py-1 rounded bg-red-100 text-red-700 hover:bg-red-300 hover:text-red-900 transition-colors shadow-sm"
                         >
                           Delete
                         </button>
@@ -122,10 +122,10 @@ const Table = ({
               onChange={(e) => handlePageSizeChange(Number(e.target.value))}
               className="px-4 py-2 border border-gray-300 rounded-md"
             >
-              <option value={10}>10 records per page</option>
-              <option value={20}>20 records per page</option>
               <option value={50}>50 records per page</option>
               <option value={100}>100 records per page</option>
+              <option value={200}>200 records per page</option>
+              <option value={500}>500 records per page</option>
             </select>
           </div>
 

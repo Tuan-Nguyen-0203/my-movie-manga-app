@@ -26,8 +26,18 @@ function MangasPage() {
 
   const [showForm, setShowForm] = useState(false);
   const [editingManga, setEditingManga] = useState(null);
+  const [formError, setFormError] = useState("");
 
   const handleAddManga = (manga) => {
+    // Duplicate check: name + country
+    const exists = items.some(
+      (m) => m.name.trim().toLowerCase() === manga.name.trim().toLowerCase() && m.country === manga.country
+    );
+    if (exists) {
+      setFormError("❌ Truyện với tên và quốc gia này đã tồn tại!");
+      return;
+    }
+    setFormError("");
     handleAdd({ ...manga, id: `manga-${Date.now()}` });
     setShowForm(false);
   };
@@ -57,13 +67,23 @@ function MangasPage() {
         <SearchBar onSearch={handleSearch} />
         <FilterDropdown
           label="Quốc gia"
-          options={["", ...Array.from(new Set((items || []).map((m) => m.country))).filter(Boolean)]}
+          options={[
+            "",
+            ...Array.from(new Set((items || []).map((m) => m.country))).filter(
+              Boolean
+            ),
+          ]}
           value={countryFilter}
           onChange={setCountryFilter}
         />
         <FilterDropdown
           label="Tình trạng"
-          options={["", ...Array.from(new Set((items || []).map((m) => m.status))).filter(Boolean)]}
+          options={[
+            "",
+            ...Array.from(new Set((items || []).map((m) => m.status))).filter(
+              Boolean
+            ),
+          ]}
           value={statusFilter}
           onChange={setStatusFilter}
         />
@@ -76,14 +96,20 @@ function MangasPage() {
       />
 
       {showForm && (
-        <MangaForm
-          onSubmit={editingManga ? handleUpdate : handleAddManga}
-          manga={editingManga}
-          onCancel={() => {
-            setShowForm(false);
-            setEditingManga(null);
-          }}
-        />
+        <>
+          {formError && (
+            <div className="text-red-500 text-center mb-2">{formError}</div>
+          )}
+          <MangaForm
+            onSave={editingManga ? handleUpdate : handleAddManga}
+            manga={editingManga}
+            onCancel={() => {
+              setShowForm(false);
+              setEditingManga(null);
+              setFormError("");
+            }}
+          />
+        </>
       )}
     </div>
   );

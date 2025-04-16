@@ -9,7 +9,6 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" });
   const [saveMsg, setSaveMsg] = useState("");
 
-
   // Khi movies prop thay đổi (thêm/xoá/sửa), cập nhật lại sortedMovies
   React.useEffect(() => {
     setSortedMovies(movies);
@@ -40,15 +39,36 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
   // Hàm lưu thứ tự hiện tại: gửi đúng thứ tự đang hiển thị (filtered & sorted)
   const handleSaveOrder = async () => {
     setSaveMsg("");
-    if (view !== "all") {
-      setSaveMsg("❌ Chỉ lưu thứ tự khi xem tất cả!");
-      return;
+    let mergedOrder = [];
+    if (view === "all") {
+      mergedOrder = sortedMovies;
+    } else {
+      // Determine which status to update
+      const isViewed = (status) =>
+        ["Đã xem", "Đã đọc"].includes((status || "").trim());
+      let filterFn = () => true;
+      if (view === "viewed") filterFn = (m) => isViewed(m.status);
+      if (view === "unviewed") filterFn = (m) => !isViewed(m.status);
+      // Get all movies not in current filtered set
+      const filteredIds = new Set(filteredMovies.map((m) => m._id || m.id));
+      const unchangedMovies = sortedMovies.filter(
+        (m) => !filteredIds.has(m._id || m.id)
+      );
+      // Merge: insert filteredMovies at positions of old filteredMovies, keep others in place
+      let i = 0;
+      mergedOrder = sortedMovies.map((m) => {
+        if (filterFn(m)) {
+          return filteredMovies[i++];
+        } else {
+          return m;
+        }
+      });
     }
     try {
       const res = await fetch("http://localhost:3001/api/movies/update-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(sortedMovies),
+        body: JSON.stringify(mergedOrder),
       });
       const data = await res.json();
       if (res.ok) setSaveMsg("✅ Đã lưu thứ tự thành công!");
@@ -58,8 +78,6 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
     }
   };
 
-
-
   const columns = [
     { key: "englishName", label: "Tên tiếng Anh" },
     { key: "vietnameseName", label: "Tên tiếng Việt" },
@@ -67,7 +85,23 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
     {
       key: "status",
       label: "Tình trạng",
-      render: (movie) => (movie.status === "Đã xem" ? "Đã xem" : "Chưa xem"),
+      render: (movie) => {
+        const status = (movie.status || "").trim();
+        const statusColors = {
+          "Đã xem": "#4CAF50",      // Green
+          "Đang xem": "#FF9800",    // Orange
+          "Bỏ dở": "#F44336",       // Red
+          "Chưa xem": "#9E9E9E"     // Grey
+        };
+        let display = status;
+        if (["Đã xem"].includes(status)) display = status;
+        else if (["Chưa xem", ""].includes(status)) display = "Chưa xem";
+        else if (["Đang xem"].includes(status)) display = status;
+        else if (["Bỏ dở"].includes(status)) display = status;
+        else display = status || "Chưa xem";
+        const color = statusColors[display] || "#9E9E9E";
+        return <span style={{ color, fontWeight: 600 }}>{display}</span>;
+      },
     },
     { key: "rate", label: "Đánh giá" },
     {
@@ -88,18 +122,57 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
     setImportMsg("");
     const file = e.target.files[0];
     if (!file) return;
-    const formData = new FormData();
-    formData.append("file", file);
     try {
-      const res = await fetch("http://localhost:3001/api/movies/import-excel", {
-        method: "POST",
-        body: formData,
+      // Read file as arrayBuffer for xlsx
+      const XLSX = await import("xlsx");
+      const data = await file.arrayBuffer();
+      const workbook = XLSX.read(data, { type: "array" });
+      const sheetName = workbook.SheetNames[0];
+      const sheet = workbook.Sheets[sheetName];
+      const imported = XLSX.utils.sheet_to_json(sheet);
+      // Check duplicates
+      const existing = sortedMovies || [];
+      const newItems = [];
+      const duplicates = [];
+      imported.forEach((item, idx) => {
+        const englishName = (item.englishName || "").trim().toLowerCase();
+        const country = (item.country || "").trim();
+        const isDup = existing.some(
+          (m) =>
+            (m.englishName || "").trim().toLowerCase() === englishName &&
+            (m.country || "").trim() === country
+        );
+        if (isDup) {
+          duplicates.push({ ...item, row: idx + 2 }); // +2 for header row
+        } else {
+          newItems.push(item);
+        }
       });
-      const data = await res.json();
-      if (res.ok) {
-        setImportMsg(`✅ ${data.message}`);
+      if (newItems.length === 0) {
+        setImportMsg(
+          `❌ Tất cả phim trong file đã tồn tại.\n` +
+            (duplicates.length > 0
+              ? `Trùng ở các dòng: ${duplicates.map((d) => d.row).join(", ")}`
+              : "")
+        );
+        inputRef.current.value = "";
+        return;
+      }
+      // Merge and trigger backend update
+      const updated = [...existing, ...newItems];
+      await fetch("http://localhost:3001/api/movies/update-order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updated),
+      });
+      if (duplicates.length > 0) {
+        setImportMsg(
+          `✅ Đã thêm ${newItems.length} phim mới.\n❌ Bỏ qua ${
+            duplicates.length
+          } phim trùng ở dòng: ${duplicates.map((d) => d.row).join(", ")}`
+        );
       } else {
-        setImportMsg(`❌ ${data.error || "Import lỗi"}`);
+        setImportMsg(`✅ Đã thêm ${newItems.length} phim mới.`);
       }
     } catch (err) {
       setImportMsg("❌ Import lỗi");
@@ -113,9 +186,16 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
       // Dynamically import xlsx only when needed
       const XLSX = await import("xlsx");
       // Prepare data: only export filtered & sorted movies
-      const exportData = filteredMovies.map(({ englishName, vietnameseName, country, status, rate, link }) => ({
-        englishName, vietnameseName, country, status, rate, link
-      }));
+      const exportData = filteredMovies.map(
+        ({ englishName, vietnameseName, country, status, rate, link }) => ({
+          englishName,
+          vietnameseName,
+          country,
+          status,
+          rate,
+          link,
+        })
+      );
       const worksheet = XLSX.utils.json_to_sheet(exportData);
       const workbook = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(workbook, worksheet, "Movies");
@@ -136,32 +216,16 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
   };
 
   return (
-    <div className="h-[calc(100vh-280px)]">
+    <div className="h-[calc(100vh-230px)]">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
-        <div className="space-x-2 mb-2 sm:mb-0">
+        <div className="flex items-center space-x-2 mb-2 sm:mb-0">
           <button
-            onClick={() => setView("all")}
-            className={`px-4 py-2 rounded ${
-              view === "all" ? "bg-blue-500 text-white" : "bg-gray-200"
-            }`}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            onClick={handleSaveOrder}
+            disabled={view !== "all"}
+            title={view !== "all" ? "Chỉ lưu thứ tự khi xem tất cả" : ""}
           >
-            Tất cả
-          </button>
-          <button
-            onClick={() => setView("unviewed")}
-            className={`px-4 py-2 rounded ${
-              view === "unviewed" ? "bg-blue-500 text-white" : "bg-gray-200"
-            }`}
-          >
-            Chưa xem
-          </button>
-          <button
-            onClick={() => setView("viewed")}
-            className={`px-4 py-2 rounded ${
-              view === "viewed" ? "bg-blue-500 text-white" : "bg-gray-200"
-            }`}
-          >
-            Đã xem
+            Save Order
           </button>
         </div>
         <div className="flex items-center space-x-2">
@@ -194,24 +258,16 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
           {importMsg}
         </div>
       )}
-      <div className="flex items-center mb-2 gap-2">
-        <button
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-          onClick={handleSaveOrder}
-          disabled={view !== "all"}
-          title={view !== "all" ? "Chỉ lưu thứ tự khi xem tất cả" : ""}
-        >
-          Save Order
-        </button>
-        {saveMsg && (
+      {saveMsg && (
+        <div className="flex items-center mb-2 gap-2">
           <span
             className="text-sm font-semibold"
             style={{ color: saveMsg.startsWith("✅") ? "green" : "red" }}
           >
             {saveMsg}
           </span>
-        )}
-      </div>
+        </div>
+      )}
       <Table
         data={filteredMovies}
         columns={columns}

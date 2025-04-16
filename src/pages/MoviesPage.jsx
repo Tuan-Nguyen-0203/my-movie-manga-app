@@ -26,8 +26,18 @@ function MoviesPage() {
 
   const [showForm, setShowForm] = useState(false);
   const [editingMovie, setEditingMovie] = useState(null);
+  const [formError, setFormError] = useState("");
 
   const handleAddMovie = (movie) => {
+    // Duplicate check: englishName + country
+    const exists = items.some(
+      (m) => m.englishName.trim().toLowerCase() === movie.englishName.trim().toLowerCase() && m.country === movie.country
+    );
+    if (exists) {
+      setFormError("❌ Phim với tên tiếng Anh và quốc gia này đã tồn tại!");
+      return;
+    }
+    setFormError("");
     handleAdd({ ...movie, id: `movie-${Date.now()}` });
     setShowForm(false);
   };
@@ -87,14 +97,20 @@ function MoviesPage() {
       />
 
       {showForm && (
-        <MovieForm
-          onSubmit={editingMovie ? handleUpdate : handleAddMovie}
-          movie={editingMovie}
-          onCancel={() => {
-            setShowForm(false);
-            setEditingMovie(null);
-          }}
-        />
+        <>
+          {formError && (
+            <div className="text-red-500 text-center mb-2">{formError}</div>
+          )}
+          <MovieForm
+            onSubmit={editingMovie ? handleUpdate : handleAddMovie}
+            movie={editingMovie}
+            onCancel={() => {
+              setShowForm(false);
+              setEditingMovie(null);
+              setFormError("");
+            }}
+          />
+        </>
       )}
     </div>
   );

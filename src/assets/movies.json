@@ -1,47 +1,47 @@
 [
   {
-    "id": "movie-1744649439880",
-    "englishName": "eqw",
-    "vietnameseName": "asdsa",
-    "country": "wqe",
-    "status": "Chưa hoàn thành",
-    "link": "qwe",
-    "rate": 0
-  },
-  {
-    "id": "movie-1744647007610",
-    "englishName": "qweq",
-    "vietnameseName": "asdsaq",
-    "country": "qweqw",
-    "status": "Đã xem",
+    "id": "movie-1744824645739",
+    "englishName": "wqe",
+    "vietnameseName": "qwe",
+    "country": "Trung Quốc",
+    "status": "Chờ đợi",
     "link": "qweqw",
     "rate": 0
   },
   {
-    "id": "movie-1744649401819",
-    "englishName": "qw",
+    "id": "movie-1744825372333",
+    "englishName": "wqe",
     "vietnameseName": "qwe",
-    "country": "qwe",
-    "status": "Đã xem",
-    "link": "qwe",
+    "country": "Việt Nam",
+    "status": "Chưa hoàn thành",
+    "link": "",
     "rate": 0
   },
   {
-    "id": "movie-1744649401818",
-    "englishName": "qweqw",
-    "vietnameseName": "qweq",
-    "country": "qweqw",
-    "status": "Hoàn thành",
-    "link": "qwe",
-    "rate": 1
+    "id": "movie-1744825379361",
+    "englishName": "qwe",
+    "vietnameseName": "",
+    "country": "Trung Quốc",
+    "status": "Chưa hoàn thành",
+    "link": "",
+    "rate": 0
   },
   {
-    "id": "movie-1744738262794",
+    "id": "movie-1744825384581",
     "englishName": "qwe",
-    "vietnameseName": "weq",
+    "vietnameseName": "",
     "country": "Trung Quốc",
-    "status": "Chờ đợi",
-    "link": "qwe",
-    "rate": "2"
+    "status": "Chưa hoàn thành",
+    "link": "",
+    "rate": 0
+  },
+  {
+    "id": "movie-1744825392272",
+    "englishName": "qwe",
+    "vietnameseName": "",
+    "country": "Việt Nam",
+    "status": "Chưa hoàn thành",
+    "link": "",
+    "rate": 0
   }
 ]

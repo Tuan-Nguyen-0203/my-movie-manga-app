@@ -41,7 +41,8 @@ function MangaForm({ manga, onSave, onCancel }) {
       rate: parseInt(rate),
       chapters: parseInt(chapters),
     };
-    onSave(newManga);
+    console.log("newManga:", newManga);
+    if (onSave) onSave(newManga);
   };
 
   // Xử lý chọn nhiều thể loại
@@ -53,7 +54,7 @@ function MangaForm({ manga, onSave, onCancel }) {
     "Hài hước",
     "Hành động",
     "Lãng mạn",
-    "Phiêu lưu"
+    "Phiêu lưu",
   ];
   const handleGenreChange = (e) => {
     const { options } = e.target;
@@ -69,7 +70,7 @@ function MangaForm({ manga, onSave, onCancel }) {
     "Trung Quốc",
     "Hàn Quốc",
     "Thái Lan",
-    "Nhật Bản"
+    "Nhật Bản",
   ];
   const statusOptions = ["Đã đọc", "Chờ đợi", "Đang dịch"];
   const rateOptions = [1, 2, 3];
@@ -83,7 +84,11 @@ function MangaForm({ manga, onSave, onCancel }) {
             {manga ? "Sửa truyện" : "Thêm truyện"}
           </h2>
         </div>
-        <form id="manga-form" onSubmit={handleSubmit} className="flex-1 overflow-y-auto px-4 py-2 space-y-4">
+        <form
+          id="manga-form"
+          onSubmit={handleSubmit}
+          className="flex-1 overflow-y-auto px-4 py-2 space-y-4"
+        >
           <div>
             <label
               htmlFor="name"
@@ -115,10 +120,14 @@ function MangaForm({ manga, onSave, onCancel }) {
               onChange={handleGenreChange}
             >
               {genreOptions.map((option) => (
-                <option key={option} value={option}>{option}</option>
+                <option key={option} value={option}>
+                  {option}
+                </option>
               ))}
             </select>
-            <div className="text-xs text-gray-500 mt-1">(Giữ Ctrl hoặc Cmd để chọn nhiều)</div>
+            <div className="text-xs text-gray-500 mt-1">
+              (Giữ Ctrl hoặc Cmd để chọn nhiều)
+            </div>
           </div>
           <div>
             <label
@@ -135,7 +144,9 @@ function MangaForm({ manga, onSave, onCancel }) {
             >
               <option value="">Chọn quốc gia</option>
               {countryOptions.map((option) => (
-                <option key={option} value={option}>{option}</option>
+                <option key={option} value={option}>
+                  {option}
+                </option>
               ))}
             </select>
           </div>
@@ -153,7 +164,9 @@ function MangaForm({ manga, onSave, onCancel }) {
               onChange={(e) => setStatus(e.target.value)}
             >
               {statusOptions.map((option) => (
-                <option key={option} value={option}>{option}</option>
+                <option key={option} value={option}>
+                  {option}
+                </option>
               ))}
             </select>
           </div>
@@ -187,7 +200,9 @@ function MangaForm({ manga, onSave, onCancel }) {
             >
               <option value="">Chọn rate</option>
               {rateOptions.map((option) => (
-                <option key={option} value={option}>{option}</option>
+                <option key={option} value={option}>
+                  {option}
+                </option>
               ))}
             </select>
           </div>

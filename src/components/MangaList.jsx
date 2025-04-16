@@ -16,18 +16,58 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
     setImportMsg("");
     const file = e.target.files[0];
     if (!file) return;
-    const formData = new FormData();
-    formData.append("file", file);
     try {
-      const res = await fetch("http://localhost:3001/api/mangas/import-excel", {
-        method: "POST",
-        body: formData,
+      // Read file as arrayBuffer for xlsx
+      const XLSX = await import("xlsx");
+      const data = await file.arrayBuffer();
+      const workbook = XLSX.read(data, { type: "array" });
+      const sheetName = workbook.SheetNames[0];
+      const sheet = workbook.Sheets[sheetName];
+      const imported = XLSX.utils.sheet_to_json(sheet);
+      // Check duplicates
+      const existing = sortedMangas || [];
+      const newItems = [];
+      const duplicates = [];
+      imported.forEach((item, idx) => {
+        const name = (item.name || "").trim().toLowerCase();
+        const country = (item.country || "").trim();
+        const isDup = existing.some(
+          (m) =>
+            (m.name || "").trim().toLowerCase() === name &&
+            (m.country || "").trim() === country
+        );
+        if (isDup) {
+          duplicates.push({ ...item, row: idx + 2 }); // +2 for header row
+        } else {
+          newItems.push(item);
+        }
       });
-      const data = await res.json();
-      if (res.ok) {
-        setImportMsg(`✅ ${data.message}`);
+      if (newItems.length === 0) {
+        setImportMsg(
+          `❌ Tất cả truyện trong file đã tồn tại.\n` +
+            (duplicates.length > 0
+              ? `Trùng ở các dòng: ${duplicates.map((d) => d.row).join(", ")}`
+              : "")
+        );
+        inputRef.current.value = "";
+        return;
+      }
+      // Merge and trigger backend update
+      const updated = [...existing, ...newItems];
+      // Optionally: update backend via API (reuse update-order or similar)
+      await fetch("http://localhost:3001/api/mangas/update-order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updated),
+      });
+      if (duplicates.length > 0) {
+        setImportMsg(
+          `✅ Đã thêm ${newItems.length} truyện mới.\n❌ Bỏ qua ${
+            duplicates.length
+          } truyện trùng ở dòng: ${duplicates.map((d) => d.row).join(", ")}`
+        );
       } else {
-        setImportMsg(`❌ ${data.error || "Import lỗi"}`);
+        setImportMsg(`✅ Đã thêm ${newItems.length} truyện mới.`);
       }
     } catch (err) {
       setImportMsg("❌ Import lỗi");
@@ -41,9 +81,16 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
       // Dynamically import xlsx only when needed
       const XLSX = await import("xlsx");
       // Prepare data: only export filtered & sorted mangas
-      const exportData = filteredMangas.map(({ name, country, status, rate, chapters, link }) => ({
-        name, country, status, rate, chapters, link
-      }));
+      const exportData = filteredMangas.map(
+        ({ name, country, status, rate, chapters, link }) => ({
+          name,
+          country,
+          status,
+          rate,
+          chapters,
+          link,
+        })
+      );
       const worksheet = XLSX.utils.json_to_sheet(exportData);
       const workbook = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(workbook, worksheet, "Mangas");
@@ -109,11 +156,33 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
   // Hàm lưu thứ tự hiện tại: gửi toàn bộ sortedMangas lên backend
   const handleSaveOrder = async () => {
     setSaveMsg("");
+    let mergedOrder = [];
+    if (view === "all") {
+      mergedOrder = sortedMangas;
+    } else {
+      // Determine which status to update
+      const isViewed = (status) =>
+        ["Đã xem", "Đã đọc"].includes((status || "").trim());
+      let filterFn = () => true;
+      if (view === "viewed") filterFn = (m) => isViewed(m.status);
+      if (view === "unviewed") filterFn = (m) => !isViewed(m.status);
+      // Get all mangas not in current filtered set
+      const filteredIds = new Set(filteredMangas.map((m) => m._id || m.id));
+      // Merge: insert filteredMangas at positions of old filteredMangas, keep others in place
+      let i = 0;
+      mergedOrder = sortedMangas.map((m) => {
+        if (filterFn(m)) {
+          return filteredMangas[i++];
+        } else {
+          return m;
+        }
+      });
+    }
     try {
       const res = await fetch("http://localhost:3001/api/mangas/update-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(sortedMangas),
+        body: JSON.stringify(mergedOrder),
       });
       const data = await res.json();
       if (res.ok) setSaveMsg("✅ Đã lưu thứ tự thành công!");
@@ -130,7 +199,27 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
     {
       key: "status",
       label: "Tình trạng",
-      render: (manga) => (manga.status === "Đã xem" ? "Đã xem" : "Chưa xem"),
+      render: (manga) => {
+        const status = (manga.status || "").trim();
+        const statusColors = {
+          "Đã xem": "#4CAF50",      // Green
+          "Đã đọc": "#2196F3",      // Blue
+          "Đang xem": "#FF9800",    // Orange
+          "Đang đọc": "#00BCD4",    // Cyan
+          "Bỏ dở": "#F44336",       // Red
+          "Chưa xem": "#9E9E9E",    // Grey
+          "Chưa đọc": "#9E9E9E"     // Grey
+        };
+        // Normalize status for display
+        let display = status;
+        if (["Đã xem", "Đã đọc"].includes(status)) display = status;
+        else if (["Chưa xem", "Chưa đọc", ""].includes(status)) display = "Chưa xem";
+        else if (["Đang xem", "Đang đọc"].includes(status)) display = status;
+        else if (["Bỏ dở"].includes(status)) display = status;
+        else display = status || "Chưa xem";
+        const color = statusColors[display] || "#9E9E9E";
+        return <span style={{ color, fontWeight: 600 }}>{display}</span>;
+      },
     },
     { key: "rate", label: "Đánh giá" },
     { key: "chapters", label: "Chapters" },
@@ -146,39 +235,23 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
   ];
 
   // Chỉ filter theo view (all, unviewed, viewed) trên danh sách đã sort
+  const isViewed = (status) =>
+    ["Đã xem", "Đã đọc"].includes((status || "").trim());
   const filteredMangas = sortedMangas.filter((manga) => {
     if (view === "all") return true;
-    if (view === "unviewed") return manga.status !== "Đã xem";
-    return manga.status === "Đã xem";
+    if (view === "unviewed") return !isViewed(manga.status);
+    return isViewed(manga.status);
   });
 
   return (
-    <div>
+    <div className="h-[calc(100vh-230px)]">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
-        <div className="space-x-2 mb-2 sm:mb-0">
+        <div className="flex items-center space-x-2 mb-2 sm:mb-0">
           <button
-            onClick={() => setView("all")}
-            className={`px-4 py-2 rounded ${
-              view === "all" ? "bg-blue-500 text-white" : "bg-gray-200"
-            }`}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            onClick={handleSaveOrder}
           >
-            Tất cả
-          </button>
-          <button
-            onClick={() => setView("unviewed")}
-            className={`px-4 py-2 rounded ${
-              view === "unviewed" ? "bg-blue-500 text-white" : "bg-gray-200"
-            }`}
-          >
-            Chưa xem
-          </button>
-          <button
-            onClick={() => setView("viewed")}
-            className={`px-4 py-2 rounded ${
-              view === "viewed" ? "bg-blue-500 text-white" : "bg-gray-200"
-            }`}
-          >
-            Đã xem
+            Save Order
           </button>
         </div>
         <div className="flex items-center space-x-2">
@@ -203,22 +276,15 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
           </button>
         </div>
       </div>
-      <div className="flex items-center mb-2 gap-2">
-        <button
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-          onClick={handleSaveOrder}
+
+      {saveMsg && (
+        <span
+          className="text-sm font-semibold"
+          style={{ color: saveMsg.startsWith("✅") ? "green" : "red" }}
         >
-          Save Order
-        </button>
-        {saveMsg && (
-          <span
-            className="text-sm font-semibold"
-            style={{ color: saveMsg.startsWith("✅") ? "green" : "red" }}
-          >
-            {saveMsg}
-          </span>
-        )}
-      </div>
+          {saveMsg}
+        </span>
+      )}
       {importMsg && (
         <div
           className="mb-4 text-sm font-semibold"
