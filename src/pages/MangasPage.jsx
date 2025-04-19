@@ -6,6 +6,23 @@ import SearchBar from "../components/SearchBar";
 import FilterDropdown from "../components/FilterDropdown";
 
 function MangasPage() {
+  // Xoá nhiều record
+  const handleDeleteMany = async (idsToDelete) => {
+    // Lấy danh sách còn lại từ items gốc
+    const remain = items.filter(m => !idsToDelete.has(m.id || m._id));
+    // Gửi lên backend cập nhật
+    try {
+      await fetch("http://localhost:3001/api/mangas/update-order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(remain),
+      });
+    } catch (e) {}
+    // Cập nhật lại state (nếu useData không tự fetch lại)
+    // Nếu useData có hàm reload, nên gọi reload();
+    // Nếu không, có thể setItems(remain) nếu items là state local.
+    // Nếu items là từ backend và tự động reload, không cần làm gì thêm.
+  }
   const {
     items,
     filteredItems,
@@ -93,6 +110,7 @@ function MangasPage() {
         mangas={filteredItems}
         onDelete={handleDelete}
         onEdit={handleEditManga}
+        onDeleteMany={handleDeleteMany}
       />
 
       {showForm && (

@@ -4,13 +4,30 @@ import SearchBar from "./SearchBar";
 
 const MangaList = ({ mangas, onDelete, onEdit }) => {
   // State declarations (only once)
-  const [view, setView] = useState("all");
   const [sortedMangas, setSortedMangas] = useState(mangas);
+
+  // Luôn đồng bộ state khi prop mangas thay đổi
+  React.useEffect(() => {
+    setSortedMangas(mangas);
+  }, [mangas]);
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" });
   const [saveMsg, setSaveMsg] = useState("");
   const [importMsg, setImportMsg] = useState("");
   const [searchText, setSearchText] = useState("");
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [recordsToDelete, setRecordsToDelete] = useState([]);
   const inputRef = React.useRef();
+
+  // Xoá nhiều record
+  const handleDeleteMany = async () => {
+    setShowDeleteModal(false);
+    // Xoá tất cả record đang hiển thị (filtered từ cha)
+    const idsToDelete = new Set(sortedMangas.map(m => m.id || m._id));
+    if (onDeleteMany) onDeleteMany(idsToDelete);
+  };
+
+
+
 
   const handleImport = async (e) => {
     setImportMsg("");
@@ -39,6 +56,10 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
         if (isDup) {
           duplicates.push({ ...item, row: idx + 2 }); // +2 for header row
         } else {
+          // Gán id nếu chưa có
+          if (!item.id) {
+            item.id = `manga-${Date.now()}-${Math.floor(Math.random()*1000000)}`;
+          }
           newItems.push(item);
         }
       });
@@ -234,14 +255,8 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
     },
   ];
 
-  // Chỉ filter theo view (all, unviewed, viewed) trên danh sách đã sort
-  const isViewed = (status) =>
-    ["Đã xem", "Đã đọc"].includes((status || "").trim());
-  const filteredMangas = sortedMangas.filter((manga) => {
-    if (view === "all") return true;
-    if (view === "unviewed") return !isViewed(manga.status);
-    return isViewed(manga.status);
-  });
+  // filteredMangas giờ chính là sortedMangas (đã filter từ cha)
+  const filteredMangas = sortedMangas;
 
   return (
     <div className="h-[calc(100vh-230px)]">
@@ -252,6 +267,15 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
             onClick={handleSaveOrder}
           >
             Save Order
+          </button>
+          <button
+            className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+            onClick={() => {
+              setRecordsToDelete(filteredMangas);
+              setShowDeleteModal(true);
+            }}
+          >
+            Delete
           </button>
         </div>
         <div className="flex items-center space-x-2">
@@ -276,6 +300,30 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
           </button>
         </div>
       </div>
+
+      {/* Modal xác nhận xoá */}
+      {showDeleteModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+          <div className="bg-white rounded shadow-lg p-6 w-80">
+            <h2 className="text-lg font-bold mb-4 text-red-600">Xác nhận xoá</h2>
+            <p className="mb-6 text-gray-700">Bạn có chắc chắn muốn xoá <b>{recordsToDelete.length}</b> truyện đang hiển thị?</p>
+            <div className="flex justify-end space-x-2">
+              <button
+                className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+                onClick={() => setShowDeleteModal(false)}
+              >
+                Huỷ
+              </button>
+              <button
+                className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                onClick={handleDeleteMany}
+              >
+                Xoá
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {saveMsg && (
         <span
