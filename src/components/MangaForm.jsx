@@ -41,8 +41,10 @@ function MangaForm({ manga, onSave, onCancel }) {
       rate: parseInt(rate),
       chapters: parseInt(chapters),
     };
-    console.log("newManga:", newManga);
-    if (onSave) onSave(newManga);
+    if (onSave) {
+      onSave(newManga);
+      if (onCancel) onCancel(); // Đóng modal và reset khi submit thành công
+    }
   };
 
   // Xử lý chọn nhiều thể loại
@@ -55,6 +57,12 @@ function MangaForm({ manga, onSave, onCancel }) {
     "Hành động",
     "Lãng mạn",
     "Phiêu lưu",
+    "Hiện đại",
+    "Cận đại",
+    "Cổ đại",
+    "Trọng sinh",
+    "Giả tưởng",
+    "Mạt thế",
   ];
   const handleGenreChange = (e) => {
     const { options } = e.target;
@@ -72,7 +80,7 @@ function MangaForm({ manga, onSave, onCancel }) {
     "Thái Lan",
     "Nhật Bản",
   ];
-  const statusOptions = ["Đã đọc", "Chờ đợi", "Đang dịch"];
+  const statusOptions = ["Đang đọc", "Đang dịch", "Đã đọc", "Chưa đọc", "Sắp đọc"];
   const rateOptions = [1, 2, 3];
 
   return (

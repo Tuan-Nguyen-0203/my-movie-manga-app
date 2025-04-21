@@ -9,7 +9,7 @@ function MangasPage() {
   // Xoá nhiều record
   const handleDeleteMany = async (idsToDelete) => {
     // Lấy danh sách còn lại từ items gốc
-    const remain = items.filter(m => !idsToDelete.has(m.id || m._id));
+    const remain = items.filter((m) => !idsToDelete.has(m.id || m._id));
     // Gửi lên backend cập nhật
     try {
       await fetch("http://localhost:3001/api/mangas/update-order", {
@@ -22,7 +22,7 @@ function MangasPage() {
     // Nếu useData có hàm reload, nên gọi reload();
     // Nếu không, có thể setItems(remain) nếu items là state local.
     // Nếu items là từ backend và tự động reload, không cần làm gì thêm.
-  }
+  };
   const {
     items,
     filteredItems,
@@ -48,7 +48,9 @@ function MangasPage() {
   const handleAddManga = (manga) => {
     // Duplicate check: name + country
     const exists = items.some(
-      (m) => m.name.trim().toLowerCase() === manga.name.trim().toLowerCase() && m.country === manga.country
+      (m) =>
+        m.name.trim().toLowerCase() === manga.name.trim().toLowerCase() &&
+        m.country === manga.country
     );
     if (exists) {
       setFormError("❌ Truyện với tên và quốc gia này đã tồn tại!");
@@ -62,6 +64,14 @@ function MangasPage() {
   const handleEditManga = (manga) => {
     setEditingManga(manga);
     setShowForm(true);
+  };
+
+  // Khi cập nhật truyện xong, tự động đóng modal và reset state
+  const handleUpdateAndClose = (manga) => {
+    handleUpdate(manga);
+    setShowForm(false);
+    setEditingManga(null);
+    setFormError("");
   };
 
   useEffect(() => {
@@ -95,12 +105,7 @@ function MangasPage() {
         />
         <FilterDropdown
           label="Tình trạng"
-          options={[
-            "",
-            ...Array.from(new Set((items || []).map((m) => m.status))).filter(
-              Boolean
-            ),
-          ]}
+          options={["", "Đang đọc", "Đang dịch", "Đã đọc", "Chưa đọc", "Sắp đọc"]}
           value={statusFilter}
           onChange={setStatusFilter}
         />
@@ -119,7 +124,7 @@ function MangasPage() {
             <div className="text-red-500 text-center mb-2">{formError}</div>
           )}
           <MangaForm
-            onSave={editingManga ? handleUpdate : handleAddManga}
+            onSave={editingManga ? handleUpdateAndClose : handleAddManga}
             manga={editingManga}
             onCancel={() => {
               setShowForm(false);

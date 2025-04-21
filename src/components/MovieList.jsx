@@ -40,6 +40,11 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
     }
     setSortConfig({ key, direction });
     const sorted = [...sortedMovies].sort((a, b) => {
+      if (key === "name") {
+        // Sắp xếp tiếng Việt chuẩn
+        const cmp = (a.name || "").localeCompare(b.name || "", "vi", { sensitivity: "base" });
+        return direction === "asc" ? cmp : -cmp;
+      }
       if (a[key] < b[key]) return direction === "asc" ? -1 : 1;
       if (a[key] > b[key]) return direction === "asc" ? 1 : -1;
       return 0;
@@ -47,47 +52,23 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
     setSortedMovies(sorted);
   };
 
+
   // Hàm lưu thứ tự hiện tại: gửi đúng thứ tự đang hiển thị (filtered & sorted)
   const handleSaveOrder = async () => {
     setSaveMsg("");
-    let mergedOrder = [];
-    if (view === "all") {
-      mergedOrder = sortedMovies;
-    } else {
-      // Determine which status to update
-      const isViewed = (status) =>
-        ["Đã xem", "Đã đọc"].includes((status || "").trim());
-      let filterFn = () => true;
-      if (view === "viewed") filterFn = (m) => isViewed(m.status);
-      if (view === "unviewed") filterFn = (m) => !isViewed(m.status);
-      // Get all movies not in current filtered set
-      const filteredIds = new Set(filteredMovies.map((m) => m._id || m.id));
-      const unchangedMovies = sortedMovies.filter(
-        (m) => !filteredIds.has(m._id || m.id)
-      );
-      // Merge: insert filteredMovies at positions of old filteredMovies, keep others in place
-      let i = 0;
-      mergedOrder = sortedMovies.map((m) => {
-        if (filterFn(m)) {
-          return filteredMovies[i++];
-        } else {
-          return m;
-        }
-      });
-    }
+    const mergedOrder = sortedMovies;
     try {
-      const res = await fetch("http://localhost:3001/api/movies/update-order", {
+      await fetch("http://localhost:3001/api/movies/update-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(mergedOrder),
       });
-      const data = await res.json();
-      if (res.ok) setSaveMsg("✅ Đã lưu thứ tự thành công!");
-      else setSaveMsg("❌ " + (data.error || "Lỗi lưu thứ tự"));
+      setSaveMsg("✅ Đã lưu thứ tự thành công!");
     } catch (e) {
       setSaveMsg("❌ Lỗi lưu thứ tự!");
     }
   };
+
 
   const columns = [
     { key: "englishName", label: "Tên tiếng Anh" },
@@ -98,20 +79,29 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
       label: "Tình trạng",
       render: (movie) => {
         const status = (movie.status || "").trim();
-        const statusColors = {
-          "Đã xem": "#4CAF50",      // Green
-          "Đang xem": "#FF9800",    // Orange
-          "Bỏ dở": "#F44336",       // Red
-          "Chưa xem": "#9E9E9E"     // Grey
-        };
-        let display = status;
-        if (["Đã xem"].includes(status)) display = status;
-        else if (["Chưa xem", ""].includes(status)) display = "Chưa xem";
-        else if (["Đang xem"].includes(status)) display = status;
-        else if (["Bỏ dở"].includes(status)) display = status;
-        else display = status || "Chưa xem";
-        const color = statusColors[display] || "#9E9E9E";
-        return <span style={{ color, fontWeight: 600 }}>{display}</span>;
+        let color = "#9CA3AF"; // Gray-400 default
+        let border = "#D1D5DB"; // Gray-300 default
+        if (status === "Đang xem") { color = "#2563EB"; border = "#60A5FA"; } // Blue-600/Blue-400
+        else if (status === "Đã xem") { color = "#16A34A"; border = "#86EFAC"; } // Green-600/Green-300
+        else if (status === "Bỏ dở") { color = "#EF4444"; border = "#f87171"; } // Red-500/Red-300
+        // Chưa xem giữ màu xám
+        return (
+          <span
+            style={{
+              display: "inline-block",
+              padding: "0.15em 0.7em",
+              fontWeight: 600,
+              border: `1.5px solid ${border}`,
+              borderRadius: "999px",
+              color,
+              background: "#fff",
+              fontSize: 13,
+              letterSpacing: 0.2,
+            }}
+          >
+            {status}
+          </span>
+        );
       },
     },
     { key: "rate", label: "Đánh giá" },
@@ -146,6 +136,10 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
       const newItems = [];
       const duplicates = [];
       imported.forEach((item, idx) => {
+      // Convert all '-' values to empty string/null for app
+      Object.keys(item).forEach((key) => {
+        if (item[key] === '-') item[key] = '';
+      });
         const englishName = (item.englishName || "").trim().toLowerCase();
         const country = (item.country || "").trim();
         const isDup = existing.some(
@@ -201,16 +195,14 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
       // Dynamically import xlsx only when needed
       const XLSX = await import("xlsx");
       // Prepare data: only export filtered & sorted movies
-      const exportData = filteredMovies.map(
-        ({ englishName, vietnameseName, country, status, rate, link }) => ({
-          englishName,
-          vietnameseName,
-          country,
-          status,
-          rate,
-          link,
-        })
-      );
+      const exportData = filteredMovies.map(({ englishName, vietnameseName, country, status, rate, link }) => ({
+        englishName: englishName == null || englishName === '' ? '-' : englishName,
+        vietnameseName: vietnameseName == null || vietnameseName === '' ? '-' : vietnameseName,
+        country: country == null || country === '' ? '-' : country,
+        status: status == null || status === '' ? '-' : status,
+        rate: rate == null || rate === '' ? '-' : rate,
+        link: link == null || link === '' ? '-' : link,
+      }));
       const worksheet = XLSX.utils.json_to_sheet(exportData);
       const workbook = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(workbook, worksheet, "Movies");

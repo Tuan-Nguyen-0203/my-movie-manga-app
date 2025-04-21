@@ -13,7 +13,7 @@ const Table = ({
 }) => {
   // Pagination logic giữ nguyên nếu muốn
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(50);
+  const [pageSize, setPageSize] = useState(100);
   const totalPages = Math.ceil(data.length / pageSize);
 
   const paginatedData = data.slice(
@@ -122,9 +122,9 @@ const Table = ({
               onChange={(e) => handlePageSizeChange(Number(e.target.value))}
               className="px-4 py-2 border border-gray-300 rounded-md"
             >
-              <option value={50}>50 records per page</option>
               <option value={100}>100 records per page</option>
               <option value={200}>200 records per page</option>
+              <option value={300}>300 records per page</option>
               <option value={500}>500 records per page</option>
             </select>
           </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Table from "./Table";
 import SearchBar from "./SearchBar";
 
-const MangaList = ({ mangas, onDelete, onEdit }) => {
+const MangaList = ({ mangas, onDelete, onEdit, onDeleteMany }) => {
   // State declarations (only once)
   const [sortedMangas, setSortedMangas] = useState(mangas);
 
@@ -22,12 +22,9 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
   const handleDeleteMany = async () => {
     setShowDeleteModal(false);
     // Xoá tất cả record đang hiển thị (filtered từ cha)
-    const idsToDelete = new Set(sortedMangas.map(m => m.id || m._id));
+    const idsToDelete = new Set(sortedMangas.map((m) => m.id || m._id));
     if (onDeleteMany) onDeleteMany(idsToDelete);
   };
-
-
-
 
   const handleImport = async (e) => {
     setImportMsg("");
@@ -46,6 +43,10 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
       const newItems = [];
       const duplicates = [];
       imported.forEach((item, idx) => {
+      // Convert all '-' values to empty string/null for app
+      Object.keys(item).forEach((key) => {
+        if (item[key] === '-') item[key] = '';
+      });
         const name = (item.name || "").trim().toLowerCase();
         const country = (item.country || "").trim();
         const isDup = existing.some(
@@ -58,7 +59,9 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
         } else {
           // Gán id nếu chưa có
           if (!item.id) {
-            item.id = `manga-${Date.now()}-${Math.floor(Math.random()*1000000)}`;
+            item.id = `manga-${Date.now()}-${Math.floor(
+              Math.random() * 1000000
+            )}`;
           }
           newItems.push(item);
         }
@@ -103,13 +106,14 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
       const XLSX = await import("xlsx");
       // Prepare data: only export filtered & sorted mangas
       const exportData = filteredMangas.map(
-        ({ name, country, status, rate, chapters, link }) => ({
-          name,
-          country,
-          status,
-          rate,
-          chapters,
-          link,
+        ({ name, genres, country, status, rate, chapters, link }) => ({
+          name: name == null || name === '' ? '-' : name,
+          genres: !genres || (Array.isArray(genres) && genres.length === 0) ? '-' : Array.isArray(genres) ? genres.join(', ') : genres,
+          country: country == null || country === '' ? '-' : country,
+          status: status == null || status === '' ? '-' : status,
+          rate: rate == null || rate === '' ? '-' : rate,
+          chapters: chapters == null || chapters === '' ? '-' : chapters,
+          link: link == null || link === '' ? '-' : link,
         })
       );
       const worksheet = XLSX.utils.json_to_sheet(exportData);
@@ -167,6 +171,11 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
     }
     setSortConfig({ key, direction });
     const sorted = [...sortedMangas].sort((a, b) => {
+      if (key === "name") {
+        // Sắp xếp tiếng Việt chuẩn
+        const cmp = (a.name || "").localeCompare(b.name || "", "vi", { sensitivity: "base" });
+        return direction === "asc" ? cmp : -cmp;
+      }
       if (a[key] < b[key]) return direction === "asc" ? -1 : 1;
       if (a[key] > b[key]) return direction === "asc" ? 1 : -1;
       return 0;
@@ -174,40 +183,18 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
     setSortedMangas(sorted);
   };
 
+
   // Hàm lưu thứ tự hiện tại: gửi toàn bộ sortedMangas lên backend
   const handleSaveOrder = async () => {
     setSaveMsg("");
-    let mergedOrder = [];
-    if (view === "all") {
-      mergedOrder = sortedMangas;
-    } else {
-      // Determine which status to update
-      const isViewed = (status) =>
-        ["Đã xem", "Đã đọc"].includes((status || "").trim());
-      let filterFn = () => true;
-      if (view === "viewed") filterFn = (m) => isViewed(m.status);
-      if (view === "unviewed") filterFn = (m) => !isViewed(m.status);
-      // Get all mangas not in current filtered set
-      const filteredIds = new Set(filteredMangas.map((m) => m._id || m.id));
-      // Merge: insert filteredMangas at positions of old filteredMangas, keep others in place
-      let i = 0;
-      mergedOrder = sortedMangas.map((m) => {
-        if (filterFn(m)) {
-          return filteredMangas[i++];
-        } else {
-          return m;
-        }
-      });
-    }
+    const mergedOrder = sortedMangas;
     try {
-      const res = await fetch("http://localhost:3001/api/mangas/update-order", {
+      await fetch("http://localhost:3001/api/mangas/update-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(mergedOrder),
       });
-      const data = await res.json();
-      if (res.ok) setSaveMsg("✅ Đã lưu thứ tự thành công!");
-      else setSaveMsg("❌ " + (data.error || "Lỗi lưu thứ tự"));
+      setSaveMsg("✅ Đã lưu thứ tự thành công!");
     } catch (e) {
       setSaveMsg("❌ Lỗi lưu thứ tự!");
     }
@@ -222,25 +209,54 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
       label: "Tình trạng",
       render: (manga) => {
         const status = (manga.status || "").trim();
-        const statusColors = {
-          "Đã xem": "#4CAF50",      // Green
-          "Đã đọc": "#2196F3",      // Blue
-          "Đang xem": "#FF9800",    // Orange
-          "Đang đọc": "#00BCD4",    // Cyan
-          "Bỏ dở": "#F44336",       // Red
-          "Chưa xem": "#9E9E9E",    // Grey
-          "Chưa đọc": "#9E9E9E"     // Grey
-        };
-        // Normalize status for display
-        let display = status;
-        if (["Đã xem", "Đã đọc"].includes(status)) display = status;
-        else if (["Chưa xem", "Chưa đọc", ""].includes(status)) display = "Chưa xem";
-        else if (["Đang xem", "Đang đọc"].includes(status)) display = status;
-        else if (["Bỏ dở"].includes(status)) display = status;
-        else display = status || "Chưa xem";
-        const color = statusColors[display] || "#9E9E9E";
-        return <span style={{ color, fontWeight: 600 }}>{display}</span>;
+        let color = "#EF4444"; // Red-400 default
+        let border = "#f87171"; // Red-300 default
+        if (status === "Đang đọc") {
+          color = "#2563EB";
+          border = "#60A5FA";
+        } // Blue-600/Blue-400
+        else if (status === "Đang dịch") {
+          color = "#A21CAF";
+          border = "#C7D2E7"; // Purple-100
+        } // Purple-700/Purple-100
+        else if (status === "Đã đọc") {
+          color = "#16A34A";
+          border = "#86EFAC";
+        } // Green-600/Green-300
+        else if (status === "Sắp đọc") {
+          color = "#D97706";
+          border = "#FBBF24";
+        } // Orange-600/Yellow-400
+        // Chưa đọc giữ màu xám
+        return (
+          <span
+            style={{
+              display: "inline-block",
+              padding: "0.15em 0.7em",
+              fontWeight: 600,
+              border: `1.5px solid ${border}`,
+              borderRadius: "999px",
+              color,
+              background: "#fff",
+              fontSize: 13,
+              letterSpacing: 0.2,
+            }}
+          >
+            {status}
+          </span>
+        );
       },
+    },
+    {
+      key: "genres",
+      label: "Thể loại",
+      render: (manga) => (
+        <span>
+          {Array.isArray(manga.genres)
+            ? manga.genres.join(", ")
+            : manga.genres || ""}
+        </span>
+      ),
     },
     { key: "rate", label: "Đánh giá" },
     { key: "chapters", label: "Chapters" },
@@ -305,8 +321,13 @@ const MangaList = ({ mangas, onDelete, onEdit }) => {
       {showDeleteModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
           <div className="bg-white rounded shadow-lg p-6 w-80">
-            <h2 className="text-lg font-bold mb-4 text-red-600">Xác nhận xoá</h2>
-            <p className="mb-6 text-gray-700">Bạn có chắc chắn muốn xoá <b>{recordsToDelete.length}</b> truyện đang hiển thị?</p>
+            <h2 className="text-lg font-bold mb-4 text-red-600">
+              Xác nhận xoá
+            </h2>
+            <p className="mb-6 text-gray-700">
+              Bạn có chắc chắn muốn xoá <b>{recordsToDelete.length}</b> truyện
+              đang hiển thị?
+            </p>
             <div className="flex justify-end space-x-2">
               <button
                 className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"

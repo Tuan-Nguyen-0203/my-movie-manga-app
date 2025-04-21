@@ -96,12 +96,7 @@ function MoviesPage() {
         />
         <FilterDropdown
           label="Tình trạng"
-          options={[
-            "",
-            ...Array.from(new Set((items || []).map((m) => m.status))).filter(
-              Boolean
-            ),
-          ]}
+          options={["", "Đang xem", "Đã xem", "Chưa xem", "Bỏ dở"]}
           value={statusFilter}
           onChange={setStatusFilter}
         />
