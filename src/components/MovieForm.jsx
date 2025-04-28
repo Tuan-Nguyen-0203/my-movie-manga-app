@@ -6,7 +6,7 @@ const MovieForm = ({ onSubmit, onCancel, movie = null }) => {
     englishName: movie?.englishName || "",
     vietnameseName: movie?.vietnameseName || "",
     country: movie?.country || "",
-    status: movie?.status || "Chưa hoàn thành",
+    status: movie?.status || "Chưa xem",
     link: movie?.link || "",
     rate: movie?.rate || 0,
   });
@@ -109,8 +109,8 @@ const MovieForm = ({ onSubmit, onCancel, movie = null }) => {
               onChange={handleChange}
             >
               <option value="Đã xem">Đã xem</option>
-              <option value="Chờ đợi">Chờ đợi</option>
-              <option value="Đang dịch">Đang dịch</option>
+              <option value="Chưa xem">Chưa xem</option>
+              <option value="Sắp xem">Sắp xem</option>
             </select>
           </div>
           <div>

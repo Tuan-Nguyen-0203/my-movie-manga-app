@@ -96,7 +96,7 @@ function MoviesPage() {
         />
         <FilterDropdown
           label="Tình trạng"
-          options={["", "Đang xem", "Đã xem", "Chưa xem", "Bỏ dở"]}
+          options={["", "Đã xem", "Chưa xem", "Sắp xem"]}
           value={statusFilter}
           onChange={setStatusFilter}
         />

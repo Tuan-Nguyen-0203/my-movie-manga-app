@@ -81,9 +81,8 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
         const status = (movie.status || "").trim();
         let color = "#9CA3AF"; // Gray-400 default
         let border = "#D1D5DB"; // Gray-300 default
-        if (status === "Đang xem") { color = "#2563EB"; border = "#60A5FA"; } // Blue-600/Blue-400
-        else if (status === "Đã xem") { color = "#16A34A"; border = "#86EFAC"; } // Green-600/Green-300
-        else if (status === "Bỏ dở") { color = "#EF4444"; border = "#f87171"; } // Red-500/Red-300
+        if (status === "Đã xem") { color = "#16A34A"; border = "#86EFAC"; } // Green-600/Green-300
+        else if (status === "Sắp xem") { color = "#D97706"; border = "#FBBF24"; } // Orange-600/Yellow-400
         // Chưa xem giữ màu xám
         return (
           <span
