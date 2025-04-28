@@ -24,12 +24,14 @@
     "id": "manga-1745082878479-676894"
   },
   {
+    "id": "manga-1745082878479-308098",
     "name": "Ân hữu trọng báo",
-    "chapters": 120,
+    "genres": [],
     "country": "Trung Quốc",
-    "status": "Chưa đọc",
+    "status": "Sắp dịch",
     "link": "https://www.wattpad.com/story/112314517-%C4%91m-%C3%A2n-h%E1%BB%AFu-tr%E1%BB%8Dng-b%C3%A1o-full",
-    "id": "manga-1745082878479-308098"
+    "rate": null,
+    "chapters": 120
   },
   {
     "name": "Bạc vụ",
@@ -48,12 +50,14 @@
     "id": "manga-1745082878479-996889"
   },
   {
+    "id": "manga-1745082878479-546311",
     "name": "Bàn Tròn Trí Mạng",
-    "chapters": 109,
+    "genres": [],
     "country": "Trung Quốc",
-    "status": "Chưa đọc",
+    "status": "Sắp dịch",
     "link": "https://www.wattpad.com/story/277268213-ho%C3%A0n_%C4%91ang-beta-b%C3%A0n-tr%C3%B2n-tr%C3%AD-m%E1%BA%A1ng-ti%E1%BA%BFu-thanh-chanh",
-    "id": "manga-1745082878479-546311"
+    "rate": null,
+    "chapters": 109
   },
   {
     "name": "Bao nhiêu tiền mới chịu bán cho anh",
@@ -102,7 +106,7 @@
       "Xuyên thư"
     ],
     "country": "Trung Quốc",
-    "status": "Đang dịch",
+    "status": "Đang đọc",
     "link": "https://www.wattpad.com/story/308522000-%C4%91m-edit-ho%C3%A0n-c%C3%A1-m%E1%BA%B7n-ngh%C4%A9-th%C3%B4ng-su%E1%BB%91t-r%E1%BB%93i-tr%C3%AC-v%C3%A3n",
     "rate": null,
     "chapters": 130
@@ -172,12 +176,14 @@
     "id": "manga-1745082878479-240554"
   },
   {
+    "id": "manga-1745082878479-451291",
     "name": "Cục cưng bé nhỏ ăn no chưa",
-    "chapters": 83,
+    "genres": [],
     "country": "Trung Quốc",
-    "status": "Chưa đọc",
+    "status": "Sắp dịch",
     "link": "https://www.wattpad.com/story/311582110-%C4%91m-edit-ho%C3%A0n-c%E1%BB%A5c-c%C6%B0ng-b%C3%A9-nh%E1%BB%8F-%C4%83n-no-ch%C6%B0a",
-    "id": "manga-1745082878479-451291"
+    "rate": null,
+    "chapters": 83
   },
   {
     "name": "Cửa hàng nhang đèn của tiểu lão bản",
@@ -590,7 +596,7 @@
     "name": "Sau khi kết hôn cùng ông xã khuyết tật giàu sang",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Đã đọc",
+    "status": "Đã dịch",
     "link": "https://www.wattpad.com/story/274689032-sau-khi-k%E1%BA%BFt-h%C3%B4n-c%C3%B9ng-%C3%B4ng-x%C3%A3-khuy%E1%BA%BFt-t%E1%BA%ADt-gi%C3%A0u-sang",
     "rate": null,
     "chapters": 48
@@ -745,13 +751,14 @@
     "id": "manga-1745082878479-616130"
   },
   {
+    "id": "manga-1745082878479-543725",
     "name": "Thụ thế thân thức tỉnh rồi",
-    "chapters": 156,
-    "genres": "Xuyên thư",
+    "genres": [],
     "country": "Trung Quốc",
-    "status": "Chưa đọc",
+    "status": "Đã dịch",
     "link": "https://www.wattpad.com/story/343581957-ho%C3%A0n-%C4%91m-th%E1%BB%A5-th%E1%BA%BF-th%C3%A2n-th%E1%BB%A9c-t%E1%BB%89nh-r%E1%BB%93i",
-    "id": "manga-1745082878479-543725"
+    "rate": null,
+    "chapters": 156
   },
   {
     "name": "Thử Ghẹo Lần Nữa Xem",
@@ -794,11 +801,14 @@
     "id": "manga-1744908166177-620052"
   },
   {
+    "id": "manga-1745082878479-789159",
     "name": "Toàn Showbiz Nghe Tôi Nổi Điên",
+    "genres": [],
     "country": "Trung Quốc",
-    "status": "Chưa đọc",
+    "status": "Sắp dịch",
     "link": "https://www.wattpad.com/story/375352203-%C4%91m-h%C3%A0i-to%C3%A0n-showbiz-nghe-t%C3%B4i-n%E1%BB%95i-%C4%91i%C3%AAn",
-    "id": "manga-1745082878479-789159"
+    "rate": null,
+    "chapters": null
   },
   {
     "name": "Tọng đuôi",
@@ -847,9 +857,9 @@
       "Xuyên thư"
     ],
     "country": "Trung Quốc",
-    "status": "Đang đọc",
+    "status": "Đã đọc",
     "link": "https://www.wattpad.com/story/313470278-ho%C3%A0n-%C4%91m-trong-ngo%C3%A0i-kh%C3%B4ng-%C4%91%E1%BB%93ng-nh%E1%BA%A5t-tu%E1%BB%B3-th%E1%BB%9Di-l%E1%BA%ADt",
-    "rate": null,
+    "rate": 2,
     "chapters": 113
   },
   {
@@ -876,12 +886,14 @@
     "id": "manga-1744908166177-665458"
   },
   {
+    "id": "manga-1745082878479-999261",
     "name": "Vợ mình mình nuôi",
-    "chapters": 112,
+    "genres": [],
     "country": "Trung Quốc",
-    "status": "Chưa đọc",
+    "status": "Sắp dịch",
     "link": "https://www.wattpad.com/story/328180918-ho%C3%A0n-%C4%91m-v%E1%BB%A3-m%C3%ACnh-m%C3%ACnh-nu%C3%B4i",
-    "id": "manga-1745082878479-999261"
+    "rate": null,
+    "chapters": 112
   },
   {
     "name": "Xin chào ác quỷ",
@@ -917,7 +929,7 @@
   },
   {
     "id": "manga-1745164917859",
-    "name": "Thụ Ốm Yếu Muốn Làm Cá Mặn Trong Truyện",
+    "name": "Thụ Ốm Yếu Muốn Làm Cá Mặn Trong Truyện Ngược",
     "genres": [
       "Xuyên thư"
     ],
@@ -986,7 +998,7 @@
       "Trinh thám"
     ],
     "country": "Trung Quốc",
-    "status": "Sắp đọc",
+    "status": "Sắp dịch",
     "link": "https://wattpad.vn/doc-tham/",
     "rate": null,
     "chapters": 185
@@ -1062,5 +1074,259 @@
     "link": "https://xuyenthan.wordpress.com/2018/12/04/muc-luc-mat-that-the-bai-diep-chi-linh/",
     "rate": null,
     "chapters": 590
+  },
+  {
+    "id": "manga-1745261411008",
+    "name": "My Engineer",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Thái Lan",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/339379033-bohn-x-duen-my-engineer-c%C3%B3-%C3%A1o-th%E1%BB%B1c-t%E1%BA%ADp-k%E1%BB%B9-thu%E1%BA%ADt",
+    "rate": null,
+    "chapters": 74
+  },
+  {
+    "id": "manga-1745261603029",
+    "name": "Nghiêm cấm gọi",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Thái Lan",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/342908370-truy%E1%BB%87n-th%C3%A1i-%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81%E0%B8%AB%E0%B8%99%E0%B8%B9%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B8%95%E0%B8%B1%E0%B8%A7%E0%B9%80%E0%B8%A5%E0%B9%87%E0%B8%81-ngi%C3%AAm-c%E1%BA%A5m-g%E1%BB%8Di",
+    "rate": null,
+    "chapters": null
+  },
+  {
+    "id": "manga-1745261891515",
+    "name": "Tan Làm Đừng Về Nhà Với Bác Sĩ Chung",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/1505104304-%C4%91m-edit-ho%C3%A0n-tan-l%C3%A0m-%C4%91%E1%BB%ABng-v%E1%BB%81-nh%C3%A0-v%E1%BB%9Bi-b%C3%A1c-s%C4%A9-chung",
+    "rate": null,
+    "chapters": 65
+  },
+  {
+    "id": "manga-1745263232135",
+    "name": "Bàn Hạ Tình Yêu (Tình Yêu Dưới Bàn)",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/386503057-b%C3%A0n-h%E1%BA%A1-t%C3%ACnh-y%C3%AAu-b%C3%A1n-%C4%91%E1%BA%A3o-thi%E1%BA%BFt-h%E1%BA%A1p",
+    "rate": null,
+    "chapters": 64
+  },
+  {
+    "id": "manga-1745263314473",
+    "name": "Sau Khi Kết Hôn Với Giáo Sư Tống",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/387001056-sau-khi-k%E1%BA%BFt-h%C3%B4n-v%E1%BB%9Bi-gi%C3%A1o-s%C6%B0-t%E1%BB%91ng-b%E1%BA%A7n-t%C3%ADch-%C4%91%C3%ADch-%C4%91%E1%BA%A3o",
+    "rate": null,
+    "chapters": 49
+  },
+  {
+    "id": "manga-1745518602951",
+    "name": "Thì thầm bên tai em ",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/344014954-%C4%91m-ho%C3%A0n-th%C3%AC-th%E1%BA%A7m-b%C3%AAn-tai-em-c%E1%BB%91-chi",
+    "rate": null,
+    "chapters": 89
+  },
+  {
+    "id": "manga-1745520450222",
+    "name": "Cậu thử trốn tôi lần nữa xem",
+    "genres": [
+      "Thanh xuân vườn trường"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/324582574-ho%C3%A0n-edit-c%E1%BA%ADu-th%E1%BB%AD-tr%E1%BB%91n-t%C3%B4i-l%E1%BA%A7n-n%E1%BB%AFa-xem-kim-nh%C3%A0n",
+    "rate": null,
+    "chapters": 68
+  },
+  {
+    "id": "manga-1745600075472",
+    "name": "Hợp đồng ly hôn trước khi tôi mất",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/315971359-%C4%91m-ho%C3%A0n-h%E1%BB%A3p-%C4%91%E1%BB%93ng-ly-h%C3%B4n-tr%C6%B0%E1%BB%9Bc-khi-t%C3%B4i-m%E1%BA%A5t-tr%C3%AD-nh%E1%BB%9B",
+    "rate": null,
+    "chapters": 117
+  },
+  {
+    "id": "manga-1745601195786",
+    "name": "Bé ngốc cũng được nhà giàu nuông chiều",
+    "genres": [
+      "Xuyên thư",
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/359087248-%C4%91m-edit-b%C3%A9-ng%E1%BB%91c-c%C5%A9ng-%C4%91%C6%B0%E1%BB%A3c-nh%C3%A0-gi%C3%A0u-nu%C3%B4ng-chi%E1%BB%81u",
+    "rate": null,
+    "chapters": 169
+  },
+  {
+    "id": "manga-1745601509526",
+    "name": "1359368765",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/248473275-s%E1%BB%B1-%E1%BB%B7-l%E1%BA%A1i-nguy-hi%E1%BB%83m",
+    "rate": null,
+    "chapters": 105
+  },
+  {
+    "id": "manga-1745602424218",
+    "name": "Trúc mã của tôi là tra công",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/282901791-tr%C3%BAc-m%C3%A3-c%E1%BB%A7a-t%C3%B4i-l%C3%A0-tra-c%C3%B4ng",
+    "rate": null,
+    "chapters": 128
+  },
+  {
+    "id": "manga-1745602597897",
+    "name": "Xuyên thành nam thê pháo hôi của nhân vật phản diện",
+    "genres": [
+      "Xuyên thư"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/302162559-xuy%C3%AAn-th%C3%A0nh-nam-th%C3%AA-ph%C3%A1o-h%C3%B4i-c%E1%BB%A7a-nh%C3%A2n-v%E1%BA%ADt-ph%E1%BA%A3n",
+    "rate": null,
+    "chapters": 119
+  },
+  {
+    "id": "manga-1745603778591",
+    "name": "Tôi thích bạn trai cậu từ rất lâu rồi",
+    "genres": [
+      "Thanh xuân vườn trường"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/294131070-t%C3%B4i-th%C3%ADch-b%E1%BA%A1n-trai-c%E1%BA%ADu-t%E1%BB%AB-r%E1%BA%A5t-l%C3%A2u-r%E1%BB%93i-t%C6%B0%C6%A1ng-t%E1%BB%AD-b%E1%BB%91i",
+    "rate": null,
+    "chapters": 44
+  },
+  {
+    "id": "manga-1745604122899",
+    "name": "Xuyên thành vị hôn phu chuyên tìm đường chết",
+    "genres": [
+      "Xuyên thư"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/206867576-cv-ho%C3%A0n-xuy%C3%AAn-th%C3%A0nh-v%E1%BB%8B-h%C3%B4n-phu-chuy%C3%AAn-t%C3%ACm-%C4%91%C6%B0%E1%BB%9Dng",
+    "rate": null,
+    "chapters": 196
+  },
+  {
+    "id": "manga-1745604605215",
+    "name": "Trêu chọc",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/242386484-edit-ho%C3%A0n-tr%C3%AAu-ch%E1%BB%8Dc-m%E1%BB%99c-h%E1%BB%81-n%C6%B0%C6%A1ng",
+    "rate": null,
+    "chapters": 26
+  },
+  {
+    "id": "manga-1745605384103",
+    "name": "Thần thật là yếu đuối",
+    "genres": [
+      "Xuyên thư",
+      "Cổ đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/339278328-10-%C4%91am-m%E1%BB%B9-completed-th%E1%BA%A7n-th%E1%BA%ADt-l%C3%A0-y%E1%BA%BFu-%C4%91u%E1%BB%91i-m%C3%A3-h%E1%BB%99-t%E1%BB%AD",
+    "rate": null,
+    "chapters": 97
+  },
+  {
+    "id": "manga-1745607769998",
+    "name": "Xuyên thành nghề nghiệp sư tôn có độ nguy hiểm cao",
+    "genres": [
+      "Xuyên thư"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/296517829-new-xuy%C3%AAn-th%C3%A0nh-ngh%E1%BB%81-nghi%E1%BB%87p-s%C6%B0-t%C3%B4n-c%C3%B3-%C4%91%E1%BB%99-nguy",
+    "rate": null,
+    "chapters": 154
+  },
+  {
+    "id": "manga-1745691634919",
+    "name": "Sau Khi Kết Hôn Với Nhân Vật Phản Diện Tàn Tật",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://wattpad.vn/sau-khi-ket-hon-voi-nhan-vat-phan-dien-tan-tat/trang-2/#s_c_content",
+    "rate": null,
+    "chapters": 53
+  },
+  {
+    "id": "manga-1745692398517",
+    "name": "Em bé đáng yêu mềm mại gả cho tổng tài nóng nảy",
+    "genres": [
+      "Trọng sinh"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/315948976-em-b%C3%A9-%C4%91%C3%A1ng-y%C3%AAu-m%E1%BB%81m-m%E1%BA%A1i-g%E1%BA%A3-cho-t%E1%BB%95ng-t%C3%A0i-n%C3%B3ng-n%E1%BA%A3y",
+    "rate": null,
+    "chapters": 115
+  },
+  {
+    "id": "manga-1745692827682",
+    "name": "Đừng hòng dạy hư tôi",
+    "genres": [
+      "Thanh xuân vườn trường"
+    ],
+    "country": "Trung Quốc",
+    "status": "Sắp dịch",
+    "link": "https://www.wattpad.com/story/336440839-xong-edit-%C4%91m-%C4%91%E1%BB%ABng-h%C3%B2ng-d%E1%BA%A1y-h%C6%B0-t%C3%B4i-la-b%E1%BB%91c-hoa-th%E1%BB%91",
+    "rate": null,
+    "chapters": 111
+  },
+  {
+    "id": "manga-1745693213065",
+    "name": "Tin Đồn",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Sắp dịch",
+    "link": "https://www.wattpad.com/story/294600652-end-tin-%C4%91%E1%BB%93n-d%C6%B0-tr%C3%ACnh",
+    "rate": null,
+    "chapters": 82
   }
 ]

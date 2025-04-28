@@ -223,10 +223,14 @@ const MangaList = ({ mangas, onDelete, onEdit, onDeleteMany }) => {
           color = "#16A34A";
           border = "#86EFAC";
         } // Green-600/Green-300
-        else if (status === "Sắp đọc") {
+        else if (status === "Sắp dịch") {
           color = "#D97706";
           border = "#FBBF24";
         } // Orange-600/Yellow-400
+        else if (status === "Đã dịch") {
+          color = "#14B8A6";
+          border = "#99F6E4";
+        } // Teal-500/Teal-200
         // Chưa đọc giữ màu xám
         return (
           <span

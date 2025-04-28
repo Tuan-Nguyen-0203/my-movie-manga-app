@@ -105,7 +105,7 @@ function MangasPage() {
         />
         <FilterDropdown
           label="Tình trạng"
-          options={["", "Đang đọc", "Đang dịch", "Đã đọc", "Chưa đọc", "Sắp đọc"]}
+          options={["", "Đang đọc", "Đang dịch", "Đã dịch", "Đã đọc", "Chưa đọc", "Sắp dịch"]}
           value={statusFilter}
           onChange={setStatusFilter}
         />

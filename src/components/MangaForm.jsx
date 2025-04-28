@@ -4,7 +4,7 @@ function MangaForm({ manga, onSave, onCancel }) {
   const [name, setName] = useState("");
   const [genres, setGenres] = useState([]); // Thể loại
   const [country, setCountry] = useState("");
-  const [status, setStatus] = useState("Đã đọc");
+  const [status, setStatus] = useState("Chưa đọc");
   const [link, setLink] = useState("");
   const [rate, setRate] = useState("");
   const [chapters, setChapters] = useState("");
@@ -22,7 +22,7 @@ function MangaForm({ manga, onSave, onCancel }) {
       setName("");
       setGenres([]);
       setCountry("");
-      setStatus("Đã đọc");
+      setStatus("Chưa đọc");
       setLink("");
       setRate("");
       setChapters("");
@@ -80,7 +80,14 @@ function MangaForm({ manga, onSave, onCancel }) {
     "Thái Lan",
     "Nhật Bản",
   ];
-  const statusOptions = ["Đang đọc", "Đang dịch", "Đã đọc", "Chưa đọc", "Sắp đọc"];
+  const statusOptions = [
+    "Đang đọc",
+    "Đang dịch",
+    "Đã dịch",
+    "Đã đọc",
+    "Chưa đọc",
+    "Sắp dịch",
+  ];
   const rateOptions = [1, 2, 3];
 
   return (
