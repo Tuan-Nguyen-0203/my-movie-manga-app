@@ -1,416 +1,1672 @@
 [
   {
-    "englishName": "A Gangster Like Me Got A Boyfriend",
-    "vietnameseName": "A Gangster Like Me Got A Boyfriend",
-    "country": "Hàn Quốc",
+    "englishName": "life love on the line",
+    "vietnameseName": "Đường kẻ tình yêu ",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://www.kenhdammy.com/2020/09/duong-ke-tinh-yeu-life-love-on-line.html",
+    "id": "movie-1745865468992-670689"
+  },
+  {
+    "id": "movie-1745865468993-100082",
+    "englishName": "Egoist",
+    "vietnameseName": "Egoist",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/06/13/egoist/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-437136",
+    "englishName": "Thầy Sahara và Toki",
+    "vietnameseName": "Thầy Sahara và Toki",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/10/26/thay-sahara-va-toki/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-392327",
+    "englishName": "Những chàng trai ở Lộc Phong Quán",
+    "vietnameseName": "Những chàng trai ở Lộc Phong Quán",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/05/24/nhung-chang-trai-o-loc-phong-quan/",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-513892",
+    "englishName": "Nếu là cùng cậu, tớ sẽ thử yêu",
+    "vietnameseName": "Nếu là cùng cậu, tớ sẽ thử yêu",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/09/15/neu-la-cau-to-se-thu-yeu/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-465086",
+    "englishName": "Given",
+    "vietnameseName": "Khơi dậy đam mê ",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://vuighe.net/given/tap-11",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-903476",
+    "englishName": "Cảnh sát X Yakuza",
+    "vietnameseName": "Cảnh sát X Yakuza",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.bilibili.tv/vi/play/1045618/11152396/comments?bstar_from=bstar-web.pgc-video-detail.episode.0",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-692405",
+    "englishName": "Cosmetic Playlover",
+    "vietnameseName": "Cosmetic Playlover",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2024/08/05/cosmetic-playlover/",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-67820",
+    "englishName": "Yêu lần hai",
+    "vietnameseName": "Yêu lần hai",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2024/02/16/khi-yeu-lan-thu-hai-se-tot-hon/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-887848",
+    "englishName": "Living with him",
+    "vietnameseName": "Sống cùng cậu ấy ",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.blvietsub.pro/2024/05/song-cung-cau-ay-living-with-him-kare-no-iru-seikatsu-2024.html#01",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-693711",
+    "englishName": "Chàng trai xinh đẹp của tôi",
+    "vietnameseName": "Chàng trai xinh đẹp của tôi",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.bilibili.tv/vi/video/4788334814042624",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-810192",
+    "englishName": "Tôi và cậu ấy đều là tân lang",
+    "vietnameseName": "Tôi và cậu ấy đều là tân lang",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://yuthanhthien.top/tanlang",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-373283",
+    "englishName": "Cậu bé xui xẻo chỉ còn cách hôn thôi",
+    "vietnameseName": "Cậu bé xui xẻo chỉ còn cách hôn thôi",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://yuthanhthien.top/xuixeo#tap-7",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-429652",
+    "englishName": "Bàn ăn của chúng tôi",
+    "vietnameseName": "Bàn ăn của chúng tôi",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/03/14/ban-an-cua-chung-toi/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-698755",
+    "englishName": "Dự báo cảm giác cơ thể",
+    "vietnameseName": "Dự báo cảm giác cơ thể",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/07/14/du-bao-cam-giac-co-the/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-47140",
+    "englishName": "25 giờ ở Alaska",
+    "vietnameseName": "25 giờ ở Alaska",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.blvietsub.pro/2024/04/25-gio-em-o-akasaka-at-2500-in-akasaka.html#01",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-832795",
+    "englishName": "Old Fashion Cupcake",
+    "vietnameseName": "Old Fashion Cupcake",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://yuthanhthien.top/oldcup",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-61076",
+    "englishName": "Tiền bối, tuyệt đối không được yêu",
+    "vietnameseName": "Tiền bối, tuyệt đối không được yêu",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://yuthanhthien.top/senpai",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-878121",
+    "englishName": "Viên bi thuỷ tinh của takara",
+    "vietnameseName": "Viên bi thuỷ tinh của takara",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2024/06/11/vien-bi-thuy-tinh-cua-takara/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-783662",
+    "englishName": "Sugar dog life",
+    "vietnameseName": "Sugar dog life",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2024/08/04/sugar-dog-life/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-213292",
+    "englishName": "Lắng nghe tiếng nắng",
+    "vietnameseName": "Lắng nghe tiếng nắng",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2024/06/11/lang-nghe-tieng-nang/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-484116",
+    "englishName": "Chỉ muốn nhìn mỗi em",
+    "vietnameseName": "Chỉ muốn nhìn mỗi em",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.kenhdammy.com/2022/06/chi-muon-nhin-moi-em.html",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-876615",
+    "englishName": "Tôi trở thành vai chính trong bộ phim BL",
+    "vietnameseName": "Tôi trở thành vai chính trong bộ phim BL",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.bilibili.tv/en/video/4789770348921856?bstar_from=bstar-web.ugc-video-detail.related-recommend.all \nhttps://www.bilibili.tv/en/video/4789761410335232?bstar_from=bstar-web.ugc-video-detail.related-recommend.all \nhttps://www.bilibili.tv/vi/video/4789673894085120 ",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-699141",
+    "englishName": "tiệm giặt ủi tiền xu minato 1 + 2",
+    "vietnameseName": "tiệm giặt ủi tiền xu minato 1 + 2",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://yuthanhthien.top/minato \nhttps://lauthapcamfilm21.wordpress.com/2023/06/19/tiem-giat-la-minato-2/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-150821",
+    "englishName": "Nụ hôn và kẹo ngọt",
+    "vietnameseName": "Nụ hôn và kẹo ngọt",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.youtube.com/watch?v=lBwn4aCsB-I&t=2s",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-389787",
+    "englishName": "Không thể chạm tới",
+    "vietnameseName": "Không thể chạm tới",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/08/17/khong-the-cham-toi/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-836858",
+    "englishName": "Lời cầu hôn hoàn hảo",
+    "vietnameseName": "Lời cầu hôn hoàn hảo",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/12/08/loi-cau-hon-hoan-hao/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-906538",
+    "englishName": "Takara và Amagi",
+    "vietnameseName": "Takara và Amagi",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://yuthanhthien.top/takama",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-576953",
+    "englishName": "Kabe Koji",
+    "vietnameseName": "Kabe Koji",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.kenhdammy.com/2022/10/kabe-koji.html",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-333459",
+    "englishName": "cherry magic movie",
+    "vietnameseName": "cherry magic movie",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://xemdammy.blogspot.com/p/2.html?v=splWALNRX",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-99246",
+    "englishName": "Mãi mãi ngày hôm qua",
+    "vietnameseName": "Mãi mãi ngày hôm qua",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.kenhdammy.com/2022/10/mai-mai-ngay-hom-qua.html",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-423735",
+    "englishName": "OTP ở chỗ làm tui quá mlem",
+    "vietnameseName": "OTP ở chỗ làm tui quá mlem",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/01/02/otp-o-cho-lam-cua-toi-qua-mlem/",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-234335",
+    "englishName": "Em thích anh rồi đấy anh thì sao",
+    "vietnameseName": "Em thích anh rồi đấy anh thì sao",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.blvietsub.com/2024/01/em-thich-anh-roi-day-anh-thi-sao-sukiyanen-kedo-do-yaro-ka-2024.html#01",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-676821",
+    "englishName": "Chỉ muốn ngắm nhìn cậu",
+    "vietnameseName": "Chỉ muốn ngắm nhìn cậu",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2022/12/20/chi-muon-nhin-ngam-cau/",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-984886",
+    "englishName": "Nghịch lý tình yêu",
+    "vietnameseName": "Nghịch lý tình yêu",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2022/12/18/nghich-ly-tinh-yeu/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-201013",
+    "englishName": "Till the end of the world with you",
+    "vietnameseName": "Till the end of the world with you",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2022/12/20/the-end-of-the-world-with-you/",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-342017",
+    "englishName": "Jack O Frost",
+    "vietnameseName": "Jack O Frost",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/02/11/jack-frost/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-241423",
+    "englishName": "Tokyo tháng 4 là ...",
+    "vietnameseName": "Tokyo tháng 4 là ...",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/05/25/thang-4-o-tokyo/",
+    "rate": 1
+  },
+  {
+    "id": "movie-1745865468993-428848",
+    "englishName": "Cún yêu",
+    "vietnameseName": "Cún yêu",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2023/01/25/cun-yeu/",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-782390",
+    "englishName": "Smell Like Green Spirit",
+    "vietnameseName": "Smell Like Green Spirit",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2024/09/06/smells-like-green-spirit/",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-379109",
+    "englishName": "Happy the end",
+    "vietnameseName": "Happy the end",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2024/09/03/happy-of-the-end/",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-109870",
+    "englishName": "Tình yêu bắt đầu từ 1 lần nhận nhầm người",
+    "vietnameseName": "Tình yêu bắt đầu từ 1 lần nhận nhầm người",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.blvietsub.pro/2024/08/tinh-yeu-bat-dau-tu-mot-lan-nhan-nham-nguoi-2024.html#01",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-806678",
+    "englishName": "Độc tình",
+    "vietnameseName": "Độc tình",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://lauthapcamfilm21.wordpress.com/2024/09/05/doc-tinh/",
+    "rate": 2
+  },
+  {
+    "id": "movie-1745865468993-552564",
+    "englishName": "Thiếu niên",
+    "vietnameseName": "Thiếu niên",
+    "country": "Nhật Bản",
+    "status": "Đã xem",
+    "link": "https://www.blvietsub.vip/2024/11/thieu-nien-miseinen-mijukuna-oretachi.html",
+    "rate": 0
+  },
+  {
+    "englishName": "Gameboys ss1 + ss2",
+    "vietnameseName": "Gameboys ss1 + ss2",
+    "country": "Philipine",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://ok.ru/video/6365570271893\nhttps://www.kenhdammy.vip/2020/07/gameboys.html",
+    "id": "movie-1746032228458-672255"
+  },
+  {
+    "englishName": "My Story",
+    "vietnameseName": "My Story",
+    "country": "Philipine",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://www.youtube.com/watch?v=j4SeGY3RIoI&list=PLcQaxIPsTWdM6aLblyPNHCV-yOLINFJpN&index=2",
+    "id": "movie-1746032228458-363331"
+  },
+  {
+    "englishName": "Tie the not",
+    "vietnameseName": "Tie the not",
+    "country": "Philipine",
     "status": "Đã xem",
     "rate": 2,
-    "link": "https://www.blvietsub.vip/2025/02/gangster-bong-dung-co-ban-trai-gangster.html",
-    "id": "movie-1745863265564-884332"
+    "link": "https://www.youtube.com/watch?v=C0MDBi8D4LU&list=PL-GGBQEvDWTY16qbzKyb1upBj8EKueIkB&index=8",
+    "id": "movie-1746032228458-505984"
   },
   {
-    "englishName": "A shooulder to cry on ",
-    "vietnameseName": "Tựa lê vai người",
-    "country": "Hàn Quốc",
+    "englishName": "The day I loved you",
+    "vietnameseName": "The day I loved you",
+    "country": "Philipine",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://www.kenhdammy.vip/2023/06/the-day-i-loved-you.html",
+    "id": "movie-1746032228458-671499"
+  },
+  {
+    "englishName": "Stay",
+    "vietnameseName": "Stay",
+    "country": "Philipine",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://www.youtube.com/watch?v=6S-Y8EYeLzg&list=PLI_vJcPjx4fUY_T5Lo4z4UGOGknmoJI_G&index=6",
+    "id": "movie-1746032228458-666262"
+  },
+  {
+    "englishName": "Rainbow Prince",
+    "vietnameseName": "Hoàng tử của tôi",
+    "country": "Philipine",
     "status": "Đã xem",
     "rate": 2,
-    "link": "https://fuhuz.com/movie-eps/tap-1-hamster-va-ke-tam-than-chong-doi-vietsub-bl-han-tua-len-vai-nguoi-a-shoulder-to-cry-on-a-shoulder-to-cry-on_TsOksgPL.html",
-    "id": "movie-1745863265564-810207"
+    "link": "https://www.youtube.com/playlist?list=PL-GGBQEvDWTZAfFWw5thTZpGt9cc9PV_k",
+    "id": "movie-1746032228458-455474"
   },
   {
-    "englishName": "Bad Guy",
-    "vietnameseName": "Bad Guy",
-    "country": "Hàn Quốc",
+    "englishName": "Biển Lặng",
+    "vietnameseName": "Biển Lặng",
+    "country": "Việt Nam",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://www.youtube.com/watch?v=X94EN77bCUs",
+    "id": "movie-1746032228458-194312"
+  },
+  {
+    "englishName": "Stupid Boy Stupid Love",
+    "vietnameseName": "Yêu đi sợ gì",
+    "country": "Việt Nam",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://www.youtube.com/watch?v=2PFRSUYSEGE",
+    "id": "movie-1746032228458-190498"
+  },
+  {
+    "englishName": "You are my sunshine",
+    "vietnameseName": "You are my sunshine",
+    "country": "Việt Nam",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://www.youtube.com/watch?v=Jp29C0xtMrY",
+    "id": "movie-1746032228458-155977"
+  },
+  {
+    "englishName": "You are my stupid boy",
+    "vietnameseName": "Tựa ánh dương sáng ngời ",
+    "country": "Việt Nam",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://www.youtube.com/watch?v=kZ5KbITxJ-Q",
+    "id": "movie-1746032228458-7920"
+  },
+  {
+    "englishName": "the best boy friend",
+    "vietnameseName": "Thằng bạn thân bất trị",
+    "country": "Việt Nam",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://www.youtube.com/watch?v=U7JGlsxTxYk&list=PLYYyUhZKiEj53_A2rrNdPwNdkF4cZrnXh&index=17",
+    "id": "movie-1746032228458-55649"
+  },
+  {
+    "englishName": "muốn nhìn thấy em",
+    "vietnameseName": "muốn nhìn thấy em",
+    "country": "Việt Nam",
     "status": "Đã xem",
     "rate": 2,
-    "link": "https://www.blvietsub.vip/2024/08/bad-guy-2024_18.html",
-    "id": "movie-1745863265564-347957"
+    "link": "https://www.youtube.com/watch?v=2QBejRIDxIs&list=PLn-i1jovuV6S6hF6uqYhhmTrwC_Q_6aRZ&index=14",
+    "id": "movie-1746032228458-487937"
   },
   {
-    "englishName": "Blossom Campus",
-    "vietnameseName": "Khuôn viên nở hoa",
-    "country": "Hàn Quốc",
+    "englishName": "Stage Of Love",
+    "vietnameseName": "Stage Of Love",
+    "country": "Việt Nam",
     "status": "Đã xem",
     "rate": 2,
-    "link": "https://fuhuzz.rip/movie/vietsub-bl-khuon-vien-no-hoa-blossom-campus-664722c8d594136da0c80c07",
-    "id": "movie-1745863265564-625073"
+    "link": "https://www.youtube.com/watch?v=q0ZzPHza0zQ&list=PLYYyUhZKiEj7uVlIjt7j_OpJQq6tZwb8l&index=8",
+    "id": "movie-1746032228458-612508"
   },
   {
-    "englishName": "Blue Boy",
-    "vietnameseName": "Blue Boy",
-    "country": "Hàn Quốc",
+    "englishName": "Anh mình bình yên nhé",
+    "vietnameseName": "Anh mình bình yên nhé",
+    "country": "Việt Nam",
     "status": "Đã xem",
     "rate": 2,
-    "link": "https://fuhuzz.rip/episode/vietsub-bl-blue-boys-tap-1-om-to-di-663a54377a802f22fdac1787",
-    "id": "movie-1745863265564-590374"
+    "link": "https://www.youtube.com/watch?v=B0jpBOyMceQ",
+    "id": "movie-1746032228458-400856"
   },
   {
-    "englishName": "Blueming",
-    "vietnameseName": "Hoa nở vì em",
-    "country": "Hàn Quốc",
+    "englishName": "Love Bill",
+    "vietnameseName": "Lời hứa của mùa hạ  ",
+    "country": "Việt Nam",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://www.youtube.com/watch?v=vc9ADR6VOH0&list=PLf_mCRbXsMcC7jQEdA8AMdcTDgE3Qy3Y4&index=2",
+    "id": "movie-1746032228458-318539"
+  },
+  {
+    "englishName": "Thiên tài hạng bét",
+    "vietnameseName": "Thiên tài hạng bét",
+    "country": "Việt Nam",
     "status": "Đã xem",
     "rate": 2,
-    "id": "movie-1745863265564-999531"
+    "link": "https://www.kenhdammy.vip/2023/06/thien-tai-hang-bet.html",
+    "id": "movie-1746032228458-471106"
   },
   {
-    "englishName": "Bon Appetit",
-    "vietnameseName": "Chúc ngon miệng",
-    "country": "Hàn Quốc",
+    "englishName": "Lấp lánh tựa ánh sao trời",
+    "vietnameseName": "Lấp lánh tựa ánh sao trời",
+    "country": "Việt Nam",
     "status": "Đã xem",
     "rate": 1,
-    "link": "https://subnhanh.im/xem-phim/chuc-ngon-mieng-vietsub-bon-appetit-2023-tap-8.html",
-    "id": "movie-1745863265564-705100"
+    "link": "https://www.youtube.com/watch?v=XSlQ2COVblY&list=RDCMUC0WWgNgyUc5Y85_DesZXTYw&index=5",
+    "id": "movie-1746032228458-327415"
   },
   {
-    "englishName": "Boy Be Brave",
-    "vietnameseName": "Lời tỏ tình không thể nói ra",
-    "country": "Hàn Quốc",
+    "englishName": "Tổ độ",
+    "vietnameseName": "Tổ độ",
+    "country": "Việt Nam",
     "status": "Đã xem",
-    "link": "https://www.fuhuzz.rip/episode/vietsub-bl-loi-to-tinh-khong-the-noi-ra-boys-be-brave-tap-8-oi-hua-se-nhan-ra-nhau-tu-cai-nhin-dau-tien-end-6645db7f29f160990e8483a2",
-    "id": "movie-1745863265564-132325"
+    "rate": 1,
+    "link": "https://www.youtube.com/watch?v=m55UYBWJTzk",
+    "id": "movie-1746032228458-425505"
   },
   {
-    "englishName": "Bump up business",
-    "vietnameseName": "Kế hoạch thăng cấp idol",
-    "country": "Hàn Quốc",
+    "englishName": "Sự lựa chọn của thái tử 1 & 2 ",
+    "vietnameseName": "Sự lựa chọn của thái tử 1 & 2 ",
+    "country": "Anh",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "http://nguonphimtv.com/xem-phim/lua-chon-cua-thai-tu-phan-2-young-royals-season-2-f57542.html",
+    "id": "movie-1746032228458-881643"
+  },
+  {
+    "englishName": "Heartstopper ss1 + ss2",
+    "vietnameseName": "Trái tim ngừng nhịp ss1 + ss2",
+    "country": "Anh",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://motchill.net/phim/trai-tim-ngung-nhip-10115.html\nhttps://www.kenhdammy.vip/2023/08/trai-tim-ngung-nhip.html",
+    "id": "movie-1746032228458-391232"
+  },
+  {
+    "englishName": "Đỏ Trắng & Xanh hoàng gia",
+    "vietnameseName": "Đỏ Trắng & Xanh hoàng gia",
+    "country": "Anh",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://yuthanhthien.top/do#full-sv-1",
+    "id": "movie-1746032228458-555158"
+  },
+  {
+    "englishName": "I go to school not by bus",
+    "vietnameseName": "I go to school not by bus",
+    "country": "Mỹ",
+    "status": "Đã xem",
+    "rate": 1,
+    "link": "https://www.youtube.com/watch?v=DOBvh6jUdnc&t=5s",
+    "id": "movie-1746032228458-761275"
+  },
+  {
+    "englishName": "Vì yệu mà chiến",
+    "vietnameseName": "Vì yệu mà chiến",
+    "country": "Việt Nam",
     "status": "Đã xem",
     "rate": 2,
-    "link": "https://subnhanh.im/xem-phim/ke-hoach-thang-cap-idol-2023-tap-8.html",
-    "id": "movie-1745863265564-639976"
+    "link": "https://www.youtube.com/watch?v=UiL_XwGFZb0&list=PL8vHP9TU8ecUXxx_O2-YW-_7kvJjtr4bx&index=2",
+    "id": "movie-1746032228458-432731"
   },
   {
-    "englishName": "Cherry Blossom After Winter",
-    "vietnameseName": "Hoa anh đào cuối đông",
-    "country": "Hàn Quốc",
+    "id": "movie-1746033681653-809874",
+    "englishName": "You're my sky",
+    "vietnameseName": "Đích đến là bầu trời  ",
+    "country": "Thái Lan",
     "status": "Đã xem",
-    "rate": 1,
-    "link": "https://motchill.net/xem-phim/hoa-anh-dao-cuoi-dong-tap-8-tap-cuoi-9905_121260.html",
-    "id": "movie-1745863265564-681174"
+    "link": "https://vieon.vn/bau-troi-cua-toi-youre-my-sky.html",
+    "rate": 1
   },
   {
-    "englishName": "Choco milk shake",
-    "vietnameseName": "Choco milk shake",
-    "country": "Hàn Quốc",
+    "englishName": "Ai Là Enchanté?",
+    "vietnameseName": "Ai Là Enchanté?",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://fuhuz.com/movie-eps/tap-10-tam-biet-choco-va-milk-_ne68zgYg.html",
-    "id": "movie-1745863265564-183313"
+    "link": "https://yuthanhthien.top/ai-la-enchante#tap-10-end-sv-1",
+    "id": "movie-1746033681653-274784"
   },
   {
-    "englishName": "FC Sold out",
-    "vietnameseName": "FC Sold out",
-    "country": "Hàn Quốc",
+    "englishName": "Dangerous Romance",
+    "vietnameseName": "Trái tim trong gió  ",
     "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.blvietsub.com/2023/08/trai-tim-trong-gio-dangerous-romance-2023.html#12",
+    "id": "movie-1746033681653-695288"
+  },
+  {
+    "englishName": "Love Stage",
+    "vietnameseName": "Love Stage",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "id": "movie-1746033681653-256668"
+  },
+  {
+    "englishName": "The Rebound",
+    "vietnameseName": "Trận này dành cho cậu  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.my/phim/the-rebound-tran-nay-danh-cho-cau-2024.html",
+    "id": "movie-1746033681653-300421"
+  },
+  {
+    "englishName": "Wedding Plan",
+    "vietnameseName": "Kế hoạch yêu đen tối của chú rễ   ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.vip/xem-phim/wedding-plan-ke-hoach-yeu-den-toi-cua-chu-re-vietsub-the-grooms-evil-love-plan-2023-tap-7.html",
+    "id": "movie-1746033681653-222193"
+  },
+  {
+    "englishName": "Knock knock Boys",
+    "vietnameseName": "Khi tình yêu gõ cửa  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://www.blvietsub.vip/2025/01/fc-soldout-fc-soldout-2025.html#08",
-    "id": "movie-1745863265564-108244"
+    "link": "https://subnhanh.li/phim/knock-knock-boys-2024.html",
+    "id": "movie-1746033681653-284873"
   },
   {
-    "englishName": "Fake Friend, Fake Buddies",
-    "vietnameseName": "Tình bạn lạ kì ",
-    "country": "Hàn Quốc",
+    "englishName": "cherry magic movie",
+    "vietnameseName": "cherry magic movie",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "  https://fuhuoo.net/movie/vietsub-tinh-ban-la-ky-fake-friend-fake-buddies_VwEDsg0T.html  ",
-    "id": "movie-1745863265564-779404"
+    "link": "https://www.blvietsub.com/2023/09/30-tuoi-con-trinh-se-bien-thanh-phu-thuy-thai-lan-cherry-magic-2023.html#01",
+    "id": "movie-1746033681653-353614"
   },
   {
-    "englishName": "First Love Again",
-    "vietnameseName": "Tình đầu thứ ba",
-    "country": "Hàn Quốc",
+    "englishName": "The sign",
+    "vietnameseName": "Điềm báo  ",
     "status": "Đã xem",
-    "rate": 1,
-    "link": "https://fuhuz.com/movie-eps/tap-1-ba-lan-ta-gap-go-vietsub-phim-boylove-tinh-dau-thu-ba-first-love-again-_NQ8x0QiG.html\nhttps://subnhanh.net/xem-phim/first-love-again-tap-4",
-    "id": "movie-1745863265564-852996"
-  },
-  {
-    "englishName": "Grey Shelter",
-    "vietnameseName": "Nơi trú ẩn màu xám ",
-    "country": "Hàn Quốc",
-    "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://fuhuzz.rip/movie/vietsub-bl-noi-tru-an-mau-xam-gray-shelter-660e8cc4bd0d2f7037dd7b74",
-    "id": "movie-1745863265564-138827"
+    "link": "https://www.blvietsub.com/2023/11/diem-bao-the-sign-2023.html#10",
+    "id": "movie-1746033681653-849769"
   },
   {
-    "englishName": "Happy Ending",
-    "vietnameseName": "Happy Ending",
-    "country": "Hàn Quốc",
+    "englishName": "Tình yêu này không có đậu đũa",
+    "vietnameseName": "Tình yêu này không có đậu đũa",
     "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.li/xem-phim/tinh-yeu-nay-khong-co-dau-dua-2024-tap-6.html",
+    "id": "movie-1746033681653-828515"
+  },
+  {
+    "englishName": "Dinosause love",
+    "vietnameseName": "Tình yêu khủng long  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.vip/xem-phim/dinosaur-lovetinh-yeu-khung-long-vietsub-dinosaur-love-2023-tap-1.html",
+    "id": "movie-1746033681653-419551"
+  },
+  {
+    "englishName": "Monster next door",
+    "vietnameseName": "Anh ấy xâm chiếm thế giới của tôi  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.my/phim/anh-ay-xam-chiem-the-gioi-cua-toi-2024.html",
+    "id": "movie-1746033681653-869499"
+  },
+  {
+    "englishName": "Law of attraction",
+    "vietnameseName": "Luật hấp hẫn ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.vip/xem-phim/luat-hap-dan-vietsub-laws-of-attraction-2023-tap-8.html",
+    "id": "movie-1746033681653-166068"
+  },
+  {
+    "englishName": "I saw you in my dream",
+    "vietnameseName": "Gặp anh trong mơ  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://fuhuzz.rip/movie/vietsub-bl-happy-ending-65afce39a249782ee6221d90",
-    "id": "movie-1745863265564-411392"
+    "link": "https://subnhanh.my/phim/gap-anh-trong-mo-2024.html",
+    "id": "movie-1746033681653-118441"
   },
   {
-    "englishName": "Happy ending romance",
-    "vietnameseName": "Happy ending romance",
-    "country": "Hàn Quốc",
+    "englishName": "A boss and a babe",
+    "vietnameseName": "A boss and a babe",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "https://fuhuz.com/movie/vietsub-bl-han-su-lang-man-vien-man-happy-ending-romance-happy-ending-romance_ZJWYMwxT.html",
-    "id": "movie-1745863265564-279900"
+    "link": "https://yuthanhthien.top/boss#tap-9 ",
+    "id": "movie-1746033681653-41162"
   },
   {
-    "englishName": "Happy merry ending",
-    "vietnameseName": "Happy merry ending",
-    "country": "Hàn Quốc",
+    "englishName": "La Pluie",
+    "vietnameseName": "Cơn mưa khi ấy em yêu anh ",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "https://fuhuz.com/movie-eps/tap-8-ket-thuc-hanh-phuc-vietsub-bl-happy-merry-ending-2023-happy-merry-ending-happy-merry-ending_92PXSQME.html",
-    "id": "movie-1745863265564-984594"
+    "link": "https://subnhanh.vip/xem-phim/la-pluie-con-mua-khi-ay-em-yeu-anh-la-pluie-the-series-i-loved-you-that-time-it-rained-2023-vietsub-tap-1.html",
+    "id": "movie-1746033681653-816510"
   },
   {
-    "englishName": "Individual Circumstance",
-    "vietnameseName": "Individual Circumstance",
-    "country": "Hàn Quốc",
+    "englishName": "Wandee Goodday",
+    "vietnameseName": "Wandee Goodday",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "https://motchill.tv/xem-phim/yeu-them-lan-nua-tap-8-tap-cuoi-10914_129995.html",
-    "id": "movie-1745863265564-812692"
+    "link": "https://motchillj.tv/xem-phim-wandee-goodday-tap-2-147199.html",
+    "id": "movie-1746033681653-377094"
   },
   {
-    "englishName": "Jazz for two",
-    "vietnameseName": "Điệu jazz của 2 người",
-    "country": "Hàn Quốc",
+    "englishName": "Cooking Crush",
+    "vietnameseName": "Đồ ăn ngon không bác sĩ ",
     "status": "Đã xem",
-    "rate": 1,
-    "link": "https://www.blvietsub.com/2024/03/dieu-jazz-cua-hai-nguoi-jazz-for-two-2024.html#02",
-    "id": "movie-1745863265564-488570"
-  },
-  {
-    "englishName": "Jun and Jun",
-    "vietnameseName": "Sẵn sàng yêu em",
-    "country": "Hàn Quốc",
-    "status": "Đã xem",
-    "rate": 1,
-    "link": "https://subnhanhs.com/xem-phim/san-sang-yeu-em-jun-and-jun-tap-8",
-    "id": "movie-1745863265564-187592"
-  },
-  {
-    "englishName": "Love Class",
-    "vietnameseName": "Love Class",
-    "country": "Hàn Quốc",
-    "status": "Đã xem",
-    "rate": 1,
-    "id": "movie-1745863265564-500617"
-  },
-  {
-    "englishName": "Love Class 2",
-    "vietnameseName": "Love Class 2",
-    "country": "Hàn Quốc",
-    "status": "Đã xem",
-    "rate": 1,
-    "link": "https://dongchill1.com/xem-phim/love-class-2/tap-10.html",
-    "id": "movie-1745863265564-226723"
-  },
-  {
-    "englishName": "Love For Love's Sake",
-    "vietnameseName": "Khu vực tối cao tình yêu",
-    "country": "Hàn Quốc",
-    "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://fuhux.net/movie-eps/tap-8dap-an-dung-vietsub-bl-khu-vuc-toi-cao-tinh-yeu-love-for-loves-sake-love-for-loves-sake-yeu-chi-vi-yeu-_X4GStABP.html",
-    "id": "movie-1745863265564-82059"
+    "link": "https://www.blvietsub.com/2023/11/do-an-ngon-khong-bac-si-cooking-crush-2023.html",
+    "id": "movie-1746033681653-401035"
   },
   {
-    "englishName": "Love Tractor",
-    "vietnameseName": "Xe công nông tình yêu",
-    "country": "Hàn Quốc",
+    "englishName": "Naughty Babe",
+    "vietnameseName": "Bướng bỉnh anh lại nghĩ em quậy",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "https://www.kenhdammy.vip/2023/06/xe-cong-nong-tinh-yeu.html",
-    "id": "movie-1745863265564-423053"
+    "link": "https://subnhanh.im/phim/naughty-babe-buong-binh-anh-lai-nghi-em-quay-2023-vietsub.html",
+    "id": "movie-1746033681653-131620"
   },
   {
-    "englishName": "Love mate",
-    "vietnameseName": "Love mate",
-    "country": "Hàn Quốc",
+    "englishName": "City of star",
+    "vietnameseName": "Thành phố thịnh vượng ",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "https://fuhuz.com/movie-eps/tap-8-tinh-yeu-dich-thuc-vietsub-bl-love-mate-_NF002QrS.html",
-    "id": "movie-1745863265564-566987"
+    "id": "movie-1746033681653-15674"
   },
   {
-    "englishName": "My Damm Bussiness",
-    "vietnameseName": "My Damm Bussiness",
-    "country": "Hàn Quốc",
+    "englishName": "Giai điệu tình yêu từ nét cọ",
+    "vietnameseName": "Giai điệu tình yêu từ nét cọ",
     "status": "Đã xem",
-    "rate": 1,
-    "link": "https://fuhuoo.net/movie/vietsub-bl-my-damn-business-_pwJ8owAX.html",
-    "id": "movie-1745863265564-160532"
-  },
-  {
-    "englishName": "Oceans like me",
-    "vietnameseName": "Oceans like me",
-    "country": "Hàn Quốc",
-    "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "id": "movie-1745863265564-792468"
+    "link": "https://www.blvietsub.com/2023/12/giai-dieu-tinh-yeu-tu-net-co-colorful-melody-2023.html#04",
+    "id": "movie-1746033681653-838288"
   },
   {
-    "englishName": "Oh My assistant",
-    "vietnameseName": "Oh My assistant",
-    "country": "Hàn Quốc",
+    "englishName": "cherry magic movie",
+    "vietnameseName": "cherry magic movie",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "https://fuhuz.com/movie/vietsub-bl-han-oh-tro-ly-dac-biet-cua-toi-oh-my-assistant-oh-my-assistant_TjYwTg0T.html",
-    "id": "movie-1745863265564-147327"
+    "id": "movie-1746033681653-529050"
   },
   {
-    "englishName": "Once Again",
-    "vietnameseName": "Thêm 1 lần nữa",
-    "country": "Hàn Quốc",
+    "englishName": "Only Boo",
+    "vietnameseName": "Chỉ Kang thôi ",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "https://luotphim2.com/xem-phim-bo/them-mot-lan-nua-2022-tap-8-end/?pserver=10597",
-    "id": "movie-1745863265564-998799"
+    "link": "https://subnhanh.kim/xem-phim/only-boo-2024-tap-9.html",
+    "id": "movie-1746033681653-755407"
   },
   {
-    "englishName": "Our date sim",
-    "vietnameseName": "Our date sim",
-    "country": "Hàn Quốc",
+    "englishName": "Middle man love",
+    "vietnameseName": "Người trung gian ",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "https://fuhuz.com/movie-eps/tap-7-nga-tu-cua-lua-chon-vietsub-bl-han-mo-phong-hen-ho-cua-toi-va-tinh-dau-our-dating-sim-our-dating-sim_y8826wPS.html",
-    "id": "movie-1745863265564-552934"
+    "link": "https://subnhanh.im/phim/anh-jade-nguoi-trung-gian-uncut-vietsub-middle-love-project-2023.html",
+    "id": "movie-1746033681653-254671"
   },
   {
-    "englishName": "Semantic Error",
-    "vietnameseName": "Lỗi logic",
-    "country": "Hàn Quốc",
+    "englishName": "Century of love",
+    "vietnameseName": "Phép màu tình yêu trăm năm  ",
     "status": "Đã xem",
-    "rate": 1,
-    "link": "https://mangadm.cc/2021/11/22/semantic-error-loi-logic-2/",
-    "id": "movie-1745863265564-604809"
-  },
-  {
-    "englishName": "Seoul Blues",
-    "vietnameseName": "Seoul Blues",
-    "country": "Hàn Quốc",
-    "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://fuhumm.net/movie/vietsub-bl-seoul-blues-_WoJQmQ9M.html",
-    "id": "movie-1745863265564-476954"
+    "link": "https://subnhanh.li/xem-phim/phep-mau-tinh-yeu-tram-nam-2024-tap-9.html",
+    "id": "movie-1746033681653-787583"
   },
   {
-    "englishName": "Sing my crush",
-    "vietnameseName": "Truy phong ",
-    "country": "Hàn Quốc",
+    "englishName": "Love Sea",
+    "vietnameseName": "Phải lòng đại dương  ",
     "status": "Đã xem",
-    "rate": 1,
-    "link": "https://subnhanh1.vip/phim-bo/sing-my-crush",
-    "id": "movie-1745863265564-679105"
-  },
-  {
-    "englishName": "Spring of crush",
-    "vietnameseName": "Spring of crush",
-    "country": "Hàn Quốc",
-    "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://webphim.cc/xem-phim-bo/love-in-spring-spring-of-crush-tap-12/?pserver=10597",
-    "id": "movie-1745863265564-330243"
+    "link": "https://subnhanh.my/phim/love-sea-phai-long-dai-duong-2024.html",
+    "id": "movie-1746033681654-755402"
   },
   {
-    "englishName": "Star struck",
-    "vietnameseName": "Truy tinh",
-    "country": "Hàn Quốc",
+    "englishName": "My Universe",
+    "vietnameseName": "My Universe",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://subnhanh.vip/phim/truy-tinh-vietsub-star-struck-2023-vietsub.html",
-    "id": "movie-1745863265564-958220"
+    "link": "https://subnhanh.cx/xem-phim/my-universe-vu-tru-cua-toi-vietsub-my-universe-2023-vietsub-tap-18.html",
+    "id": "movie-1746033681654-671143"
   },
   {
-    "englishName": "To my star 2",
-    "vietnameseName": "Gửi đến ngôi sao của anh",
-    "country": "Hàn Quốc",
+    "englishName": "Step by step",
+    "vietnameseName": "Chầm chậm yêu  ",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "https://yuthanhthien.top/star2#tap-10",
-    "id": "movie-1745863265564-427715"
+    "link": "https://subnhanh.vip/xem-phim/cham-cham-yeu-tap-12.html",
+    "id": "movie-1746033681654-219809"
   },
   {
-    "englishName": "Why R U",
-    "vietnameseName": "Tình cờ đó là cậu",
-    "country": "Hàn Quốc",
+    "englishName": "The promise",
+    "vietnameseName": "The promise",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "https://fuhuzz.com/movie-eps/tap-8-chuan-bi-dien-vietsub-bl-han-why-r-u-tinh-co-do-la-cau-why-r-u-korean-remake_ADnyBAYN.html",
-    "id": "movie-1745863265564-912913"
+    "link": "https://subnhanh.vip/xem-phim/the-promise-2023-vietsub-tap-10.html",
+    "id": "movie-1746033681654-538277"
   },
   {
-    "vietnameseName": "Hương vị rượu và tình yêu",
-    "country": "Hàn Quốc",
+    "englishName": "Deep Night",
+    "vietnameseName": "Đêm nay chỉ có chúng ta ",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://fuhuz.com/movie-eps/tap-8-an-mi-dau-phai-chi-an-mi-vietsub-bl-han-huong-vi-ruou-va-tinh-yeu-all-the-liquors-all-the-liquors_5UYrhQ3d.html",
-    "id": "movie-1745863265564-562199"
+    "link": "https://subnhanh.cx/xem-phim/dem-nay-chi-co-chung-ta-2024-tap-6.html",
+    "id": "movie-1746033681654-496648"
   },
   {
-    "vietnameseName": "cuộc sống tươi đẹp",
-    "country": "Hàn Quốc",
+    "englishName": "To be continued",
+    "vietnameseName": "To be continued",
     "status": "Đã xem",
-    "rate": 1,
-    "link": "https://www.youtube.com/watch?v=JVWz7SaJOTI&list=PLqE5kcWkuD6eRJ7CQMvDKOLpRw99Ulaq2&index=62",
-    "id": "movie-1745863265564-533584"
-  },
-  {
-    "vietnameseName": "Chuyến bay đêm",
-    "country": "Hàn Quốc",
-    "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://www.youtube.com/watch?v=KeKI_4K3f9A",
-    "id": "movie-1745863265564-912060"
+    "link": "https://www.blvietsub.com/2024/02/to-be-continued-2024.html",
+    "id": "movie-1746033681654-364934"
   },
   {
-    "vietnameseName": "Chuyện tình ở PoogDuck 304",
-    "country": "Hàn Quốc",
+    "englishName": "Stay like a local",
+    "vietnameseName": "Stay like a local",
     "status": "Đã xem",
-    "rate": 1,
-    "link": "https://luotphim.to/xem-phim-bo/roommates-of-poongduck-304-tap-7/?pserver=10597",
-    "id": "movie-1745863265564-132676"
-  },
-  {
-    "englishName": "The eight scence ",
-    "vietnameseName": "Giác quan thứ 8",
-    "country": "Hàn Quốc",
-    "status": "Đã xem",
-    "rate": 1,
-    "link": "https://subnhanh.vip/xem-phim/giac-quan-thu-8-the-eighth-sense-2023-vietsub-tap-10.html",
-    "id": "movie-1745863265564-956528"
-  },
-  {
-    "vietnameseName": "Chuyện tình kì lạ",
-    "country": "Hàn Quốc",
-    "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://fuhuoo.net/movie/vietsub-bl-chuyen-tinh-ky-la-eccentric-romance-_s7IUpQvY.html",
-    "id": "movie-1745863265564-286461"
+    "link": "https://yuthanhthien.top/journey",
+    "id": "movie-1746033681654-704771"
   },
   {
-    "englishName": "Summer Indigo",
-    "vietnameseName": "Summer Indigo",
-    "country": "Hàn Quốc",
+    "englishName": "Absolute Zero",
+    "vietnameseName": "Độ không tuyệt đối",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 1,
-    "link": "https://www.blvietsub.vip/2025/03/rang-lam-he-summer-indigo-2025.html#01",
-    "id": "movie-1745863265564-564287"
+    "link": "https://subnhanh.im/phim/do-khong-tuyet-doi-absolute-zero-2023.html",
+    "id": "movie-1746033681654-905606"
   },
   {
-    "englishName": "Two some boys",
-    "vietnameseName": "Two some boys",
-    "country": "Hàn Quốc",
+    "englishName": "my ride",
+    "vietnameseName": "Chàng tài xế của tôi ",
     "status": "Đã xem",
-    "rate": 2,
-    "link": "https://www.youtube.com/@Lovememory19/search?query=TwosomeBoys\nhttps://www.blvietsub.vip/2025/02/oi-chang-trai-two-some-boys-2024.html#01 ",
-    "id": "movie-1745863265564-935149"
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://vieon.vn/chang-tai-xe-cua-toi-my-ride.html",
+    "id": "movie-1746033681654-829981"
   },
   {
-    "englishName": "Unknown Untitled Unmastered (UUU)",
-    "vietnameseName": "Unknown Untitled Unmastered (UUU)",
-    "country": "Hàn Quốc",
+    "englishName": "Something in my room",
+    "vietnameseName": "Tôi và ma ở trong phòng ",
     "status": "Đã xem",
+    "country": "Thái Lan",
     "rate": 2,
-    "link": "https://fuhuoo.net/movie/vietsub-uuu-unknown-untitled-unmastered_oiCEDgkH.html",
-    "id": "movie-1745863265564-524832"
+    "link": "https://yuthanhthien.top/toivama",
+    "id": "movie-1746033681654-822727"
+  },
+  {
+    "englishName": "My love mix up",
+    "vietnameseName": "Viết tình yêu bằng cục tẩy ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.my/phim/viet-tinh-yeu-bang-cuc-tay-tinh-dau-chong-phai-ban-thai-2024.html",
+    "id": "movie-1746033681654-485985"
+  },
+  {
+    "englishName": "Pit babe",
+    "vietnameseName": "Pit babe",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.blvietsub.com/2023/10/duong-dua-duong-tinh-pit-babe-2023.html#01",
+    "id": "movie-1746033681654-107104"
+  },
+  {
+    "englishName": "Memory in letter",
+    "vietnameseName": "Ký ức qua những lá thư  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.blvietsub.pro/2024/04/ky-uc-qua-nhung-la-thu-memory-in-letter.html#06",
+    "id": "movie-1746033681654-414058"
+  },
+  {
+    "englishName": "Night Dream",
+    "vietnameseName": "Giấc mơ đêm  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://subnhanh.men/xem-phim/giac-mo-dem-2023-night-dream-2023-tap-6.html",
+    "id": "movie-1746033681654-635923"
+  },
+  {
+    "englishName": "Ruk Dew",
+    "vietnameseName": "Một tình yêu ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.kenhdammy.com/2022/02/mot-tinh-yeu.html",
+    "id": "movie-1746033681654-286623"
+  },
+  {
+    "englishName": "Bài thơ của năm ánh sáng",
+    "vietnameseName": "Bài thơ của năm ánh sáng",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://yuthanhthien.top/favorite#tap-10",
+    "id": "movie-1746033681654-365755"
+  },
+  {
+    "englishName": "Restarted",
+    "vietnameseName": "Xin yêu thêm lần nữa được không  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://luotphim.vip/xem-phim-bo/xin-yeu-them-lan-nua-duoc-khong-tap-11-end/?pserver=10597",
+    "id": "movie-1746033681654-711311"
+  },
+  {
+    "englishName": "Tuxedo the series",
+    "vietnameseName": "Tuxedo the series",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "id": "movie-1746033681654-827284"
+  },
+  {
+    "englishName": "Hương hoa tình yêu",
+    "vietnameseName": "Hương hoa tình yêu",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.im/xem-phim/huong-thom-tinh-yeu-tap-6.html",
+    "id": "movie-1746033681654-370781"
+  },
+  {
+    "englishName": "For Him",
+    "vietnameseName": "For Him",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.blvietsub.com/2023/12/chap-nhan-la-cua-him-for-him-2023.html#12",
+    "id": "movie-1746033681654-24374"
+  },
+  {
+    "englishName": "Venus in the sky",
+    "vietnameseName": "Venus in the sky",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.im/phim/venus-in-the-sky-2023-vietsub.html",
+    "id": "movie-1746033681654-986926"
+  },
+  {
+    "englishName": "Love in tranlation",
+    "vietnameseName": "Love in tranlation",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.io/xem-phim/love-in-translation-2023-vietsub-tap-8.html",
+    "id": "movie-1746033681654-931674"
+  },
+  {
+    "englishName": "the miracle of teddy bear ",
+    "vietnameseName": "Chú gấu diệu kỳ  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "id": "movie-1746033681654-911506"
+  },
+  {
+    "englishName": "Secret love on you",
+    "vietnameseName": "Yêu thầm  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "id": "movie-1746033681654-588373"
+  },
+  {
+    "englishName": "cutie pie",
+    "vietnameseName": "Không nói gì anh lại bảo em ngốc  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "id": "movie-1746033681654-416637"
+  },
+  {
+    "englishName": "Not me",
+    "vietnameseName": "Cậu ấy không phải tôi",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "id": "movie-1746033681654-113338"
+  },
+  {
+    "englishName": "Hidden agenda",
+    "vietnameseName": "Động cơ ngầm  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://yuthanhthien.top/ha#tap-12-end",
+    "id": "movie-1746033681654-507968"
+  },
+  {
+    "englishName": "Star in my mind",
+    "vietnameseName": "Theo ý vì sao ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "id": "movie-1746033681654-19073"
+  },
+  {
+    "englishName": "Sợi chỉ đỏ",
+    "vietnameseName": "Sợi chỉ đỏ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.youtube.com/watch?v=CKHOFq5Mp-M&list=PLKM548k2ueeWKPrH1--yzMwH4fGfQVpzn&index=15 (26ph)",
+    "id": "movie-1746033681654-899844"
+  },
+  {
+    "englishName": "What zabb man",
+    "vietnameseName": "What zabb man",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://yuthanhthien.top/zabb#tap-6-sv-1",
+    "id": "movie-1746033681654-684892"
+  },
+  {
+    "englishName": "Bác sĩ tôi đến đón linh hồn bệnh nhân",
+    "vietnameseName": "Bác sĩ tôi đến đón linh hồn bệnh nhân",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://motchill.net/xem-phim/toi-den-vi-linh-hon-tap-1-9996_121225.html",
+    "id": "movie-1746033681654-592572"
+  },
+  {
+    "englishName": "Di chúc của thần cupid",
+    "vietnameseName": "Di chúc của thần cupid",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "id": "movie-1746033681654-179711"
+  },
+  {
+    "englishName": "Our Day",
+    "vietnameseName": "Yêu Được Không, Cậu Không Cười  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://yuthanhthien.top/our-days#tap-1-sv-1",
+    "id": "movie-1746033681654-148730"
+  },
+  {
+    "englishName": "physical theraphy",
+    "vietnameseName": "Hậu chia tay em đau anh nhói ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://webphim.cc/xem-phim-bo/physical-therapy-tap-9/?pserver=10597",
+    "id": "movie-1746033681654-785986"
+  },
+  {
+    "englishName": "close friend",
+    "vietnameseName": "Trên tình bạn dưới tình yêu  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://yuthanhthien.top/close2",
+    "id": "movie-1746033681654-84984"
+  },
+  {
+    "englishName": "Triage",
+    "vietnameseName": "Triage",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://yuthanhthien.top/triage#tap-10",
+    "id": "movie-1746033681654-115758"
+  },
+  {
+    "englishName": "sky in your heart",
+    "vietnameseName": "Thiên cực của tôi  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://yuthanhthien.top/thiencuc#tap-2-sv-1",
+    "id": "movie-1746033681654-615493"
+  },
+  {
+    "englishName": "Kinn Porsche the series",
+    "vietnameseName": "Kinn Porsche the series",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.ssphim.net/p/thieu-gia-xa-hoi-den-yeu-toi-kinnporsche-tap-5 40ph",
+    "id": "movie-1746033681654-614909"
+  },
+  {
+    "englishName": "secrect love",
+    "vietnameseName": "secrect love",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://webphim.cc/xem-phim-bo/my-secret-love-secret-admirer-tap-9/?pserver=10597",
+    "id": "movie-1746033681654-767454"
+  },
+  {
+    "englishName": "love machanic",
+    "vietnameseName": "love machanic",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://webphim.cc/xem-phim-bo/love-mechanics-tap-8/?pserver=10597",
+    "id": "movie-1746033681654-865127"
+  },
+  {
+    "englishName": "21 day theory",
+    "vietnameseName": "21 day theory",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://yuthanhthien.top/21days#tap-4-end",
+    "id": "movie-1746033681654-708383"
+  },
+  {
+    "englishName": "My keychain the series",
+    "vietnameseName": "My keychain the series",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.kenhdammy.com/2022/06/my-keychain-series.html",
+    "id": "movie-1746033681654-814116"
+  },
+  {
+    "englishName": "The love of winter",
+    "vietnameseName": "The love of winter",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.kenhdammy.com/2022/02/the-love-of-winter.html",
+    "id": "movie-1746033681654-84524"
+  },
+  {
+    "englishName": "unforgetten night",
+    "vietnameseName": "unforgetten night",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://yuthanhthien.top/mafia#tap-6-sv-1",
+    "id": "movie-1746033681654-601844"
+  },
+  {
+    "englishName": "Coffee melody",
+    "vietnameseName": "Bài ca yêu thương ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://yuthanhthien.top/coffee-melody",
+    "id": "movie-1746033681654-461136"
+  },
+  {
+    "englishName": "what if",
+    "vietnameseName": "Giả sử  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://yuthanhthien.top/giasu",
+    "id": "movie-1746033681654-670165"
+  },
+  {
+    "englishName": "Hội siêu quậy",
+    "vietnameseName": "Hội siêu quậy",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.kenhdammy.com/2020/03/hoi-sieu-quay.html",
+    "id": "movie-1746033681654-132105"
+  },
+  {
+    "englishName": "Gray",
+    "vietnameseName": "Gray",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.youtube.com/watch?v=pkeWxKMADks&t=2425s",
+    "id": "movie-1746033681654-738516"
+  },
+  {
+    "englishName": "On Clound Nine",
+    "vietnameseName": "On Clound Nine",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.youtube.com/watch?v=FDdGL7TCH-c&list=PLHWvrNIJL6cWZ-doJDFK2VMshJFRfvz5H&index=6",
+    "id": "movie-1746033681654-719796"
+  },
+  {
+    "englishName": "Low requency",
+    "vietnameseName": "Tần số thấp  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://subnhanh.vip/xem-phim/tan-so-thap-vietsub-low-frequency-2023-vietsub-tap-8.html",
+    "id": "movie-1746033681654-786696"
+  },
+  {
+    "englishName": "Vice versa",
+    "vietnameseName": "Tình yêu hoán đổi thể giới  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://motphim1.com/xem-phim/vice-versa-the-series-tap-12",
+    "id": "movie-1746033681654-780147"
+  },
+  {
+    "englishName": "even sun",
+    "vietnameseName": "even sun",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://luotphim.to/xem-phim-bo/even-sun-tap-1/?pserver=10597",
+    "id": "movie-1746033681654-606085"
+  },
+  {
+    "englishName": "work from heart",
+    "vietnameseName": "work from heart",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://yuthanhthien.top/wfh",
+    "id": "movie-1746033681654-61402"
+  },
+  {
+    "englishName": "my only 12% ",
+    "vietnameseName": "my only 12% ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.kenhdammy.com/2022/08/my-only-12.html",
+    "id": "movie-1746033681654-445477"
+  },
+  {
+    "englishName": "eclipse",
+    "vietnameseName": "Nhật thực  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://yuthanhthien.top/eclipse#tap-7",
+    "id": "movie-1746033681654-779325"
+  },
+  {
+    "englishName": "Love in the air",
+    "vietnameseName": "Không khí tình yêu ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://motphimtv.info/xem-phim/khong-khi-tinh-yeu-tap-13-tap-cuoi-10537_127131.html",
+    "id": "movie-1746033681654-428094"
+  },
+  {
+    "englishName": "oh my sunshine",
+    "vietnameseName": "oh my sunshine",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://yuthanhthien.top/sunshine#tap-11",
+    "id": "movie-1746033681654-307977"
+  },
+  {
+    "englishName": "Big dragon the series",
+    "vietnameseName": "Big dragon the series",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.kenhdammy.com/2022/10/big-dragon-series.html",
+    "id": "movie-1746033681654-537142"
+  },
+  {
+    "englishName": "Ghost Host Ghost House",
+    "vietnameseName": "Ghost Host Ghost House",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "id": "movie-1746033681654-537099"
+  },
+  {
+    "englishName": "Fahlen ruk",
+    "vietnameseName": "Fahlen ruk",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://yuthanhthien.top/fahlanruk#tap-10",
+    "id": "movie-1746033681654-434572"
+  },
+  {
+    "englishName": "Khun Chai",
+    "vietnameseName": "Khun Chai",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://vn.trueid.net/watch/series/VEXwajr717wJ/ZRXXmGO2b3JR/WG8vAzWxxrDZ/NPk1d8XdJDD5/khun-chai-tap-16",
+    "id": "movie-1746033681654-26333"
+  },
+  {
+    "englishName": "catch me baby",
+    "vietnameseName": "bậc thầy tình yêu ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.kenhdammy.com/2022/10/bac-thay-tinh-yeu.html",
+    "id": "movie-1746033681654-394036"
+  },
+  {
+    "englishName": "Ai long Nhai the series",
+    "vietnameseName": "Ai long Nhai the series",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://motchill.tv/xem-phim/ai-long-nhai-the-series-tap-5-10623_126526.html",
+    "id": "movie-1746033681654-424646"
+  },
+  {
+    "englishName": "Hard love mission",
+    "vietnameseName": "Hard love mission",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://motphimtv.me/phim/hard-love-mission-10677.html",
+    "id": "movie-1746033681654-549248"
+  },
+  {
+    "englishName": "Remember me",
+    "vietnameseName": "Remember me",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://yuthanhthien.top/reme#tap-8",
+    "id": "movie-1746033681654-58732"
+  },
+  {
+    "englishName": "Between us",
+    "vietnameseName": "Dây dầu gai  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.kenhdammy.net/2022/11/day-dau-gai-between-us-2022.html",
+    "id": "movie-1746033681654-622196"
+  },
+  {
+    "englishName": "I will knock you",
+    "vietnameseName": "I will knock you",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "id": "movie-1746033681654-728999"
+  },
+  {
+    "englishName": "2 moon the ambassador",
+    "vietnameseName": "2 moon the ambassador",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://fuhuz.com/movie/2-moons-the-ambassador-2-moons-the-ambassador_afiwggII.html",
+    "id": "movie-1746033681654-466542"
+  },
+  {
+    "englishName": "609 bed time story",
+    "vietnameseName": "609 bed time story",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://motchill.tv/xem-phim/609-bedtime-story-tap-24-tap-cuoi-10757_130511.html",
+    "id": "movie-1746033681654-479186"
+  },
+  {
+    "englishName": "My school president",
+    "vietnameseName": "My school president",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://yuthanhthien.top/president#tap-1",
+    "id": "movie-1746033681654-491875"
+  },
+  {
+    "englishName": "Dành riêng cho mình em",
+    "vietnameseName": "Dành riêng cho mình em",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.kenhdammy.net/2022/12/danh-cho-rieng-minh-em.html",
+    "id": "movie-1746033681654-574128"
+  },
+  {
+    "englishName": "Moonlight chicken",
+    "vietnameseName": "Cơm gà ánh trăng  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "id": "movie-1746033681654-394247"
+  },
+  {
+    "englishName": "The wrap effect",
+    "vietnameseName": "Mật mã lệch lạc ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://vn.trueid.net/watch/series/W3lg0xAaRD1Q/6jqYy0GkLEqj/ybqGvAP4K28R/1B1oja8lpM0L/mat-ma-lech-lac-tap-6",
+    "id": "movie-1746033681654-139423"
+  },
+  {
+    "englishName": "Destiny Seeker",
+    "vietnameseName": "Destiny Seeker",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.kenhdammy.net/2023/02/destiny-seeker.html",
+    "id": "movie-1746033681654-381300"
+  },
+  {
+    "englishName": "đường kinh độ 180 độ lướt qua chúng ta",
+    "vietnameseName": "đường kinh độ 180 độ lướt qua chúng ta",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://yuthanhthien.top/180do",
+    "id": "movie-1746033681654-588139"
+  },
+  {
+    "englishName": "Bed Friend",
+    "vietnameseName": "Bed Friend",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.cc/xem-phim/ban-giuong-bed-friend-2023-vietsub-tap-10.html",
+    "id": "movie-1746033681654-888800"
+  },
+  {
+    "englishName": "Chain of heart",
+    "vietnameseName": "Chain of heart",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.cc/xem-phim/chains-of-heart-xieng-xich-trai-tim-2023-vietsub-tap-9.html",
+    "id": "movie-1746033681654-38531"
+  },
+  {
+    "englishName": "Tin tem jai",
+    "vietnameseName": "Tin tem jai",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://subnhanh.vip/xem-phim/tin-tem-jai-the-series-2023-vietsub-ta-10.html",
+    "id": "movie-1746033681654-21894"
+  },
+  {
+    "englishName": "Make a wish",
+    "vietnameseName": "Make a wish",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://yuthanhthien.top/wish#tap-6-end",
+    "id": "movie-1746033681654-703521"
+  },
+  {
+    "englishName": "Future - Chàng kĩ sư đẹp trai và Bác sĩ của tôi",
+    "vietnameseName": "Future - Chàng kĩ sư đẹp trai và Bác sĩ của tôi",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://yuthanhthien.top/fu#tap-6-end",
+    "id": "movie-1746033681654-619469"
+  },
+  {
+    "englishName": "Love syndrome 3",
+    "vietnameseName": "Love syndrome 3",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://subnhanhtv.pro/xemphim/love-syndrome-3/rIGboZE.html",
+    "id": "movie-1746033681654-235758"
+  },
+  {
+    "englishName": "Tình yêu ở cửa hàng tiện lợi",
+    "vietnameseName": "Tình yêu ở cửa hàng tiện lợi",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.kenhdammy.com/2020/05/tinh-yeu-o-cua-hang-tien-loi.html",
+    "id": "movie-1746033681654-461519"
+  },
+  {
+    "englishName": "Battle of the writter",
+    "vietnameseName": "Trò chơi đại tác chiến ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.my/phim/tro-choi-dai-tac-chien-2024.html",
+    "id": "movie-1746033681654-995701"
+  },
+  {
+    "englishName": "Chức nghiệp thế thân",
+    "vietnameseName": "Chức nghiệp thế thân",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://subnhanh.my/phim/chuc-nghiep-the-than-2024.html",
+    "id": "movie-1746033681654-26202"
+  },
+  {
+    "englishName": "Hidden Moon",
+    "vietnameseName": "Trăng khuyết  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.blvietsub.vip/2024/10/trang-khuyet-hidden-moon-2024_16.html#07",
+    "id": "movie-1746033681654-248235"
+  },
+  {
+    "englishName": "Jack&Joker",
+    "vietnameseName": "Kẻ đánh cắp trái tim tôi ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.blvietsub.vip/2024/10/nguoi-anh-cap-trai-tim-toi-jack-joker-u_15.html#05",
+    "id": "movie-1746033681654-281749"
+  },
+  {
+    "englishName": "Every You Every Me",
+    "vietnameseName": "Vạn Kiếp Yêu Người  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.blvietsub.vip/2024/10/van-kiep-yeu-nguoi-every-you-every-me_15.html#03",
+    "id": "movie-1746033681654-409804"
+  },
+  {
+    "englishName": "Bắt cóc (Kidnap)",
+    "vietnameseName": "Bắt cóc (Kidnap)",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.blvietsub.vip/2024/10/bat-coc-kidnap-2024_11.html#09",
+    "id": "movie-1746033681654-740925"
+  },
+  {
+    "englishName": "Caged Again",
+    "vietnameseName": "Dũng Cảm Nói Yêu Người ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.blvietsub.vip/2024/11/dung-cam-noi-yeu-nguoi-caged-again-2024.html",
+    "id": "movie-1746033681654-239118"
+  },
+  {
+    "englishName": "Love Sick 2024",
+    "vietnameseName": "Yêu là yêu  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.blvietsub.vip/2024/10/yeu-la-yeu-2024-love-sick-2024_14.html",
+    "id": "movie-1746033681654-482585"
+  },
+  {
+    "englishName": "Fourever You",
+    "vietnameseName": "Vì Tình Yêu Dẫn Lối ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.blvietsub.vip/2024/10/vi-tinh-yeu-dan-loi-fourever-you-2024_11.html",
+    "id": "movie-1746033681654-39063"
+  },
+  {
+    "englishName": "Your Sky",
+    "vietnameseName": "Muôn ngàn trời mây  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.blvietsub.vip/2024/06/khoang-troi-cua-anh-your-sky-2024_5.html",
+    "id": "movie-1746033681654-430824"
+  },
+  {
+    "englishName": "ThamePo the series",
+    "vietnameseName": "Trái tim hẵng 1 nhịp ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.blvietsub.vip/2024/06/thamepo-trai-tim-hang-mot-nhip-thamepo_3.html#12",
+    "id": "movie-1746033681654-95533"
+  },
+  {
+    "englishName": "Sangmin Dinneaw",
+    "vietnameseName": "Sangmin Dinneaw",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 2,
+    "link": "https://www.blvietsub.vip/2024/12/sangmin-dinneaw-2024.html",
+    "id": "movie-1746033681654-581468"
+  },
+  {
+    "englishName": "Perfect10 Liner",
+    "vietnameseName": "Gia Tộc Mã Số Thần Thánh  ",
+    "status": "Đã xem",
+    "country": "Thái Lan",
+    "rate": 1,
+    "link": "https://www.blvietsub.vip/2024/06/gia-toc-ma-so-than-thanh-perfect10_3.html",
+    "id": "movie-1746033681654-885524"
   }
 ]

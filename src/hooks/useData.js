@@ -48,7 +48,10 @@ export const useData = (type) => {
     const trimmedSearch = term.trim().toLowerCase();
     const filtered = items.filter((item) => {
       if (!trimmedSearch) return true;
+      // Bổ sung search cho phim: englishName, vietnameseName
       const inName = item.name?.toLowerCase().includes(trimmedSearch);
+      const inEnglishName = item.englishName?.toLowerCase().includes(trimmedSearch);
+      const inVietnameseName = item.vietnameseName?.toLowerCase().includes(trimmedSearch);
       const inCountry = item.country?.toLowerCase().includes(trimmedSearch);
       const inStatus = item.status?.toLowerCase().includes(trimmedSearch);
       const inRate = (item.rate + '').toLowerCase().includes(trimmedSearch);
@@ -58,7 +61,7 @@ export const useData = (type) => {
         : false;
       const inLink = item.link?.toLowerCase().includes(trimmedSearch);
       return (
-        inName || inCountry || inStatus || inRate || inChapters || inGenres || inLink
+        inName || inEnglishName || inVietnameseName || inCountry || inStatus || inRate || inChapters || inGenres || inLink
       );
     });
     setFilteredItems(filtered);

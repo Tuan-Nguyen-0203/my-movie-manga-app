@@ -1,11 +1,13 @@
 [
   {
+    "id": "manga-1745082878479-872014",
     "name": "Ai đem ai thật lòng",
-    "chapters": 110,
+    "genres": [],
     "country": "Trung Quốc",
     "status": "Chưa đọc",
     "link": "https://www.wattpad.com/story/232692240-ai-%C4%91em-ai-th%E1%BA%ADt-l%C3%B2ng-th%E1%BB%A7y-thi%C3%AAn-th%E1%BB%ABa",
-    "id": "manga-1745082878479-872014"
+    "rate": null,
+    "chapters": 110
   },
   {
     "name": "Ai đó",
@@ -890,7 +892,7 @@
     "name": "Vợ mình mình nuôi",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Sắp dịch",
+    "status": "Đang dịch",
     "link": "https://www.wattpad.com/story/328180918-ho%C3%A0n-%C4%91m-v%E1%BB%A3-m%C3%ACnh-m%C3%ACnh-nu%C3%B4i",
     "rate": null,
     "chapters": 112
@@ -1186,7 +1188,7 @@
   },
   {
     "id": "manga-1745601509526",
-    "name": "1359368765",
+    "name": "SỰ Ỷ LẠI NGUY HIỂM",
     "genres": [
       "Hiện đại"
     ],
@@ -1328,5 +1330,56 @@
     "link": "https://www.wattpad.com/story/294600652-end-tin-%C4%91%E1%BB%93n-d%C6%B0-tr%C3%ACnh",
     "rate": null,
     "chapters": 82
+  },
+  {
+    "id": "manga-1745950694381",
+    "name": "SAO ANH CHƯA ĐẾN DỖ EM ĐI",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/307521534-%C4%91m-end-sao-anh-ch%C6%B0a-%C4%91%E1%BA%BFn-d%E1%BB%97-em-%C4%91i-m%E1%BA%B7c-t%C3%A2y-kha",
+    "rate": null,
+    "chapters": 92
+  },
+  {
+    "id": "manga-1745951382594",
+    "name": "Trầm Chu",
+    "genres": [
+      "Hiện đại",
+      "Trọng sinh"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/78384601-%C4%91m-tr%E1%BA%A7m-chu-s%E1%BB%9F-h%C3%A0n-y-thanh-full",
+    "rate": null,
+    "chapters": 161
+  },
+  {
+    "id": "manga-1745954684198",
+    "name": "Tôi bị ánh trăng của nam chính coi trọng",
+    "genres": [
+      "Thanh xuân vườn trường",
+      "Xuyên thư",
+      "Trọng sinh"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/200137728-edit-ho%C3%A0n-t%C3%B4i-b%E1%BB%8B-%C3%A1nh-tr%C4%83ng-c%E1%BB%A7a-nam-ch%C3%ADnh-coi",
+    "rate": null,
+    "chapters": 114
+  },
+  {
+    "id": "manga-1745954877444",
+    "name": "Kẻ thù vừa ngọt vừa bám người",
+    "genres": [
+      "Trọng sinh"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/192832253-ho%C3%A0n-k%E1%BA%BB-th%C3%B9-v%E1%BB%ABa-ng%E1%BB%8Dt-v%E1%BB%ABa-b%C3%A1m-ng%C6%B0%E1%BB%9Di-phong-c%E1%BB%ADu",
+    "rate": null,
+    "chapters": 66
   }
 ]

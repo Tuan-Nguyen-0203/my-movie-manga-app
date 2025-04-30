@@ -45,7 +45,55 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
         const cmp = (a.name || "").localeCompare(b.name || "", "vi", { sensitivity: "base" });
         return direction === "asc" ? cmp : -cmp;
       }
-      if (a[key] < b[key]) return direction === "asc" ? -1 : 1;
+      if (key === "vietnameseName") {
+      // So sánh tiếng Việt chuẩn cho tên phim
+      const alphabet = [
+        "a", "ă", "â", "b", "c", "d", "đ", "e", "ê", "g", "h", "i", "k", "l", "m", "n", "o", "ô", "ơ", "p", "q", "r", "s", "t", "u", "ư", "v", "x", "y"
+      ];
+      function getBaseChar(char) {
+        return char.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      }
+      function getCharOrder(char) {
+        const base = getBaseChar(char);
+        const idx = alphabet.indexOf(base);
+        return idx === -1 ? 100 : idx;
+      }
+      function getAccentOrder(char) {
+        const nfd = char.normalize("NFD");
+        const accent = nfd.slice(1);
+        if (!accent) return 0;
+        if (accent.includes("\u0301")) return 1; // sắc
+        if (accent.includes("\u0300")) return 2; // huyền
+        if (accent.includes("\u0309")) return 3; // hỏi
+        if (accent.includes("\u0303")) return 4; // ngã
+        if (accent.includes("\u0323")) return 5; // nặng
+        return 0;
+      }
+      function vietnameseCompare(aStr, bStr) {
+        aStr = (aStr || "").toLowerCase().normalize("NFC");
+        bStr = (bStr || "").toLowerCase().normalize("NFC");
+        const minLen = Math.min(aStr.length, bStr.length);
+        for (let i = 0; i < minLen; ++i) {
+          const aChar = aStr[i];
+          const bChar = bStr[i];
+          if (aChar === bChar) continue;
+          const aOrder = getCharOrder(aChar);
+          const bOrder = getCharOrder(bChar);
+          if (aOrder !== bOrder) return aOrder - bOrder;
+          // Nếu chữ giống nhau, so sánh dấu
+          const aAccent = getAccentOrder(aChar);
+          const bAccent = getAccentOrder(bChar);
+          if (aAccent !== bAccent) return aAccent - bAccent;
+          // Nếu vẫn giống, fallback unicode
+          if (aChar < bChar) return -1;
+          if (aChar > bChar) return 1;
+        }
+        return aStr.length - bStr.length;
+      }
+      const cmp = vietnameseCompare(a.vietnameseName, b.vietnameseName);
+      return direction === "asc" ? cmp : -cmp;
+    }
+    if (a[key] < b[key]) return direction === "asc" ? -1 : 1;
       if (a[key] > b[key]) return direction === "asc" ? 1 : -1;
       return 0;
     });

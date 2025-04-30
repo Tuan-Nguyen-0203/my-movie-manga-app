@@ -80,8 +80,12 @@ function MangasPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-2">
         <h1 className="text-2xl font-bold text-gray-900">Danh sách truyện</h1>
+        <SearchBar
+          onSearch={handleSearch}
+          className="max-w-full w-[500px]"
+        />
         <button
           onClick={() => setShowForm(true)}
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
@@ -89,26 +93,44 @@ function MangasPage() {
           Thêm truyện mới
         </button>
       </div>
-
-      <div className="grid grid-cols-3 gap-4">
-        <SearchBar onSearch={handleSearch} />
-        <FilterDropdown
-          label="Quốc gia"
-          options={[
-            "",
-            ...Array.from(new Set((items || []).map((m) => m.country))).filter(
-              Boolean
-            ),
-          ]}
-          value={countryFilter}
-          onChange={setCountryFilter}
-        />
-        <FilterDropdown
-          label="Tình trạng"
-          options={["", "Đang đọc", "Đang dịch", "Đã dịch", "Đã đọc", "Chưa đọc", "Sắp dịch"]}
-          value={statusFilter}
-          onChange={setStatusFilter}
-        />
+      {/* Tabs filter for status + quốc gia */}
+      <div className="flex flex-wrap gap-2 mb-4 items-center justify-between">
+        <div className="flex gap-2 flex-wrap">
+          {[
+            "Tất cả",
+            "Đang đọc",
+            "Đang dịch",
+            "Đã dịch",
+            "Đã đọc",
+            "Chưa đọc",
+            "Sắp dịch",
+          ].map((tab) => (
+            <button
+              key={tab}
+              className={`px-4 py-2 rounded-full border text-sm font-medium transition-all duration-200 ${
+                statusFilter === (tab === "Tất cả" ? "" : tab)
+                  ? "bg-blue-500 text-white border-blue-500"
+                  : "bg-white text-gray-700 border-gray-300 hover:bg-blue-50"
+              }`}
+              onClick={() => setStatusFilter(tab === "Tất cả" ? "" : tab)}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+        <div className="w-52">
+          <FilterDropdown
+            label="Quốc gia"
+            options={[
+              "",
+              ...Array.from(
+                new Set((items || []).map((m) => m.country))
+              ).filter(Boolean),
+            ]}
+            value={countryFilter}
+            onChange={setCountryFilter}
+          />
+        </div>
       </div>
 
       <MangaList
