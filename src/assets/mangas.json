@@ -30,10 +30,11 @@
     "name": "Ân hữu trọng báo",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Sắp dịch",
+    "status": "Đã dịch",
     "link": "https://www.wattpad.com/story/112314517-%C4%91m-%C3%A2n-h%E1%BB%AFu-tr%E1%BB%8Dng-b%C3%A1o-full",
-    "rate": null,
-    "chapters": 120
+    "rate": "",
+    "chapters": 120,
+    "notes": "Ân hữu trọng báo"
   },
   {
     "name": "Bạc vụ",
@@ -108,9 +109,9 @@
       "Xuyên thư"
     ],
     "country": "Trung Quốc",
-    "status": "Đang đọc",
+    "status": "Đã đọc",
     "link": "https://www.wattpad.com/story/308522000-%C4%91m-edit-ho%C3%A0n-c%C3%A1-m%E1%BA%B7n-ngh%C4%A9-th%C3%B4ng-su%E1%BB%91t-r%E1%BB%93i-tr%C3%AC-v%C3%A3n",
-    "rate": null,
+    "rate": 1,
     "chapters": 130
   },
   {
@@ -182,10 +183,11 @@
     "name": "Cục cưng bé nhỏ ăn no chưa",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Sắp dịch",
+    "status": "Đã dịch",
     "link": "https://www.wattpad.com/story/311582110-%C4%91m-edit-ho%C3%A0n-c%E1%BB%A5c-c%C6%B0ng-b%C3%A9-nh%E1%BB%8F-%C4%83n-no-ch%C6%B0a",
-    "rate": null,
-    "chapters": 83
+    "rate": "",
+    "chapters": 83,
+    "notes": "https://www.youtube.com/watch?v=jYBQxlZcnVU&list=PLQQUt6ORh-Na0BfP3INaaZNFI0yK89IGW&index=1"
   },
   {
     "name": "Cửa hàng nhang đèn của tiểu lão bản",
@@ -604,12 +606,15 @@
     "chapters": 48
   },
   {
+    "id": "manga-1745082878479-129389",
     "name": "Sau Khi Trùng Sinh, Cậu Chủ Thật Bắt Đầu Dưỡng Sinh",
-    "chapters": 104,
+    "genres": [],
     "country": "Trung Quốc",
-    "status": "Chưa đọc",
+    "status": "Đã dịch",
     "link": "https://www.wattpad.com/story/374339762-end-sau-khi-tr%C3%B9ng-sinh-c%E1%BA%ADu-ch%E1%BB%A7-th%E1%BA%ADt-b%E1%BA%AFt-%C4%91%E1%BA%A7u-d%C6%B0%E1%BB%A1ng",
-    "id": "manga-1745082878479-129389"
+    "rate": "NaN",
+    "chapters": 104,
+    "notes": "https://www.youtube.com/watch?v=sj5PoWDQcNA&list=PLJWYpDSRkwnbvgl4cXXpnXzXOUoo2uzUE&index=1"
   },
   {
     "name": "Sau Khi Từ Hôn Gả Cho Thư Sinh Làm Phu Lang",
@@ -757,7 +762,7 @@
     "name": "Thụ thế thân thức tỉnh rồi",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Đã dịch",
+    "status": "Đang đọc",
     "link": "https://www.wattpad.com/story/343581957-ho%C3%A0n-%C4%91m-th%E1%BB%A5-th%E1%BA%BF-th%C3%A2n-th%E1%BB%A9c-t%E1%BB%89nh-r%E1%BB%93i",
     "rate": null,
     "chapters": 156
@@ -807,10 +812,11 @@
     "name": "Toàn Showbiz Nghe Tôi Nổi Điên",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Sắp dịch",
+    "status": "Đã dịch",
     "link": "https://www.wattpad.com/story/375352203-%C4%91m-h%C3%A0i-to%C3%A0n-showbiz-nghe-t%C3%B4i-n%E1%BB%95i-%C4%91i%C3%AAn",
-    "rate": null,
-    "chapters": null
+    "rate": "1",
+    "chapters": 134,
+    "notes": "https://www.youtube.com/watch?v=VScGI_QgUd0&list=PLL9pLC75woQNGvrOGHiZjVjoA6r8fvJd4&index=1"
   },
   {
     "name": "Tọng đuôi",
@@ -892,7 +898,7 @@
     "name": "Vợ mình mình nuôi",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Đang dịch",
+    "status": "Đã dịch",
     "link": "https://www.wattpad.com/story/328180918-ho%C3%A0n-%C4%91m-v%E1%BB%A3-m%C3%ACnh-m%C3%ACnh-nu%C3%B4i",
     "rate": null,
     "chapters": 112
@@ -1314,10 +1320,11 @@
       "Thanh xuân vườn trường"
     ],
     "country": "Trung Quốc",
-    "status": "Sắp dịch",
+    "status": "Đã dịch",
     "link": "https://www.wattpad.com/story/336440839-xong-edit-%C4%91m-%C4%91%E1%BB%ABng-h%C3%B2ng-d%E1%BA%A1y-h%C6%B0-t%C3%B4i-la-b%E1%BB%91c-hoa-th%E1%BB%91",
-    "rate": null,
-    "chapters": 111
+    "rate": "",
+    "chapters": 111,
+    "notes": "https://www.youtube.com/watch?v=-Pj6FAOypSk&list=PLkw_8Ms-aSsD7OKbQ2jB_Pr2oUVULoj6a&index=1"
   },
   {
     "id": "manga-1745693213065",
@@ -1381,5 +1388,94 @@
     "link": "https://www.wattpad.com/story/192832253-ho%C3%A0n-k%E1%BA%BB-th%C3%B9-v%E1%BB%ABa-ng%E1%BB%8Dt-v%E1%BB%ABa-b%C3%A1m-ng%C6%B0%E1%BB%9Di-phong-c%E1%BB%ADu",
     "rate": null,
     "chapters": 66
+  },
+  {
+    "id": "manga-1746035134307",
+    "name": "Vương Gia Giả Mạo",
+    "genres": [
+      "Cổ đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/392253910-%C4%91am-m%E1%BB%B9-full-v%C6%B0%C6%A1ng-gia-gi%E1%BA%A3-m%E1%BA%A1o-c%C3%B4ng-t%E1%BB%AD-vu-ca",
+    "rate": null,
+    "chapters": 89
+  },
+  {
+    "id": "manga-1746113528440",
+    "name": "Tiếng vĩ cầm trong đêm giông bão",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://awread.vn/b/kQrzmu/read",
+    "rate": null,
+    "chapters": 60
+  },
+  {
+    "id": "manga-1746114107422",
+    "name": "Ghi chép về sách minh họa sưu tầm ác mộng",
+    "genres": [
+      "Linh dị"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.wattpad.com/story/282060202-%C4%91m-on-going-ghi-ch%C3%A9p-v%E1%BB%81-s%C3%A1ch-minh-h%E1%BB%8Da-s%C6%B0u-t%E1%BA%A7m-%C3%A1c",
+    "rate": null,
+    "chapters": 110,
+    "notes": "https://www.youtube.com/playlist?list=PL1-rV6lw1hVGbDx3QZTOw-RwH4h5kVJ1l"
+  },
+  {
+    "id": "manga-1746114399721",
+    "name": "Trở Thành NPC Xinh Đẹp Trong Trò Chơi Vô Hạn",
+    "genres": [
+      "Linh dị"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/379513982-%C4%91m-tr%E1%BB%9F-th%C3%A0nh-npc-xinh-%C4%91%E1%BA%B9p-trong-tr%C3%B2-ch%C6%A1i-v%C3%B4-h%E1%BA%A1n",
+    "rate": null,
+    "chapters": 200
+  },
+  {
+    "id": "manga-1746114825605",
+    "name": "Độc giả và nhân vật chính đích thị là chân tình",
+    "genres": [
+      "Linh dị"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/54006218-%C4%91%C3%B4%CC%A3c-gia%CC%89-ho%CC%80a-chu%CC%89-gia%CC%81c-tuy%C3%AA%CC%A3t-b%C6%B0%CC%81c-thi%CC%A3-ch%C3%A2n-%C3%A1i",
+    "rate": null,
+    "chapters": 107
+  },
+  {
+    "id": "manga-1746115374965",
+    "name": "Địa Cầu Online",
+    "genres": [
+      "Linh dị",
+      "Giả tưởng",
+      "Mạt thế"
+    ],
+    "country": "Trung Quốc",
+    "status": "Chưa đọc",
+    "link": "https://www.wattpad.com/story/251754642-edit-%C4%91%E1%BB%8Ba-c%E1%BA%A7u-online-c1-c134 +  https://chuongnholengkeng.wordpress.com/dm-edit-dia-cau-online-mac-than-hoan-tu-chuong-147/ +  https://mangcutmeowmeow.wordpress.com/2020/10/31/chuong-138-cau-la-cai-tha-gi/",
+    "rate": null,
+    "chapters": 245
+  },
+  {
+    "id": "manga-1746121810918",
+    "name": "Trời đất! Diễn viên vô danh nhà ai vừa lên sân khấu đã hôn vai ác chó điên chứ!",
+    "genres": [
+      "Xuyên thư",
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.wattpad.com/story/373559937-hcv-tr%E1%BB%9Di-%C4%91%E1%BA%A5t-di%E1%BB%85n-vi%C3%AAn-v%C3%B4-danh-nh%C3%A0-ai-v%E1%BB%ABa-l%C3%AAn-s%C3%A2n + https://www.wattpad.com/story/392513184-hcv-ph%E1%BA%A7n-2-tr%E1%BB%9Di-%C4%91%E1%BA%A5t-di%E1%BB%85n-vi%C3%AAn-v%C3%B4-danh-nh%C3%A0-ai-v%E1%BB%ABa",
+    "rate": "",
+    "chapters": 236,
+    "notes": "https://www.youtube.com/watch?v=3Kyl9wKz7Tw&list=PLAlkknZS7HNElMFTGi8SycF03KcUmnmQi&index=1"
   }
 ]

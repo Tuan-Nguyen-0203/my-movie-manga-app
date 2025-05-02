@@ -3,7 +3,7 @@ import { Outlet, NavLink } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className="flex h-screen bg-gray-50 aaaaa">
+    <div className="flex h-screen bg-gray-50">
       {/* Sidebar */}
       <div className="w-32 bg-white shadow-lg">
         <div className="p-4">
@@ -42,7 +42,7 @@ const Layout = () => {
 
       {/* Main Content */}
       <div className="flex flex-col h-screen w-[calc(100vw-128px)]">
-        <div className="flex h-screen auto-rows-auto flex-col">
+        <div className="flex h-screen auto-rows-auto flex-col overflow-auto">
           {/* <div className="p-4">
             <div className="max-w-full overflow-hidden"> */}
           <div className="p-4">

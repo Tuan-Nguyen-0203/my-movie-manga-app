@@ -17,12 +17,18 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
   // Xoá nhiều record
   const handleDeleteMany = async () => {
     setShowDeleteModal(false);
+    // Xác nhận trước khi xóa
+    if (
+      !window.confirm(
+        `Bạn có chắc chắn muốn xóa ${sortedMovies.length} phim đã chọn?`
+      )
+    ) {
+      return;
+    }
     // Xoá tất cả record đang hiển thị (filtered từ cha)
-    const idsToDelete = new Set(sortedMovies.map(m => m.id || m._id));
+    const idsToDelete = new Set(sortedMovies.map((m) => m.id || m._id));
     if (onDeleteMany) onDeleteMany(idsToDelete);
   };
-
-
 
   // Khi movies prop thay đổi (thêm/xoá/sửa), cập nhật lại sortedMovies
   React.useEffect(() => {
@@ -42,81 +48,127 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
     const sorted = [...sortedMovies].sort((a, b) => {
       if (key === "name") {
         // Sắp xếp tiếng Việt chuẩn
-        const cmp = (a.name || "").localeCompare(b.name || "", "vi", { sensitivity: "base" });
+        const cmp = (a.name || "").localeCompare(b.name || "", "vi", {
+          sensitivity: "base",
+        });
         return direction === "asc" ? cmp : -cmp;
       }
       if (key === "vietnameseName") {
-      // So sánh tiếng Việt chuẩn cho tên phim
-      const alphabet = [
-        "a", "ă", "â", "b", "c", "d", "đ", "e", "ê", "g", "h", "i", "k", "l", "m", "n", "o", "ô", "ơ", "p", "q", "r", "s", "t", "u", "ư", "v", "x", "y"
-      ];
-      function getBaseChar(char) {
-        return char.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-      }
-      function getCharOrder(char) {
-        const base = getBaseChar(char);
-        const idx = alphabet.indexOf(base);
-        return idx === -1 ? 100 : idx;
-      }
-      function getAccentOrder(char) {
-        const nfd = char.normalize("NFD");
-        const accent = nfd.slice(1);
-        if (!accent) return 0;
-        if (accent.includes("\u0301")) return 1; // sắc
-        if (accent.includes("\u0300")) return 2; // huyền
-        if (accent.includes("\u0309")) return 3; // hỏi
-        if (accent.includes("\u0303")) return 4; // ngã
-        if (accent.includes("\u0323")) return 5; // nặng
-        return 0;
-      }
-      function vietnameseCompare(aStr, bStr) {
-        aStr = (aStr || "").toLowerCase().normalize("NFC");
-        bStr = (bStr || "").toLowerCase().normalize("NFC");
-        const minLen = Math.min(aStr.length, bStr.length);
-        for (let i = 0; i < minLen; ++i) {
-          const aChar = aStr[i];
-          const bChar = bStr[i];
-          if (aChar === bChar) continue;
-          const aOrder = getCharOrder(aChar);
-          const bOrder = getCharOrder(bChar);
-          if (aOrder !== bOrder) return aOrder - bOrder;
-          // Nếu chữ giống nhau, so sánh dấu
-          const aAccent = getAccentOrder(aChar);
-          const bAccent = getAccentOrder(bChar);
-          if (aAccent !== bAccent) return aAccent - bAccent;
-          // Nếu vẫn giống, fallback unicode
-          if (aChar < bChar) return -1;
-          if (aChar > bChar) return 1;
+        // So sánh tiếng Việt chuẩn cho tên phim
+        const alphabet = [
+          "a",
+          "ă",
+          "â",
+          "b",
+          "c",
+          "d",
+          "đ",
+          "e",
+          "ê",
+          "g",
+          "h",
+          "i",
+          "k",
+          "l",
+          "m",
+          "n",
+          "o",
+          "ô",
+          "ơ",
+          "p",
+          "q",
+          "r",
+          "s",
+          "t",
+          "u",
+          "ư",
+          "v",
+          "x",
+          "y",
+        ];
+        function getBaseChar(char) {
+          return char.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         }
-        return aStr.length - bStr.length;
+        function getCharOrder(char) {
+          const base = getBaseChar(char);
+          const idx = alphabet.indexOf(base);
+          return idx === -1 ? 100 : idx;
+        }
+        function getAccentOrder(char) {
+          const nfd = char.normalize("NFD");
+          const accent = nfd.slice(1);
+          if (!accent) return 0;
+          if (accent.includes("\u0301")) return 1; // sắc
+          if (accent.includes("\u0300")) return 2; // huyền
+          if (accent.includes("\u0309")) return 3; // hỏi
+          if (accent.includes("\u0303")) return 4; // ngã
+          if (accent.includes("\u0323")) return 5; // nặng
+          return 0;
+        }
+        function vietnameseCompare(aStr, bStr) {
+          aStr = (aStr || "").toLowerCase().normalize("NFC");
+          bStr = (bStr || "").toLowerCase().normalize("NFC");
+          const minLen = Math.min(aStr.length, bStr.length);
+          for (let i = 0; i < minLen; ++i) {
+            const aChar = aStr[i];
+            const bChar = bStr[i];
+            if (aChar === bChar) continue;
+            const aOrder = getCharOrder(aChar);
+            const bOrder = getCharOrder(bChar);
+            if (aOrder !== bOrder) return aOrder - bOrder;
+            // Nếu chữ giống nhau, so sánh dấu
+            const aAccent = getAccentOrder(aChar);
+            const bAccent = getAccentOrder(bChar);
+            if (aAccent !== bAccent) return aAccent - bAccent;
+            // Nếu vẫn giống, fallback unicode
+            if (aChar < bChar) return -1;
+            if (aChar > bChar) return 1;
+          }
+          return aStr.length - bStr.length;
+        }
+        const cmp = vietnameseCompare(a.vietnameseName, b.vietnameseName);
+        return direction === "asc" ? cmp : -cmp;
       }
-      const cmp = vietnameseCompare(a.vietnameseName, b.vietnameseName);
-      return direction === "asc" ? cmp : -cmp;
-    }
-    if (a[key] < b[key]) return direction === "asc" ? -1 : 1;
+      if (a[key] < b[key]) return direction === "asc" ? -1 : 1;
       if (a[key] > b[key]) return direction === "asc" ? 1 : -1;
       return 0;
     });
     setSortedMovies(sorted);
   };
 
-
-  // Hàm lưu thứ tự hiện tại: gửi đúng thứ tự đang hiển thị (filtered & sorted)
+  // Hàm lưu thứ tự hiện tại: chỉ cập nhật thứ tự mà không thay đổi dữ liệu gốc
   const handleSaveOrder = async () => {
     setSaveMsg("");
-    const mergedOrder = sortedMovies;
     try {
+      // Lấy danh sách phim gốc
+      const originalMovies = movies;
+      // Tạo mảng mới chỉ chứa id và thứ tự
+      const orderData = sortedMovies.map((movie, index) => ({
+        id: movie.id,
+        order: index,
+      }));
+
       await fetch("http://localhost:3001/api/movies/update-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(mergedOrder),
+        body: JSON.stringify(orderData),
       });
+
+      // Cập nhật lại sortedMovies để phản ánh thay đổi thứ tự
+      const updatedMovies = [...originalMovies];
+      orderData.forEach((item, index) => {
+        const movie = updatedMovies.find((m) => m.id === item.id);
+        if (movie) {
+          movie.order = item.order;
+        }
+      });
+      setSortedMovies(updatedMovies);
+
       setSaveMsg("✅ Đã lưu thứ tự thành công!");
     } catch (e) {
       setSaveMsg("❌ Lỗi lưu thứ tự!");
     }
   };
-
 
   const columns = [
     { key: "englishName", label: "Tên tiếng Anh" },
@@ -129,8 +181,14 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
         const status = (movie.status || "").trim();
         let color = "#9CA3AF"; // Gray-400 default
         let border = "#D1D5DB"; // Gray-300 default
-        if (status === "Đã xem") { color = "#16A34A"; border = "#86EFAC"; } // Green-600/Green-300
-        else if (status === "Sắp xem") { color = "#D97706"; border = "#FBBF24"; } // Orange-600/Yellow-400
+        if (status === "Đã xem") {
+          color = "#16A34A";
+          border = "#86EFAC";
+        } // Green-600/Green-300
+        else if (status === "Sắp xem") {
+          color = "#D97706";
+          border = "#FBBF24";
+        } // Orange-600/Yellow-400
         // Chưa xem giữ màu xám
         return (
           <span
@@ -183,10 +241,10 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
       const newItems = [];
       const duplicates = [];
       imported.forEach((item, idx) => {
-      // Convert all '-' values to empty string/null for app
-      Object.keys(item).forEach((key) => {
-        if (item[key] === '-') item[key] = '';
-      });
+        // Convert all '-' values to empty string/null for app
+        Object.keys(item).forEach((key) => {
+          if (item[key] === "-") item[key] = "";
+        });
         const englishName = (item.englishName || "").trim().toLowerCase();
         const country = (item.country || "").trim();
         const isDup = existing.some(
@@ -199,7 +257,9 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
         } else {
           // Gán id nếu chưa có
           if (!item.id) {
-            item.id = `movie-${Date.now()}-${Math.floor(Math.random()*1000000)}`;
+            item.id = `movie-${Date.now()}-${Math.floor(
+              Math.random() * 1000000
+            )}`;
           }
           newItems.push(item);
         }
@@ -242,14 +302,20 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
       // Dynamically import xlsx only when needed
       const XLSX = await import("xlsx");
       // Prepare data: only export filtered & sorted movies
-      const exportData = filteredMovies.map(({ englishName, vietnameseName, country, status, rate, link }) => ({
-        englishName: englishName == null || englishName === '' ? '-' : englishName,
-        vietnameseName: vietnameseName == null || vietnameseName === '' ? '-' : vietnameseName,
-        country: country == null || country === '' ? '-' : country,
-        status: status == null || status === '' ? '-' : status,
-        rate: rate == null || rate === '' ? '-' : rate,
-        link: link == null || link === '' ? '-' : link,
-      }));
+      const exportData = filteredMovies.map(
+        ({ englishName, vietnameseName, country, status, rate, link }) => ({
+          englishName:
+            englishName == null || englishName === "" ? "-" : englishName,
+          vietnameseName:
+            vietnameseName == null || vietnameseName === ""
+              ? "-"
+              : vietnameseName,
+          country: country == null || country === "" ? "-" : country,
+          status: status == null || status === "" ? "-" : status,
+          rate: rate == null || rate === "" ? "-" : rate,
+          link: link == null || link === "" ? "-" : link,
+        })
+      );
       const worksheet = XLSX.utils.json_to_sheet(exportData);
       const workbook = XLSX.utils.book_new();
       XLSX.utils.book_append_sheet(workbook, worksheet, "Movies");
@@ -322,8 +388,13 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
       {showDeleteModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
           <div className="bg-white rounded shadow-lg p-6 w-80">
-            <h2 className="text-lg font-bold mb-4 text-red-600">Xác nhận xoá</h2>
-            <p className="mb-6 text-gray-700">Bạn có chắc chắn muốn xoá <b>{recordsToDelete.length}</b> phim đang hiển thị?</p>
+            <h2 className="text-lg font-bold mb-4 text-red-600">
+              Xác nhận xoá
+            </h2>
+            <p className="mb-6 text-gray-700">
+              Bạn có chắc chắn muốn xoá <b>{recordsToDelete.length}</b> phim
+              đang hiển thị?
+            </p>
             <div className="flex justify-end space-x-2">
               <button
                 className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
@@ -339,16 +410,6 @@ const MovieList = ({ movies, onDelete, onEdit }) => {
               </button>
             </div>
           </div>
-        </div>
-      )}
-      {saveMsg && (
-        <div className="flex items-center mb-2 gap-2">
-          <span
-            className="text-sm font-semibold"
-            style={{ color: saveMsg.startsWith("✅") ? "green" : "red" }}
-          >
-            {saveMsg}
-          </span>
         </div>
       )}
       <Table

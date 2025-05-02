@@ -6,8 +6,9 @@ function MangaForm({ manga, onSave, onCancel }) {
   const [country, setCountry] = useState("");
   const [status, setStatus] = useState("Chưa đọc");
   const [link, setLink] = useState("");
-  const [rate, setRate] = useState("");
+  const [rate, setRate] = useState(""); // Thay đổi từ "" thành ""
   const [chapters, setChapters] = useState("");
+  const [notes, setNotes] = useState("");
 
   useEffect(() => {
     if (manga) {
@@ -16,8 +17,9 @@ function MangaForm({ manga, onSave, onCancel }) {
       setCountry(manga.country || "");
       setStatus(manga.status || "Đã đọc");
       setLink(manga.link || "");
-      setRate(manga.rate ? manga.rate.toString() : "");
+      setRate(manga.rate ? manga.rate.toString() : ""); // Chuyển đổi rate thành string khi load
       setChapters(manga.chapters ? manga.chapters.toString() : "");
+      setNotes(manga.notes || ""); // Đảm bảo notes được set từ manga
     } else {
       setName("");
       setGenres([]);
@@ -26,6 +28,7 @@ function MangaForm({ manga, onSave, onCancel }) {
       setLink("");
       setRate("");
       setChapters("");
+      setNotes("");
     }
   }, [manga]);
 
@@ -38,8 +41,9 @@ function MangaForm({ manga, onSave, onCancel }) {
       country,
       status,
       link,
-      rate: parseInt(rate),
+      rate: rate || "", // Sử dụng rate nếu có, nếu không thì sử dụng ""
       chapters: parseInt(chapters),
+      notes,
     };
     if (onSave) {
       onSave(newManga);
@@ -89,6 +93,13 @@ function MangaForm({ manga, onSave, onCancel }) {
     "Sắp dịch",
   ];
   const rateOptions = [1, 2, 3];
+
+  // Xử lý thay đổi rate
+  const handleRateChange = (e) => {
+    const value = e.target.value;
+    const parsedValue = Math.min(Math.max(parseInt(value), 0), 10);
+    setRate(parsedValue.toString() || "");
+  };
 
   return (
     <div className="fixed top-0 !mt-0 left-0 w-full h-full bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
@@ -205,21 +216,33 @@ function MangaForm({ manga, onSave, onCancel }) {
               htmlFor="rate"
               className="block text-gray-700 text-sm font-bold mb-2"
             >
-              Rate:
+              Đánh giá:
             </label>
-            <select
+            <input
+              type="number"
               id="rate"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               value={rate}
-              onChange={(e) => setRate(e.target.value)}
+              onChange={handleRateChange}
+              min="0"
+              max="10"
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="notes"
+              className="block text-gray-700 text-sm font-bold mb-2"
             >
-              <option value="">Chọn rate</option>
-              {rateOptions.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
+              Ghi chú (không hiển thị trong danh sách):
+            </label>
+            <textarea
+              id="notes"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              value={notes}
+              onChange={(e) => setNotes(e.target.value)}
+              rows="3"
+              placeholder="Nhập các thông tin bổ sung không cần hiển thị trong danh sách..."
+            />
           </div>
           <div>
             <label

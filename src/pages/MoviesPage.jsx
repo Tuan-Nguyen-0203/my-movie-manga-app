@@ -132,7 +132,11 @@ function MoviesPage() {
           )}
           <MovieForm
             onSubmit={(movie) => {
-              handleUpdate(movie);
+              if (editingMovie) {
+                handleUpdate(movie);
+              } else {
+                handleAddMovie(movie);
+              }
               setShowForm(false);
               setEditingMovie(null);
               setFormError("");

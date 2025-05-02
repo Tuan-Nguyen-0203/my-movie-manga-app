@@ -23,26 +23,6 @@ export const useData = (type) => {
     }
   };
 
-  const updateData = async (newData) => {
-    try {
-      const response = await fetch(`http://localhost:3001/api/data/${type}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newData),
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to update data");
-      }
-
-      fetchData();
-    } catch (error) {
-      console.error("Error updating data:", error);
-    }
-  };
-
   const handleSearch = (term) => {
     setSearchTerm(term);
     const trimmedSearch = term.trim().toLowerCase();
@@ -67,7 +47,6 @@ export const useData = (type) => {
     setFilteredItems(filtered);
   };
 
-
   const handleFilter = () => {
     let filtered = items;
 
@@ -86,30 +65,85 @@ export const useData = (type) => {
     setFilteredItems(filtered);
   };
 
-  const handleAdd = (newItem) => {
-    const updatedItems = [...items, newItem];
-    setItems(updatedItems);
-    setFilteredItems(updatedItems);
+  const handleAdd = async (newItem) => {
+    try {
+      // Thêm mới vào state
+      const updatedItems = [...items, newItem];
+      setItems(updatedItems);
+      setFilteredItems(updatedItems);
 
-    updateData(updatedItems);
+      // Gọi API để thêm mới
+      const response = await fetch(`http://localhost:3001/api/data/${type}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify([...items, newItem]),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to add item");
+      }
+    } catch (error) {
+      console.error("Error adding item:", error);
+      throw error;
+    }
   };
 
-  const handleUpdate = (updatedItem) => {
-    const updatedItems = items.map((item) =>
-      item.id === updatedItem.id ? updatedItem : item
-    );
-    setItems(updatedItems);
-    setFilteredItems(updatedItems);
+  const handleUpdate = async (updatedItem) => {
+    try {
+      // Cập nhật state
+      const updatedItems = items.map((item) =>
+        item.id === updatedItem.id ? updatedItem : item
+      );
+      setItems(updatedItems);
+      setFilteredItems(updatedItems);
 
-    updateData(updatedItems);
+      // Gọi API để cập nhật
+      const response = await fetch(`http://localhost:3001/api/data/${type}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedItems),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to update item");
+      }
+    } catch (error) {
+      console.error("Error updating item:", error);
+      throw error;
+    }
   };
 
-  const handleDelete = (id) => {
-    const updatedItems = items.filter((item) => item.id !== id);
-    setItems(updatedItems);
-    setFilteredItems(updatedItems);
+  const handleDelete = async (id) => {
+    if (!window.confirm(`Bạn có chắc chắn muốn xóa ${type === 'movies' ? 'phim' : 'truyện'} này?`)) {
+      return;
+    }
 
-    updateData(updatedItems);
+    try {
+      // Cập nhật state
+      const updatedItems = items.filter((item) => item.id !== id);
+      setItems(updatedItems);
+      setFilteredItems(updatedItems);
+
+      // Gọi API để xóa
+      const response = await fetch(`http://localhost:3001/api/data/${type}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedItems),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to delete item");
+      }
+    } catch (error) {
+      console.error("Error deleting item:", error);
+      throw error;
+    }
   };
 
   return {

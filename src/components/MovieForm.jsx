@@ -8,7 +8,8 @@ const MovieForm = ({ onSubmit, onCancel, movie = null }) => {
     country: movie?.country || "",
     status: movie?.status || "Chưa xem",
     link: movie?.link || "",
-    rate: movie?.rate || 0,
+    rate: movie?.rate ? movie?.rate.toString() : "", // Chuyển đổi rate thành string khi load
+    notes: movie?.notes || "", // Đảm bảo notes được set từ movie
   });
 
   const handleSubmit = (e) => {
@@ -18,10 +19,18 @@ const MovieForm = ({ onSubmit, onCancel, movie = null }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    if (name === 'rate') {
+      const parsedValue = Math.min(Math.max(parseInt(value), 0), 10);
+      setFormData((prev) => ({
+        ...prev,
+        rate: parsedValue.toString() || "",
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   return (
@@ -109,6 +118,7 @@ const MovieForm = ({ onSubmit, onCancel, movie = null }) => {
               onChange={handleChange}
             >
               <option value="Đã xem">Đã xem</option>
+              <option value="Đang xem">Đang xem</option>
               <option value="Chưa xem">Chưa xem</option>
               <option value="Sắp xem">Sắp xem</option>
             </select>
@@ -136,18 +146,33 @@ const MovieForm = ({ onSubmit, onCancel, movie = null }) => {
             >
               Đánh giá:
             </label>
-            <select
+            <input
+              type="number"
               id="rate"
               name="rate"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               value={formData.rate}
               onChange={handleChange}
+              min="0"
+              max="10"
+            />
+          </div>
+          <div>
+            <label
+              htmlFor="notes"
+              className="block text-gray-700 text-sm font-bold mb-2"
             >
-              <option value="">Chọn rate</option>
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-            </select>
+              Ghi chú (không hiển thị trong danh sách):
+            </label>
+            <textarea
+              id="notes"
+              name="notes"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              value={formData.notes}
+              onChange={handleChange}
+              rows="3"
+              placeholder="Nhập các thông tin bổ sung không cần hiển thị trong danh sách..."
+            ></textarea>
           </div>
         </form>
         {/* Sticky Footer */}

@@ -43,55 +43,40 @@ const MangaList = ({ mangas, onDelete, onEdit, onDeleteMany }) => {
       const newItems = [];
       const duplicates = [];
       imported.forEach((item, idx) => {
-      // Convert all '-' values to empty string/null for app
-      Object.keys(item).forEach((key) => {
-        if (item[key] === '-') item[key] = '';
-      });
+        // Convert all '-' values to empty string/null for app
+        Object.keys(item).forEach((key) => {
+          if (item[key] === '-') item[key] = '';
+        });
         const name = (item.name || "").trim().toLowerCase();
         const country = (item.country || "").trim();
         const isDup = existing.some(
-          (m) =>
-            (m.name || "").trim().toLowerCase() === name &&
-            (m.country || "").trim() === country
+          (m) => (m.name || "").trim().toLowerCase() === name && (m.country || "").trim() === country
         );
-        if (isDup) {
-          duplicates.push({ ...item, row: idx + 2 }); // +2 for header row
-        } else {
-          // Gán id nếu chưa có
-          if (!item.id) {
-            item.id = `manga-${Date.now()}-${Math.floor(
-              Math.random() * 1000000
-            )}`;
-          }
+        if (!isDup) {
           newItems.push(item);
+        } else {
+          duplicates.push({ row: idx + 1, name, country });
         }
       });
-      if (newItems.length === 0) {
-        setImportMsg(
-          `❌ Tất cả truyện trong file đã tồn tại.\n` +
-            (duplicates.length > 0
-              ? `Trùng ở các dòng: ${duplicates.map((d) => d.row).join(", ")}`
-              : "")
-        );
-        inputRef.current.value = "";
-        return;
-      }
       // Merge and trigger backend update
       const updated = [...existing, ...newItems];
-      // Optionally: update backend via API (reuse update-order or similar)
-      await fetch("http://localhost:3001/api/mangas/update-order", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updated),
-      });
-      if (duplicates.length > 0) {
-        setImportMsg(
-          `✅ Đã thêm ${newItems.length} truyện mới.\n❌ Bỏ qua ${
-            duplicates.length
-          } truyện trùng ở dòng: ${duplicates.map((d) => d.row).join(", ")}`
-        );
-      } else {
-        setImportMsg(`✅ Đã thêm ${newItems.length} truyện mới.`);
+      try {
+        await fetch("http://localhost:3001/api/mangas/update-order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(updated),
+        });
+        if (duplicates.length > 0) {
+          setImportMsg(
+            `✅ Đã thêm ${newItems.length} truyện mới.\n❌ Bỏ qua ${
+              duplicates.length
+            } truyện trùng ở dòng: ${duplicates.map((d) => d.row).join(", ")}`
+          );
+        } else {
+          setImportMsg(`✅ Đã thêm ${newItems.length} truyện mới.`);
+        }
+      } catch (err) {
+        setImportMsg("❌ Import lỗi");
       }
     } catch (err) {
       setImportMsg("❌ Import lỗi");
@@ -380,13 +365,13 @@ const MangaList = ({ mangas, onDelete, onEdit, onDeleteMany }) => {
                 className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
                 onClick={() => setShowDeleteModal(false)}
               >
-                Huỷ
+                Cancel
               </button>
               <button
                 className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
                 onClick={handleDeleteMany}
               >
-                Xoá
+                Delete
               </button>
             </div>
           </div>
