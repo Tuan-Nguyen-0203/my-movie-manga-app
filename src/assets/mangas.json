@@ -280,9 +280,9 @@
       "Cổ đại"
     ],
     "country": "Trung Quốc",
-    "status": "Đã dịch",
+    "status": "Đã đọc",
     "link": "https://www.wattpad.com/story/218692181-%C4%91m-end-%C4%91%E1%BA%BFn-c%E1%BA%A3-ng%C6%B0%E1%BB%9Di-qu%C3%A8-c%C5%A9ng-b%E1%BB%8B-t%C3%B4i-l%E1%BB%ABa-%C4%91%E1%BB%A9ng-d%E1%BA%ADy",
-    "rate": "",
+    "rate": "1",
     "chapters": 167,
     "notes": "https://www.youtube.com/watch?v=6gicxeghIEg&list=PLkw_8Ms-aSsC6Uh_VJT1mdCLIEaPRD3oU&index=1"
   },
@@ -397,12 +397,15 @@
     "id": "manga-1745082878479-874101"
   },
   {
+    "id": "manga-1745082878479-529043",
     "name": "Linh Môi",
-    "chapters": 99,
+    "genres": [],
     "country": "Trung Quốc",
-    "status": "Chưa đọc",
+    "status": "Đã dịch",
     "link": "https://www.wattpad.com/story/303885731-linh-m%C3%B4i-phong-l%C6%B0u-th%C6%B0-ng%E1%BB%91c",
-    "id": "manga-1745082878479-529043"
+    "rate": "",
+    "chapters": 99,
+    "notes": "https://www.youtube.com/watch?v=eZgN3pBmGwU&list=PLP45R0fd65o6N1eUJhV-EbGKA2je3ADtb&index=1"
   },
   {
     "name": "Ma đạo tổ sư",
@@ -512,12 +515,17 @@
     "notes": "https://www.youtube.com/watch?v=9Ue7KQFJGD0"
   },
   {
+    "id": "manga-1745082878479-742200",
     "name": "Nhà có bé ngoan",
-    "chapters": 85,
+    "genres": [
+      "Trọng sinh"
+    ],
     "country": "Trung Quốc",
-    "status": "Chưa đọc",
+    "status": "Đã dịch",
     "link": "https://www.wattpad.com/story/317839359-nh%C3%A0-c%C3%B3-b%C3%A9-ngoan-th%C3%ADnh-nguy%C3%AAn",
-    "id": "manga-1745082878479-742200"
+    "rate": "",
+    "chapters": 85,
+    "notes": "https://www.youtube.com/watch?v=DthB7HHGEA8&list=PLkw_8Ms-aSsBRp1Fki6S_HZt5C-WzQPic&index=1"
   },
   {
     "name": "Nhân cách nguy hiểm",
@@ -650,9 +658,9 @@
     "name": "Sau Khi Trùng Sinh, Cậu Chủ Thật Bắt Đầu Dưỡng Sinh",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Đã dịch",
+    "status": "Đã đọc",
     "link": "https://www.wattpad.com/story/374339762-end-sau-khi-tr%C3%B9ng-sinh-c%E1%BA%ADu-ch%E1%BB%A7-th%E1%BA%ADt-b%E1%BA%AFt-%C4%91%E1%BA%A7u-d%C6%B0%E1%BB%A1ng",
-    "rate": "NaN",
+    "rate": "2",
     "chapters": 104,
     "notes": "https://www.youtube.com/watch?v=sj5PoWDQcNA&list=PLJWYpDSRkwnbvgl4cXXpnXzXOUoo2uzUE&index=1"
   },
@@ -811,10 +819,11 @@
     "name": "Thụ thế thân thức tỉnh rồi",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Đang đọc",
+    "status": "Đã đọc",
     "link": "https://www.wattpad.com/story/343581957-ho%C3%A0n-%C4%91m-th%E1%BB%A5-th%E1%BA%BF-th%C3%A2n-th%E1%BB%A9c-t%E1%BB%89nh-r%E1%BB%93i",
-    "rate": null,
-    "chapters": 156
+    "rate": "1",
+    "chapters": 156,
+    "notes": ""
   },
   {
     "name": "Thử Ghẹo Lần Nữa Xem",
@@ -861,7 +870,7 @@
     "name": "Toàn Showbiz Nghe Tôi Nổi Điên",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Đã dịch",
+    "status": "Đang đọc",
     "link": "https://www.wattpad.com/story/375352203-%C4%91m-h%C3%A0i-to%C3%A0n-showbiz-nghe-t%C3%B4i-n%E1%BB%95i-%C4%91i%C3%AAn",
     "rate": "1",
     "chapters": 134,
@@ -900,12 +909,18 @@
     "id": "manga-1744908166177-359634"
   },
   {
+    "id": "manga-1745082878479-654635",
     "name": "Tôi,còn có thể cứu vãn một chút nữa không?",
-    "chapters": 97,
+    "genres": [
+      "Xuyên thư",
+      "Hiện đại"
+    ],
     "country": "Trung Quốc",
-    "status": "Chưa đọc",
+    "status": "Đã dịch",
     "link": "https://www.wattpad.com/story/341098951-t%C3%B4i-c%C3%B2n-c%C3%B3-th%E1%BB%83-c%E1%BB%A9u-v%C3%A3n-m%E1%BB%99t-ch%C3%BAt-n%E1%BB%AFa-kh%C3%B4ng",
-    "id": "manga-1745082878479-654635"
+    "rate": "",
+    "chapters": 97,
+    "notes": "Tôi còn có thể cứu vãn chút gì không?"
   },
   {
     "id": "manga-1744908166177-510258",
@@ -950,10 +965,11 @@
     "name": "Vợ mình mình nuôi",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Đã dịch",
+    "status": "Đã đọc",
     "link": "https://www.wattpad.com/story/328180918-ho%C3%A0n-%C4%91m-v%E1%BB%A3-m%C3%ACnh-m%C3%ACnh-nu%C3%B4i",
-    "rate": null,
-    "chapters": 112
+    "rate": "1",
+    "chapters": 112,
+    "notes": ""
   },
   {
     "name": "Xin chào ác quỷ",
@@ -1728,5 +1744,215 @@
     "rate": "",
     "chapters": 1990,
     "notes": "https://www.youtube.com/watch?v=VVT-lXKyR7U&list=PLNDmsVc-b06w4dig8gKuBfSA2MU8CK1Kn&index=1"
+  },
+  {
+    "id": "manga-1747330281798",
+    "name": "Xung hỷ",
+    "genres": [
+      "Trọng sinh"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=q7NxP6JvdPQ&list=PLGUmWsLu8aiBEBXaid5bF2SZF5KL46qmM&index=1",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=q7NxP6JvdPQ&list=PLGUmWsLu8aiBEBXaid5bF2SZF5KL46qmM&index=1"
+  },
+  {
+    "id": "manga-1747332932369",
+    "name": "Âm thầm si mê",
+    "genres": [
+      "Giả tưởng"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=wWKMcZPtGNk",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=rM1lmKblx5s"
+  },
+  {
+    "id": "manga-1747333385390",
+    "name": "LỜI HỒI ĐÁP CỦA KEANU REEVES ",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/@truyendammy_keelin/search?query=L%E1%BB%9CI%20H%E1%BB%92I%20%C4%90%C3%81P%20C%E1%BB%A6A%20KEANU%20REEVES%20",
+    "rate": "",
+    "chapters": null,
+    "notes": ""
+  },
+  {
+    "id": "manga-1747595283902",
+    "name": "Sổ bệnh án",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=h--1mxBzYbU&list=PLEQhEU1xNS2yS9WufbOL8t6FTACrAjJSt&index=1",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=h--1mxBzYbU&list=PLEQhEU1xNS2yS9WufbOL8t6FTACrAjJSt&index=1"
+  },
+  {
+    "id": "manga-1747596268244",
+    "name": "Ta Có Một Căn Phòng Khủng Bố, Ta Có Một Tòa Nhà Ma",
+    "genres": [
+      "Linh dị"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=WKmxh9c_-3o&list=PLnskP2sTK9jPfPqWApaK2JWgb6_gagQh4&index=2",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=WKmxh9c_-3o&list=PLnskP2sTK9jPfPqWApaK2JWgb6_gagQh4&index=2"
+  },
+  {
+    "id": "manga-1747596363582",
+    "name": "Quỷ xá",
+    "genres": [
+      "Linh dị"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=xuIuQ4yuRIM&list=PLIruxH4Qf19fk_V0ZxABtb7n-GNKr3A0e&index=1",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=xuIuQ4yuRIM&list=PLIruxH4Qf19fk_V0ZxABtb7n-GNKr3A0e&index=1"
+  },
+  {
+    "id": "manga-1748192529080",
+    "name": "Sau khi xuyên thành miêu tinh linh của hotboy cùng trường",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/@audiodoctruyendammy/search?query=mi%C3%AAu%20tinh%20linh",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/@audiodoctruyendammy/search?query=mi%C3%AAu%20tinh%20linh"
+  },
+  {
+    "id": "manga-1748192776681",
+    "name": "Bất tuần",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=Zr4ew6AwSDg&list=PLkw_8Ms-aSsA_XnsEb3hAZcuABSuyI1f8&index=1",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=Zr4ew6AwSDg&list=PLkw_8Ms-aSsA_XnsEb3hAZcuABSuyI1f8&index=1"
+  },
+  {
+    "id": "manga-1748192893430",
+    "name": "Kiêu Ngạo",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/@f5truyen/search?query=Ki%C3%AAu%20Ng%E1%BA%A1o",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/@f5truyen/search?query=Ki%C3%AAu%20Ng%E1%BA%A1o"
+  },
+  {
+    "id": "manga-1748193534092",
+    "name": "Luật Sư Hạng Nhất",
+    "genres": [
+      "Trinh thám"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=K0n2Gmckbqc&list=PLP45R0fd65o4QXJKqNe-ZmXQI6KVTmJrt&index=1",
+    "rate": "",
+    "chapters": 215,
+    "notes": "https://www.youtube.com/watch?v=K0n2Gmckbqc&list=PLP45R0fd65o4QXJKqNe-ZmXQI6KVTmJrt&index=1"
+  },
+  {
+    "id": "manga-1748193732499",
+    "name": "Chiết Chi",
+    "genres": [
+      "Cổ đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=FXRAhjbO8Zo&list=PLCorKtERIBWrPbsSOFj6cTmxn9rcxY2w8&index=1",
+    "rate": "",
+    "chapters": 20,
+    "notes": "https://www.youtube.com/watch?v=FXRAhjbO8Zo&list=PLCorKtERIBWrPbsSOFj6cTmxn9rcxY2w8&index=1"
+  },
+  {
+    "id": "manga-1748193961916",
+    "name": "Sau khi ly hôn em vẫn còn mặc áo khoác của anh",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=dowhcnHglK8&list=PLa6DzxKGbcG2kt-0qc5nqpsX7J_UiGvZX&index=1",
+    "rate": "",
+    "chapters": 66,
+    "notes": "https://www.youtube.com/watch?v=dowhcnHglK8&list=PLa6DzxKGbcG2kt-0qc5nqpsX7J_UiGvZX&index=1"
+  },
+  {
+    "id": "manga-1748194085291",
+    "name": "Cậu ấy đến từ 1945",
+    "genres": [
+      "Xuyên thư",
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=Yo-VtOBJqgY&list=PLJWYpDSRkwnbThdcdbIFB192bQ9ZMYORf&index=1",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=Yo-VtOBJqgY&list=PLJWYpDSRkwnbThdcdbIFB192bQ9ZMYORf&index=1"
+  },
+  {
+    "id": "manga-1748194599736",
+    "name": "Sao Tôi Có Thể Thích Cậu Ta Được",
+    "genres": [
+      "Thanh xuân vườn trường",
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=Xd2FQ0pocRE&list=PLkw_8Ms-aSsCEWY85CbElIJfi7toYlECc&index=1",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=Xd2FQ0pocRE&list=PLkw_8Ms-aSsCEWY85CbElIJfi7toYlECc&index=1"
+  },
+  {
+    "id": "manga-1748195140677",
+    "name": "Hình xăm ",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=EWroQ8UDB-Q&list=PLEnQKdDnKDlSnYqND1jkctzTDdJ8dOlcj&index=1",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=EWroQ8UDB-Q&list=PLEnQKdDnKDlSnYqND1jkctzTDdJ8dOlcj&index=1"
+  },
+  {
+    "id": "manga-1748696188972",
+    "name": "Xuyên Thành Nam Thê Pháo Hội Của Nhân Vật Phản Diện",
+    "genres": [
+      "Xuyên thư"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "http://youtube.com/watch?v=0-JFMVtCDCM&list=PLshoG2TrGi_CC0OeOSBqGOQ64ypUqUyVh&index=1",
+    "rate": "",
+    "chapters": 118,
+    "notes": "http://youtube.com/watch?v=0-JFMVtCDCM&list=PLshoG2TrGi_CC0OeOSBqGOQ64ypUqUyVh&index=1"
   }
 ]
