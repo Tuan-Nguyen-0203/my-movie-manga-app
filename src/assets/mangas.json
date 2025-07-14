@@ -31,9 +31,9 @@
     "name": "Ân hữu trọng báo",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Đã dịch",
+    "status": "Đã đọc",
     "link": "https://www.wattpad.com/story/112314517-%C4%91m-%C3%A2n-h%E1%BB%AFu-tr%E1%BB%8Dng-b%C3%A1o-full",
-    "rate": "",
+    "rate": "2",
     "chapters": 120,
     "notes": "Ân hữu trọng báo"
   },
@@ -870,7 +870,7 @@
     "name": "Toàn Showbiz Nghe Tôi Nổi Điên",
     "genres": [],
     "country": "Trung Quốc",
-    "status": "Đang đọc",
+    "status": "Đã đọc",
     "link": "https://www.wattpad.com/story/375352203-%C4%91m-h%C3%A0i-to%C3%A0n-showbiz-nghe-t%C3%B4i-n%E1%BB%95i-%C4%91i%C3%AAn",
     "rate": "1",
     "chapters": 134,
@@ -1476,18 +1476,6 @@
     "chapters": 89
   },
   {
-    "id": "manga-1746113528440",
-    "name": "Tiếng vĩ cầm trong đêm giông bão",
-    "genres": [
-      "Hiện đại"
-    ],
-    "country": "Trung Quốc",
-    "status": "Chưa đọc",
-    "link": "https://awread.vn/b/kQrzmu/read",
-    "rate": null,
-    "chapters": 60
-  },
-  {
     "id": "manga-1746114107422",
     "name": "Ghi chép về sách minh họa sưu tầm ác mộng",
     "genres": [
@@ -1609,9 +1597,9 @@
       "Linh dị"
     ],
     "country": "Trung Quốc",
-    "status": "Đã dịch",
+    "status": "Đã đọc",
     "link": "https://www.youtube.com/@f5truyen/search?query=h%C3%B4m%20nay%20t%C3%B4i%20l%E1%BA%A1i%20b%E1%BB%8B%20%C3%A9p%20s%E1%BB%91ng%20l%E1%BA%A1i",
-    "rate": "",
+    "rate": "1",
     "chapters": 110,
     "notes": "https://www.youtube.com/@f5truyen/search?query=h%C3%B4m%20nay%20t%C3%B4i%20l%E1%BA%A1i%20b%E1%BB%8B%20%C3%A9p%20s%E1%BB%91ng%20l%E1%BA%A1i"
   },
@@ -1954,5 +1942,264 @@
     "rate": "",
     "chapters": 118,
     "notes": "http://youtube.com/watch?v=0-JFMVtCDCM&list=PLshoG2TrGi_CC0OeOSBqGOQ64ypUqUyVh&index=1"
+  },
+  {
+    "id": "manga-1748717161224",
+    "name": "Tôi lại đánh sập câu chuyện kinh dị trong trường rồi",
+    "genres": [
+      "Linh dị"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=PCwBuw_mBvE&list=PL9B3UidgzJxKFRtPEFxItKo_MxQobXqPi&index=11",
+    "rate": "",
+    "chapters": 198,
+    "notes": ""
+  },
+  {
+    "id": "manga-1748717573133",
+    "name": "Người Mù Bảo Ta Đừng Nhìn Lén Hắn Nữa",
+    "genres": [
+      "Cổ đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=I-N1rZHrsag",
+    "rate": "",
+    "chapters": null,
+    "notes": ""
+  },
+  {
+    "id": "manga-1748717723736",
+    "name": "Nhớ ra tên tôi chưa",
+    "genres": [
+      "Thanh xuân vườn trường"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/@f5truyen/search?query=Nh%E1%BB%9B%20Ra%20T%C3%AAn%20T%C3%B4i%20Ch%C6%B0a",
+    "rate": "",
+    "chapters": 93,
+    "notes": ""
+  },
+  {
+    "id": "manga-1748754475204",
+    "name": "Đại dương xanh thẫm (Tiếng vĩ cầm trong đêm giông bão)",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Việt Nam",
+    "status": "Đã đọc",
+    "link": "https://www.youtube.com/watch?v=jMsdSoWT888&list=PLwO_TSaAaLfnFLrCdmfgwNCtn7r1m6lp0&index=1",
+    "rate": "2",
+    "chapters": 60,
+    "notes": ""
+  },
+  {
+    "id": "manga-1749324011770",
+    "name": "Người Đẹp Ốm Yếu Và Chàng Vệ Sĩ Trúc Mã Của Cậu ",
+    "genres": [
+      "Xuyên thư"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/@f5truyen/search?query=Ng%C6%B0%E1%BB%9Di%20%C4%90%E1%BA%B9p%20%E1%BB%90m%20Y%E1%BA%BFu%20V%C3%A0%20Ch%C3%A0ng%20V%E1%BB%87%20S%C4%A9%20Tr%C3%BAc%20M%C3%A3%20C%E1%BB%A7a%20C%E1%BA%ADu%20",
+    "rate": "",
+    "chapters": 64,
+    "notes": "https://www.youtube.com/@f5truyen/search?query=Ng%C6%B0%E1%BB%9Di%20%C4%90%E1%BA%B9p%20%E1%BB%90m%20Y%E1%BA%BFu%20V%C3%A0%20Ch%C3%A0ng%20V%E1%BB%87%20S%C4%A9%20Tr%C3%BAc%20M%C3%A3%20C%E1%BB%A7a%20C%E1%BA%ADu%20"
+  },
+  {
+    "id": "manga-1749324286256",
+    "name": "Tiệm tạp hoá của nhóc con",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=NsUYvgMaQew&list=PLkT8s_51ougMw8okp0sQ7ob5SzanxTF5x&index=1",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=NsUYvgMaQew&list=PLkT8s_51ougMw8okp0sQ7ob5SzanxTF5x&index=1"
+  },
+  {
+    "id": "manga-1749324667559",
+    "name": "Được Đại Lão Cố Chấp Cưng Chiều Từ Nhỏ Đến Lớn",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/@LinhMieuAudio/search?query=%C4%90%C6%B0%E1%BB%A3c%20%C4%90%E1%BA%A1i%20L%C3%A3o%20C%E1%BB%91%20Ch%E1%BA%A5p%20C%C6%B0ng%20Chi%E1%BB%81u%20T%E1%BB%AB%20Nh%E1%BB%8F%20%C4%90%E1%BA%BFn%20L%E1%BB%9Bn",
+    "rate": "NaN",
+    "chapters": 89,
+    "notes": "https://www.youtube.com/@LinhMieuAudio/search?query=%C4%90%C6%B0%E1%BB%A3c%20%C4%90%E1%BA%A1i%20L%C3%A3o%20C%E1%BB%91%20Ch%E1%BA%A5p%20C%C6%B0ng%20Chi%E1%BB%81u%20T%E1%BB%AB%20Nh%E1%BB%8F%20%C4%90%E1%BA%BFn%20L%E1%BB%9Bn"
+  },
+  {
+    "id": "manga-1749325305008",
+    "name": "Người đẹp ốm íu cần được nâng niu trong tim",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=HtPoRt01o1w&list=PLJWYpDSRkwnb6DR8XNt_wLoggnyGqZDSQ&index=1",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=HtPoRt01o1w&list=PLJWYpDSRkwnb6DR8XNt_wLoggnyGqZDSQ&index=1"
+  },
+  {
+    "id": "manga-1749326406998",
+    "name": "Lời hồi đáp của keanu ",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/@truyendammy_keelin/search?query=l%E1%BB%9Di%20h%E1%BB%93i%20%C4%91%C3%A1p%20c%E1%BB%A7a%20keanu%20",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/@truyendammy_keelin/search?query=l%E1%BB%9Di%20h%E1%BB%93i%20%C4%91%C3%A1p%20c%E1%BB%A7a%20keanu%20"
+  },
+  {
+    "id": "manga-1749326915111",
+    "name": "Cắn Lên Đầu Ngón Tay Anh",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=18I6I3KIYc0&list=PLlKUMYnpOx-_m6P59y8PnjGdQbPDig_kL&index=1",
+    "rate": "",
+    "chapters": 88,
+    "notes": "https://www.youtube.com/watch?v=18I6I3KIYc0&list=PLlKUMYnpOx-_m6P59y8PnjGdQbPDig_kL&index=1"
+  },
+  {
+    "id": "manga-1749327182483",
+    "name": "Cúi mình hôn em",
+    "genres": [
+      "Cổ đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=a70Pi_01heU&list=PLwO_TSaAaLfnQ5EqkTLvyLD7QHrVy7cWI&index=1",
+    "rate": "",
+    "chapters": 35,
+    "notes": "https://www.youtube.com/watch?v=a70Pi_01heU&list=PLwO_TSaAaLfnQ5EqkTLvyLD7QHrVy7cWI&index=1"
+  },
+  {
+    "id": "manga-1749327535597",
+    "name": "Xin Nghe Lời Thần Linh",
+    "genres": [
+      "Linh dị"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=mxTZe9R5lbw&list=PLGUmWsLu8aiBT7AEDe6LMu7XG_ifScuMa&index=1",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=mxTZe9R5lbw&list=PLGUmWsLu8aiBT7AEDe6LMu7XG_ifScuMa&index=1"
+  },
+  {
+    "id": "manga-1749327915985",
+    "name": "Bạn Cùng Bàn Làm Tôi Vô Tâm Học Tập",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "",
+    "rate": "NaN",
+    "chapters": 85,
+    "notes": ""
+  },
+  {
+    "id": "manga-1750010294599",
+    "name": "Nhóc gây hoạ",
+    "genres": [
+      "Xuyên thư"
+    ],
+    "country": "Trung Quốc",
+    "status": "Sắp dịch",
+    "link": "https://wattpad.com.vn/nhoc-gay-hoa-nhi-dan",
+    "rate": "",
+    "chapters": 68,
+    "notes": ""
+  },
+  {
+    "id": "manga-1750010522005",
+    "name": "Trợ lý kiến trúc sư",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Trung Quốc",
+    "status": "Sắp dịch",
+    "link": "",
+    "rate": "",
+    "chapters": 239,
+    "notes": ""
+  },
+  {
+    "id": "manga-1750010822926",
+    "name": "Tiếng ve ngày hè",
+    "genres": [
+      "Hiện đại"
+    ],
+    "country": "Việt Nam",
+    "status": "Sắp dịch",
+    "link": "",
+    "rate": "",
+    "chapters": 99,
+    "notes": ""
+  },
+  {
+    "id": "manga-1750011308454",
+    "name": "Cậu cả hôm nay cải tà quy chính",
+    "genres": [],
+    "country": "",
+    "status": "Chưa đọc",
+    "link": "https://rookies.vn/truyen/cau-ca-hom-nay-cai-ta-quy-chinh",
+    "rate": "",
+    "chapters": null,
+    "notes": ""
+  },
+  {
+    "id": "manga-1750011817812",
+    "name": "Viên lão quái kì án",
+    "genres": [
+      "Linh dị"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=bPah3LqmIKc&list=PLNDmsVc-b06zhvf9tfuWEtF0SvDHZUqMN&index=1",
+    "rate": "",
+    "chapters": 1321,
+    "notes": ""
+  },
+  {
+    "id": "manga-1750012072692",
+    "name": "Giải mộng",
+    "genres": [
+      "Linh dị"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/@meohoa001/search?query=gi%E1%BA%A3i%20m%E1%BB%99ng",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/@meohoa001/search?query=gi%E1%BA%A3i%20m%E1%BB%99ng"
+  },
+  {
+    "id": "manga-1750012239617",
+    "name": "Cao Thủ “Đổi Đen Thay Trắng”",
+    "genres": [
+      "Linh dị",
+      "Xuyên thư"
+    ],
+    "country": "Trung Quốc",
+    "status": "Đã dịch",
+    "link": "https://www.youtube.com/watch?v=kH5oZPkTnuI&list=PLGUmWsLu8aiBjBTTtkqLoly3SiNxDvGZC&index=1",
+    "rate": "",
+    "chapters": null,
+    "notes": "https://www.youtube.com/watch?v=kH5oZPkTnuI&list=PLGUmWsLu8aiBjBTTtkqLoly3SiNxDvGZC&index=1"
   }
 ]
